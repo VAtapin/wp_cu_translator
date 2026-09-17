@@ -19,7 +19,7 @@
 - Плагин всегда передаёт имя клиента, Installation ID и необратимый идентификатор посетителя; `X-API-Key` добавляется только при его настройке.
 - Публичное имя: `Church Slavonic Translator`; slug, text domain и каталог ZIP: `church-slavonic-translator`.
 - Текущая версия: `1.0.1`.
-- GitHub Release создаётся тегом, совпадающим с версией без префикса `v`.
+- GitHub Release `1.0.1` создан тегом без префикса `v`; в нём опубликованы `church-slavonic-translator-1.0.1.zip` и постоянный `church-slavonic-translator.zip`.
 - WordPress.org deployment выключен до настройки переменной `WORDPRESS_ORG_ENABLED=true` и SVN-секретов.
 - Ранее опубликованный GitHub Release `1.0.0` содержит архивы со старым именем `wp-cu-translator` и предшествует подготовке для WordPress.org. Он не изменялся: новый tag/release и публикация в WordPress.org требуют отдельного решения владельца.
 
@@ -30,12 +30,13 @@
 ## Следующие действия
 
 - Обновить Bible Desktop и проверить бесплатный и ключевой режимы плагина на целевом WordPress.
-- Перед новым GitHub Release создать отдельный тег `1.0.1`; существующий релиз `1.0.0` не изменять.
+- Установить ZIP `church-slavonic-translator.zip` из последнего GitHub Release на целевом WordPress и проверить настоящий перевод в бесплатном и ключевом режимах.
 - После обновления production API установить финальный ZIP и проверить настоящий перевод в бесплатном и ключевом режимах.
 
 ## Последние проверки
 
 - Для отдельного меню настроек и справки по шорткодам пройдены PHP lint главного файла, uninstall-скрипта и smoke-теста, `node --check` JavaScript и генератора локализаций, пересборка EN/RU/DE-каталогов, проверка совпадения версии `1.0.1` в заголовке плагина и `readme.txt`, а также `git diff --check`. Интеграционный WordPress smoke-тест не запускался: корень тестовой установки WordPress в текущей среде не предоставлен.
+- GitHub API подтвердил созданный Release `1.0.1` и оба ZIP-asset, включая постоянное имя для ссылки на последнюю версию.
 - PHP lint главного файла и uninstall-скрипта, `node --check` JavaScript и генератора переводов прошли.
 - Каталог из 53 строк проверен и собран в POT, русские и немецкие PO/MO-файлы воспроизводимым Node-скриптом; все gettext-вызовы используют `church-slavonic-translator`.
 - Версии `church-slavonic-translator.php` и `readme.txt` совпадают: `1.0.0`; `Tested up to` подтверждён локальным WordPress 7.1.
@@ -44,4 +45,4 @@
 - В реальном локальном WordPress 7.1/SQLite smoke-тест подтвердил Plugin URI, постоянный UUID установки, английские, русские и немецкие название/описание плагина, HTML шорткода и JavaScript-сообщения.
 - WordPress.org deploy не запускался, новый tag/release не создавался.
 
-Последний связанный commit: Add translator settings and shortcode guide.
+Последний связанный commit: Record 1.0.1 release.
