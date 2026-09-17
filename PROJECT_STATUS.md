@@ -20,7 +20,7 @@
 - Плагин всегда передаёт имя клиента, Installation ID и необратимый идентификатор посетителя; `X-API-Key` добавляется только при его настройке.
 - Публичное имя: `Church Slavonic Translator`; slug, text domain и каталог ZIP: `church-slavonic-translator`.
 - Текущая версия: `1.0.3`.
-- GitHub Release `1.0.2` создан тегом без префикса `v`; в нём опубликованы `church-slavonic-translator-1.0.2.zip` и постоянный `church-slavonic-translator.zip`.
+- GitHub Release `1.0.3` создан тегом без префикса `v`; в нём опубликованы `church-slavonic-translator-1.0.3.zip` и постоянный `church-slavonic-translator.zip`.
 - WordPress.org deployment выключен до настройки переменной `WORDPRESS_ORG_ENABLED=true` и SVN-секретов.
 - Ранее опубликованный GitHub Release `1.0.0` содержит архивы со старым именем `wp-cu-translator` и предшествует подготовке для WordPress.org. Он не изменялся: новый tag/release и публикация в WordPress.org требуют отдельного решения владельца.
 
@@ -31,7 +31,7 @@
 ## Следующие действия
 
 - Обновить Bible Desktop и проверить бесплатный и ключевой режимы плагина на целевом WordPress.
-- Создать GitHub Release `1.0.3`, затем установить ZIP `church-slavonic-translator.zip` на целевом WordPress и проверить настоящий перевод в бесплатном и ключевом режимах.
+- Установить ZIP `church-slavonic-translator.zip` на целевом WordPress и проверить настоящий перевод в бесплатном и ключевом режимах.
 
 ## Последние проверки
 
@@ -43,5 +43,7 @@
 - Официальный Plugin Check 2.1.0 завершился сообщением `No errors found`; ошибок и предупреждений нет.
 - В реальном локальном WordPress 7.1/SQLite smoke-тест подтвердил Plugin URI, постоянный UUID установки, английские, русские и немецкие название/описание плагина, HTML шорткода и JavaScript-сообщения.
 - WordPress.org deploy не запускался и остаётся выключенным; GitHub Release `1.0.2` опубликован отдельно.
+- PHP lint главного файла, uninstall-скрипта и smoke-теста, `node --check` JavaScript и генератора локализаций, пересборка EN/RU/DE-каталогов, точная проверка минимального CSS и `git diff --check` прошли для версии 1.0.3.
+- GitHub API подтвердил Release `1.0.3` и оба ZIP-asset, включая постоянное имя для ссылки на последнюю версию.
 
-Последний связанный commit: Remove translator interface styles.
+Последний связанный commit: Record 1.0.3 release.
