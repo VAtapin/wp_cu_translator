@@ -77,6 +77,11 @@ if (! str_contains($html, '<h3 class="wp-cu-translator__title">')) {
     throw new RuntimeException('Translator shortcode title must use an h3 heading.');
 }
 
+$stylesheet = trim((string) file_get_contents(dirname($pluginFile).'/assets/wp-cu-translator.css'));
+if ($stylesheet !== ".wp-cu-translator__text {\n    font-family: \"Monomakh Unicode\", \"Times New Roman\", serif;\n    white-space: pre-wrap;\n}") {
+    throw new RuntimeException('Translator stylesheet must contain only the Church Slavonic result text style.');
+}
+
 $shortcodes = wp_cu_translator_shortcodes();
 if (($shortcodes[0]['shortcode'] ?? '') !== '[wp_cu_translator]' || ! str_contains((string) ($shortcodes[1]['shortcode'] ?? ''), 'title=')) {
     throw new RuntimeException('Shortcode reference does not list the default and custom-title forms.');

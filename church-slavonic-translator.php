@@ -3,7 +3,7 @@
  * Plugin Name: Church Slavonic Translator
  * Plugin URI: https://kalender.georg-kloster.ru/calendar-api
  * Description: Translate text into Church Slavonic using the Bible Desktop translation service.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Requires at least: 6.3
  * Requires PHP: 8.0
  * Author: Vladimir Atapin
@@ -17,7 +17,7 @@
 if (! defined('ABSPATH')) {
     exit;
 }
-define('WP_CU_TRANSLATOR_VERSION', '1.0.2');
+define('WP_CU_TRANSLATOR_VERSION', '1.0.3');
 define('WP_CU_TRANSLATOR_OPTION', 'wp_cu_translator_settings');
 define('WP_CU_TRANSLATOR_INSTALLATION_OPTION', 'wp_cu_translator_installation_id');
 define('WP_CU_TRANSLATOR_FILE', __FILE__);

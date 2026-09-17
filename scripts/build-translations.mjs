@@ -74,7 +74,7 @@ const escapePo = (value) => JSON.stringify(value);
 
 function metadata(locale, plural) {
   return [
-    'Project-Id-Version: Church Slavonic Translator 1.0.2',
+    'Project-Id-Version: Church Slavonic Translator 1.0.3',
     'Report-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues',
     'POT-Creation-Date: 2026-09-17 00:00+0000',
     'PO-Revision-Date: 2026-09-17 00:00+0000',
