@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2
+
+- Let the active WordPress theme control the translator typography and standard form controls.
+- Changed the frontend translator title from an h2 to an h3 heading.
+
 ## 1.0.1
 
 - Added a dedicated WordPress admin menu for the translator with Settings and Shortcodes pages.

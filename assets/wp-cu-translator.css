@@ -6,7 +6,6 @@
     border: 1px solid #dedbd3;
     border-radius: 14px;
     background: #fffdf8;
-    color: #28251f;
 }
 .wp-cu-translator *,
 .wp-cu-translator *::before,
@@ -16,25 +15,17 @@
 
 .wp-cu-translator__title {
     margin: 0 0 1.25rem;
-    font-size: clamp(1.4rem, 4vw, 2rem);
 }
 
 .wp-cu-translator__label,
 .wp-cu-translator__options {
     display: grid;
     gap: .45rem;
-    font-weight: 600;
 }
 
 .wp-cu-translator textarea,
 .wp-cu-translator select {
     width: 100%;
-    padding: .75rem;
-    border: 1px solid #aaa49a;
-    border-radius: 8px;
-    background: #fff;
-    color: inherit;
-    font: inherit;
 }
 
 .wp-cu-translator textarea {
@@ -51,15 +42,10 @@
 .wp-cu-translator__options {
     grid-template-columns: repeat(2, minmax(120px, 1fr));
     margin: 0;
-    padding: .7rem .85rem;
-    border: 1px solid #dedbd3;
-    border-radius: 8px;
-    font-weight: 400;
 }
 
 .wp-cu-translator__options legend {
     padding: 0 .3rem;
-    font-weight: 600;
 }
 
 .wp-cu-translator__submit,
@@ -73,10 +59,6 @@
     border: 1px solid #7d2e1d;
     border-radius: 8px;
     background: #7d2e1d;
-    color: #fff;
-    font: inherit;
-    font-weight: 600;
-    line-height: 1.2;
     text-decoration: none;
     cursor: pointer;
 }
@@ -107,8 +89,6 @@
 
 .wp-cu-translator__match {
     margin: 0 0 .75rem;
-    color: #655e53;
-    font-size: .95rem;
 }
 
 .wp-cu-translator__text {
@@ -117,8 +97,6 @@
     border-radius: 8px;
     background: #f5f0e5;
     font-family: "Monomakh Unicode", "Times New Roman", serif;
-    font-size: 1.25rem;
-    line-height: 1.65;
     white-space: pre-wrap;
 }
 
@@ -133,14 +111,10 @@
 .wp-cu-translator__actions a {
     border-color: #6d675e;
     background: transparent;
-    color: #3a352e;
-    font-size: .92rem;
 }
 
 .wp-cu-translator__hint {
     margin: .75rem 0 0;
-    color: #655e53;
-    font-size: .9rem;
 }
 
 @media (max-width: 640px) {

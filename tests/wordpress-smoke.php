@@ -73,6 +73,9 @@ $html = do_shortcode('[wp_cu_translator]');
 if (! str_contains($html, $expected[$locale]['title'])) {
     throw new RuntimeException('Translated shortcode title does not match for '.$locale);
 }
+if (! str_contains($html, '<h3 class="wp-cu-translator__title">')) {
+    throw new RuntimeException('Translator shortcode title must use an h3 heading.');
+}
 
 $shortcodes = wp_cu_translator_shortcodes();
 if (($shortcodes[0]['shortcode'] ?? '') !== '[wp_cu_translator]' || ! str_contains((string) ($shortcodes[1]['shortcode'] ?? ''), 'title=')) {
