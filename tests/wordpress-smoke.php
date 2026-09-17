@@ -58,6 +58,9 @@ if ($locale !== 'en_US') {
 }
 
 $metadata = get_plugin_data($pluginFile, false, true);
+if (($metadata['PluginURI'] ?? '') !== 'https://kalender.georg-kloster.ru/calendar-api') {
+    throw new RuntimeException('Plugin URI does not match.');
+}
 if (($metadata['Name'] ?? '') !== $expected[$locale]['name']) {
     throw new RuntimeException('Translated plugin name does not match for '.$locale);
 }

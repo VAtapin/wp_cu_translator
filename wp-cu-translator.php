@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: WP CU Translator
- * Plugin URI: https://github.com/VAtapin/wp_cu_translator
+ * Plugin URI: https://kalender.georg-kloster.ru/calendar-api
  * Description: Church Slavonic translator for WordPress powered by the Bible Desktop API.
  * Version: 1.0.0
  * Requires at least: 6.3
