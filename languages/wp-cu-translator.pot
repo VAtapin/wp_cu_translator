@@ -1,0 +1,164 @@
+msgid ""
+msgstr "Project-Id-Version: WP CU Translator 1.0.0\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-09-17 00:00+0000\nPO-Revision-Date: 2026-09-17 00:00+0000\nLanguage: LANGUAGE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=INTEGER; plural=EXPRESSION;\nX-Domain: wp-cu-translator\n"
+
+msgid "WP CU Translator"
+msgstr ""
+
+msgid "Church Slavonic translator for WordPress powered by the Bible Desktop API."
+msgstr ""
+
+msgid "Enter a valid Bible Desktop HTTPS URL."
+msgstr ""
+
+msgid "Add the form with [wp_cu_translator]. The free tier works without a key; an optional key enables higher limits and always stays on the WordPress server."
+msgstr ""
+
+msgid "Bible Desktop URL"
+msgstr ""
+
+msgid "Example:"
+msgstr ""
+
+msgid "Bible Desktop API key"
+msgstr ""
+
+msgid "The key is saved. Leave the field empty to keep it."
+msgstr ""
+
+msgid "Optional. Without a key, the plugin uses the free public tier. Add a key for higher limits."
+msgstr ""
+
+msgid "Delete the saved key"
+msgstr ""
+
+msgid "Timeout"
+msgstr ""
+
+msgid "seconds"
+msgstr ""
+
+msgid "Save settings"
+msgstr ""
+
+msgid "Check connection"
+msgstr ""
+
+msgid "The check does not send text to OpenAI and does not spend money."
+msgstr ""
+
+msgid "Insufficient permissions."
+msgstr ""
+
+msgid "Connection established. The Bible Desktop API is available."
+msgstr ""
+
+msgid "Could not connect: %s"
+msgstr ""
+
+msgid "Church Slavonic Translator"
+msgstr ""
+
+msgid "Translating…"
+msgstr ""
+
+msgid "Translation could not be completed."
+msgstr ""
+
+msgid "Recognized as %s"
+msgstr ""
+
+msgid "Ready — the result was loaded from cache."
+msgstr ""
+
+msgid "Ready."
+msgstr ""
+
+msgid "Copied"
+msgstr ""
+
+msgid "Could not copy"
+msgstr ""
+
+msgid "Plain text copied"
+msgstr ""
+
+msgid "Text to translate"
+msgstr ""
+
+msgid "Enter Russian or German text"
+msgstr ""
+
+msgid "Source language"
+msgstr ""
+
+msgid "Detect automatically"
+msgstr ""
+
+msgid "Russian"
+msgstr ""
+
+msgid "German"
+msgstr ""
+
+msgid "Orthography"
+msgstr ""
+
+msgid "Accents"
+msgstr ""
+
+msgid "Titlo"
+msgstr ""
+
+msgid "Breathings"
+msgstr ""
+
+msgid "Slavonic numbers"
+msgstr ""
+
+msgid "Translate"
+msgstr ""
+
+msgid "Copy text"
+msgstr ""
+
+msgid "Copy with formatting"
+msgstr ""
+
+msgid "Download font"
+msgstr ""
+
+msgid "After downloading, open MonomakhUnicode.ttf and click Install. If Word does not select it automatically, select the pasted text and assign Monomakh Unicode manually."
+msgstr ""
+
+msgid "Enter text to translate."
+msgstr ""
+
+msgid "The selected source language is not supported."
+msgstr ""
+
+msgid "The text is too long."
+msgstr ""
+
+msgid "Could not connect to Bible Desktop."
+msgstr ""
+
+msgid "The Bible Desktop API key is invalid."
+msgstr ""
+
+msgid "Check the entered text and translation settings."
+msgstr ""
+
+msgid "The translation request limit has been reached. Please try again later."
+msgstr ""
+
+msgid "The higher translation limit has been reached. Please try again later."
+msgstr ""
+
+msgid "The free daily limit has been reached. Add an API key for higher limits or try again after the reset."
+msgstr ""
+
+msgid "The translation service is temporarily unavailable."
+msgstr ""
+
+msgid "Bible Desktop returned HTTP error %d."
+msgstr ""

@@ -1,0 +1,70 @@
+name: Build and release WordPress plugin
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          coverage: none
+
+      - name: Verify version and syntax
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          version="$(sed -n 's/^ \* Version: \(.*\)$/\1/p' wp-cu-translator.php)"
+          stable="$(sed -n 's/^Stable tag: \(.*\)$/\1/p' readme.txt)"
+          test "$TAG" = "$version"
+          test "$TAG" = "$stable"
+          find . -name '*.php' -not -path './.git/*' -print0 | xargs -0 -n1 php -l
+          node --check assets/wp-cu-translator.js
+          node --check scripts/build-translations.mjs
+          node scripts/build-translations.mjs
+          git diff --exit-code -- languages
+
+      - name: Build installation ZIP
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          package="$RUNNER_TEMP/wp-cu-translator-package"
+          mkdir -p "$package/wp-cu-translator"
+          rsync -a --exclude-from=.distignore ./ "$package/wp-cu-translator/"
+          (cd "$package" && zip -qr "$GITHUB_WORKSPACE/wp-cu-translator-$TAG.zip" wp-cu-translator)
+          cp "wp-cu-translator-$TAG.zip" wp-cu-translator.zip
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$TAG" "wp-cu-translator-$TAG.zip" wp-cu-translator.zip \
+            --title "WP CU Translator $TAG" \
+            --generate-notes
+
+  deploy-wordpress-org:
+    if: ${{ vars.WORDPRESS_ORG_ENABLED == 'true' }}
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to WordPress.org
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: wp-cu-translator

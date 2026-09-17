@@ -1,0 +1,17 @@
+.git
+.github
+.gitignore
+.gitattributes
+.distignore
+node_modules
+scripts
+tests
+test
+tmp
+.idea
+.vscode
+*.log
+*.zip
+README.md
+CHANGELOG.md
+PROJECT_STATUS.md

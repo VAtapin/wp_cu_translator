@@ -1,0 +1,164 @@
+msgid ""
+msgstr "Project-Id-Version: WP CU Translator 1.0.0\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-09-17 00:00+0000\nPO-Revision-Date: 2026-09-17 00:00+0000\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\nX-Domain: wp-cu-translator\n"
+
+msgid "WP CU Translator"
+msgstr "WP CU Translator — церковнославянский переводчик"
+
+msgid "Church Slavonic translator for WordPress powered by the Bible Desktop API."
+msgstr "Церковнославянский переводчик для WordPress на основе API Bible Desktop."
+
+msgid "Enter a valid Bible Desktop HTTPS URL."
+msgstr "Укажите корректный HTTPS-адрес Bible Desktop."
+
+msgid "Add the form with [wp_cu_translator]. The free tier works without a key; an optional key enables higher limits and always stays on the WordPress server."
+msgstr "Добавьте форму шорткодом [wp_cu_translator]. Бесплатный режим работает без ключа; необязательный ключ включает повышенные лимиты и всегда остаётся на сервере WordPress."
+
+msgid "Bible Desktop URL"
+msgstr "Адрес Bible Desktop"
+
+msgid "Example:"
+msgstr "Например:"
+
+msgid "Bible Desktop API key"
+msgstr "Ключ Bible Desktop API"
+
+msgid "The key is saved. Leave the field empty to keep it."
+msgstr "Ключ сохранён. Оставьте поле пустым, чтобы не менять его."
+
+msgid "Optional. Without a key, the plugin uses the free public tier. Add a key for higher limits."
+msgstr "Необязательно. Без ключа плагин использует бесплатный публичный режим. Добавьте ключ для повышенных лимитов."
+
+msgid "Delete the saved key"
+msgstr "Удалить сохранённый ключ"
+
+msgid "Timeout"
+msgstr "Таймаут"
+
+msgid "seconds"
+msgstr "секунд"
+
+msgid "Save settings"
+msgstr "Сохранить настройки"
+
+msgid "Check connection"
+msgstr "Проверить соединение"
+
+msgid "The check does not send text to OpenAI and does not spend money."
+msgstr "Проверка не отправляет текст в OpenAI и не расходует деньги."
+
+msgid "Insufficient permissions."
+msgstr "Недостаточно прав."
+
+msgid "Connection established. The Bible Desktop API is available."
+msgstr "Соединение установлено. Bible Desktop API доступен."
+
+msgid "Could not connect: %s"
+msgstr "Не удалось подключиться: %s"
+
+msgid "Church Slavonic Translator"
+msgstr "Церковнославянский переводчик"
+
+msgid "Translating…"
+msgstr "Переводим…"
+
+msgid "Translation could not be completed."
+msgstr "Перевод не выполнен."
+
+msgid "Recognized as %s"
+msgstr "Распознано как %s"
+
+msgid "Ready — the result was loaded from cache."
+msgstr "Готово — результат взят из кэша."
+
+msgid "Ready."
+msgstr "Готово."
+
+msgid "Copied"
+msgstr "Скопировано"
+
+msgid "Could not copy"
+msgstr "Не удалось скопировать"
+
+msgid "Plain text copied"
+msgstr "Скопирован обычный текст"
+
+msgid "Text to translate"
+msgstr "Текст для перевода"
+
+msgid "Enter Russian or German text"
+msgstr "Введите русский или немецкий текст"
+
+msgid "Source language"
+msgstr "Исходный язык"
+
+msgid "Detect automatically"
+msgstr "Определить автоматически"
+
+msgid "Russian"
+msgstr "Русский"
+
+msgid "German"
+msgstr "Немецкий"
+
+msgid "Orthography"
+msgstr "Написание"
+
+msgid "Accents"
+msgstr "Ударения"
+
+msgid "Titlo"
+msgstr "Титла"
+
+msgid "Breathings"
+msgstr "Придыхания"
+
+msgid "Slavonic numbers"
+msgstr "Славянские числа"
+
+msgid "Translate"
+msgstr "Перевести"
+
+msgid "Copy text"
+msgstr "Копировать текст"
+
+msgid "Copy with formatting"
+msgstr "Копировать с форматированием"
+
+msgid "Download font"
+msgstr "Скачать шрифт"
+
+msgid "After downloading, open MonomakhUnicode.ttf and click Install. If Word does not select it automatically, select the pasted text and assign Monomakh Unicode manually."
+msgstr "После скачивания откройте файл MonomakhUnicode.ttf и нажмите «Установить». Если Word не выберет шрифт автоматически, выделите текст и назначьте Monomakh Unicode вручную."
+
+msgid "Enter text to translate."
+msgstr "Введите текст для перевода."
+
+msgid "The selected source language is not supported."
+msgstr "Выбранный исходный язык не поддерживается."
+
+msgid "The text is too long."
+msgstr "Текст слишком длинный."
+
+msgid "Could not connect to Bible Desktop."
+msgstr "Не удалось подключиться к Bible Desktop."
+
+msgid "The Bible Desktop API key is invalid."
+msgstr "Ключ Bible Desktop API недействителен."
+
+msgid "Check the entered text and translation settings."
+msgstr "Проверьте введённый текст и настройки перевода."
+
+msgid "The translation request limit has been reached. Please try again later."
+msgstr "Достигнут лимит запросов на перевод. Попробуйте позже."
+
+msgid "The higher translation limit has been reached. Please try again later."
+msgstr "Достигнут повышенный лимит переводов. Попробуйте снова позже."
+
+msgid "The free daily limit has been reached. Add an API key for higher limits or try again after the reset."
+msgstr "Достигнут бесплатный суточный лимит. Добавьте API-ключ для повышенных лимитов или повторите после сброса."
+
+msgid "The translation service is temporarily unavailable."
+msgstr "Сервис перевода временно недоступен."
+
+msgid "Bible Desktop returned HTTP error %d."
+msgstr "Bible Desktop вернул ошибку HTTP %d."

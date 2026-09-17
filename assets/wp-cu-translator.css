@@ -1,0 +1,155 @@
+.wp-cu-translator {
+    box-sizing: border-box;
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid #dedbd3;
+    border-radius: 14px;
+    background: #fffdf8;
+    color: #28251f;
+}
+.wp-cu-translator *,
+.wp-cu-translator *::before,
+.wp-cu-translator *::after {
+    box-sizing: inherit;
+}
+
+.wp-cu-translator__title {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+.wp-cu-translator__label,
+.wp-cu-translator__options {
+    display: grid;
+    gap: .45rem;
+    font-weight: 600;
+}
+
+.wp-cu-translator textarea,
+.wp-cu-translator select {
+    width: 100%;
+    padding: .75rem;
+    border: 1px solid #aaa49a;
+    border-radius: 8px;
+    background: #fff;
+    color: inherit;
+    font: inherit;
+}
+
+.wp-cu-translator textarea {
+    resize: vertical;
+}
+
+.wp-cu-translator__grid {
+    display: grid;
+    grid-template-columns: minmax(190px, .7fr) minmax(260px, 1.3fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.wp-cu-translator__options {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    margin: 0;
+    padding: .7rem .85rem;
+    border: 1px solid #dedbd3;
+    border-radius: 8px;
+    font-weight: 400;
+}
+
+.wp-cu-translator__options legend {
+    padding: 0 .3rem;
+    font-weight: 600;
+}
+
+.wp-cu-translator__submit,
+.wp-cu-translator__actions button,
+.wp-cu-translator__actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: .65rem 1rem;
+    border: 1px solid #7d2e1d;
+    border-radius: 8px;
+    background: #7d2e1d;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.wp-cu-translator__submit {
+    margin-top: 1rem;
+}
+
+.wp-cu-translator__submit:disabled {
+    opacity: .6;
+    cursor: wait;
+}
+
+.wp-cu-translator__status {
+    min-height: 1.5em;
+    margin: .75rem 0 0;
+}
+
+.wp-cu-translator__status--error {
+    color: #a21b1b;
+}
+
+.wp-cu-translator__result {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #dedbd3;
+}
+
+.wp-cu-translator__match {
+    margin: 0 0 .75rem;
+    color: #655e53;
+    font-size: .95rem;
+}
+
+.wp-cu-translator__text {
+    min-height: 5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #f5f0e5;
+    font-family: "Monomakh Unicode", "Times New Roman", serif;
+    font-size: 1.25rem;
+    line-height: 1.65;
+    white-space: pre-wrap;
+}
+
+.wp-cu-translator__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .65rem;
+    margin-top: 1rem;
+}
+
+.wp-cu-translator__actions button,
+.wp-cu-translator__actions a {
+    border-color: #6d675e;
+    background: transparent;
+    color: #3a352e;
+    font-size: .92rem;
+}
+
+.wp-cu-translator__hint {
+    margin: .75rem 0 0;
+    color: #655e53;
+    font-size: .9rem;
+}
+
+@media (max-width: 640px) {
+    .wp-cu-translator__grid,
+    .wp-cu-translator__options {
+        grid-template-columns: 1fr;
+    }
+
+    .wp-cu-translator__actions > * {
+        width: 100%;
+    }
+}
