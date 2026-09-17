@@ -1,17 +1,18 @@
-=== WP CU Translator ===
+=== Church Slavonic Translator ===
 Contributors: atapin
-Tags: church-slavonic, translator, bible, language
+Tags: church slavonic, translator, bible, orthodox, ai
 Requires at least: 6.3
+Tested up to: 7.1
 Requires PHP: 8.0
 Stable tag: 1.0.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Church Slavonic translator for WordPress powered by the Bible Desktop API.
+Translate text into Church Slavonic using the Bible Desktop translation service.
 
 == Description ==
 
-WP CU Translator adds a compact translation form through the `[wp_cu_translator]` shortcode. It accepts Russian and German text, supports automatic language detection and lets the visitor choose accents, titlo, breathings and Slavonic numbers.
+Church Slavonic Translator adds a compact translation form through the `[wp_cu_translator]` shortcode. It accepts Russian and German text, supports automatic language detection and lets the visitor choose accents, titlo, breathings and Slavonic numbers.
 
 The plugin works without an API key using the free public Bible Desktop API tier. The free tier has usage limits to protect the service and control external AI processing costs. An optional API key can be configured for higher limits and additional authorized functionality. No secret API credentials are bundled with the plugin.
 
@@ -23,11 +24,11 @@ Biblical references, exact verses, confidently recognized quotations and cached 
 
 == Installation ==
 
-1. In WordPress open **Plugins → Add New → Upload Plugin** and upload `wp-cu-translator.zip`.
-2. Activate **WP CU Translator**. The free public tier works immediately.
-3. Optionally create a key under **Bible Desktop → System → AI integration → External sites** and save it under **Settings → WP CU Translator** for higher limits.
-5. Use **Check connection**. This check does not call OpenAI.
-6. Add `[wp_cu_translator]` to a page.
+1. In WordPress open **Plugins → Add New → Upload Plugin** and upload `church-slavonic-translator.zip`.
+2. Activate **Church Slavonic Translator**. The free public tier works immediately.
+3. Optionally create a key under **Bible Desktop → System → AI integration → External sites** and save it under **Settings → Church Slavonic Translator** for higher limits.
+4. Use **Check connection**. This check does not call OpenAI.
+5. Add `[wp_cu_translator]` to a page.
 
 Optional custom title:
 

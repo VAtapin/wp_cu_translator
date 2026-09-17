@@ -1,4 +1,4 @@
-# WP CU Translator
+# Church Slavonic Translator
 
 WordPress-плагин для перевода русского и немецкого текста на церковнославянский язык через [Bible Desktop](https://bible-desktop.com/).
 
@@ -6,13 +6,13 @@ WordPress-плагин для перевода русского и немецк�
 
 ## Установка
 
-Готовый архив последней версии: [wp-cu-translator.zip](https://github.com/VAtapin/wp_cu_translator/releases/latest/download/wp-cu-translator.zip).
+После следующего подтверждённого GitHub Release установочный архив будет доступен как `church-slavonic-translator.zip`. До этого используйте локально проверенный ZIP из сборки проекта.
 
-1. В WordPress выберите **Плагины → Добавить новый → Загрузить плагин** и загрузите `wp-cu-translator.zip`.
-2. Активируйте **WP CU Translator** — бесплатный режим уже готов к работе.
-3. При необходимости повышенных лимитов создайте ключ в **Bible Desktop → Система → ИИ-интеграция → Подключение внешних сайтов** и сохраните его в **Настройки → WP CU Translator**.
-5. Нажмите **Проверить соединение**. Проверка не вызывает OpenAI и не расходует деньги.
-6. Добавьте на страницу шорткод `[wp_cu_translator]`.
+1. В WordPress выберите **Плагины → Добавить новый → Загрузить плагин** и загрузите `church-slavonic-translator.zip`.
+2. Активируйте **Church Slavonic Translator** — бесплатный режим уже готов к работе.
+3. При необходимости повышенных лимитов создайте ключ в **Bible Desktop → Система → ИИ-интеграция → Подключение внешних сайтов** и сохраните его в **Настройки → Church Slavonic Translator**.
+4. Нажмите **Проверить соединение**. Проверка не вызывает OpenAI и не расходует деньги.
+5. Добавьте на страницу шорткод `[wp_cu_translator]`.
 
 Требования: WordPress 6.3 или новее, PHP 8.0 или новее, HTTPS-доступ к `bible-desktop.com`.
 
@@ -46,11 +46,11 @@ WordPress-плагин для перевода русского и немецк�
 
 ## Разработка и выпуск
 
-Номер версии должен совпадать в заголовке `wp-cu-translator.php`, `readme.txt` и Git-теге. Тег `1.0.0` запускает GitHub Actions, который:
+Номер версии должен совпадать в заголовке `church-slavonic-translator.php`, `readme.txt` и Git-теге. Тег версии запускает GitHub Actions, который:
 
 1. проверяет версии и синтаксис PHP/JavaScript;
 2. проверяет и пересобирает каталоги переводов;
-3. собирает архивы `wp-cu-translator-1.0.0.zip` и `wp-cu-translator.zip`;
+3. собирает архивы `church-slavonic-translator-1.0.0.zip` и `church-slavonic-translator.zip`;
 4. создаёт GitHub Release с обоими файлами.
 
 Публикация в WordPress.org отключена, пока переменная репозитория `WORDPRESS_ORG_ENABLED` не получит значение `true` и не будут настроены секреты `SVN_USERNAME` и `SVN_PASSWORD`.

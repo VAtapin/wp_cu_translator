@@ -1,10 +1,10 @@
 msgid ""
-msgstr "Project-Id-Version: WP CU Translator 1.0.0\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-09-17 00:00+0000\nPO-Revision-Date: 2026-09-17 00:00+0000\nLanguage: LANGUAGE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=INTEGER; plural=EXPRESSION;\nX-Domain: wp-cu-translator\n"
+msgstr "Project-Id-Version: Church Slavonic Translator 1.0.0\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-09-17 00:00+0000\nPO-Revision-Date: 2026-09-17 00:00+0000\nLanguage: LANGUAGE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=INTEGER; plural=EXPRESSION;\nX-Domain: church-slavonic-translator\n"
 
-msgid "WP CU Translator"
+msgid "Church Slavonic Translator"
 msgstr ""
 
-msgid "Church Slavonic translator for WordPress powered by the Bible Desktop API."
+msgid "Translate text into Church Slavonic using the Bible Desktop translation service."
 msgstr ""
 
 msgid "Enter a valid Bible Desktop HTTPS URL."
@@ -53,9 +53,6 @@ msgid "Connection established. The Bible Desktop API is available."
 msgstr ""
 
 msgid "Could not connect: %s"
-msgstr ""
-
-msgid "Church Slavonic Translator"
 msgstr ""
 
 msgid "Translating…"

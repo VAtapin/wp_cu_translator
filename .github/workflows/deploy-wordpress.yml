@@ -25,7 +25,7 @@ jobs:
         env:
           TAG: ${{ github.ref_name }}
         run: |
-          version="$(sed -n 's/^ \* Version: \(.*\)$/\1/p' wp-cu-translator.php)"
+          version="$(sed -n 's/^ \* Version: \(.*\)$/\1/p' church-slavonic-translator.php)"
           stable="$(sed -n 's/^Stable tag: \(.*\)$/\1/p' readme.txt)"
           test "$TAG" = "$version"
           test "$TAG" = "$stable"
@@ -39,19 +39,19 @@ jobs:
         env:
           TAG: ${{ github.ref_name }}
         run: |
-          package="$RUNNER_TEMP/wp-cu-translator-package"
-          mkdir -p "$package/wp-cu-translator"
-          rsync -a --exclude-from=.distignore ./ "$package/wp-cu-translator/"
-          (cd "$package" && zip -qr "$GITHUB_WORKSPACE/wp-cu-translator-$TAG.zip" wp-cu-translator)
-          cp "wp-cu-translator-$TAG.zip" wp-cu-translator.zip
+          package="$RUNNER_TEMP/church-slavonic-translator-package"
+          mkdir -p "$package/church-slavonic-translator"
+          rsync -a --exclude-from=.distignore ./ "$package/church-slavonic-translator/"
+          (cd "$package" && zip -qr "$GITHUB_WORKSPACE/church-slavonic-translator-$TAG.zip" church-slavonic-translator)
+          cp "church-slavonic-translator-$TAG.zip" church-slavonic-translator.zip
 
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.ref_name }}
         run: |
-          gh release create "$TAG" "wp-cu-translator-$TAG.zip" wp-cu-translator.zip \
-            --title "WP CU Translator $TAG" \
+          gh release create "$TAG" "church-slavonic-translator-$TAG.zip" church-slavonic-translator.zip \
+            --title "Church Slavonic Translator $TAG" \
             --generate-notes
 
   deploy-wordpress-org:
@@ -67,4 +67,4 @@ jobs:
         env:
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-          SLUG: wp-cu-translator
+          SLUG: church-slavonic-translator

@@ -2,8 +2,8 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const translations = {
-  'WP CU Translator': ['WP CU Translator — церковнославянский переводчик', 'WP CU Translator – Kirchenslawischer Übersetzer'],
-  'Church Slavonic translator for WordPress powered by the Bible Desktop API.': ['Церковнославянский переводчик для WordPress на основе API Bible Desktop.', 'Kirchenslawischer Übersetzer für WordPress mit der Bible Desktop API.'],
+  'Church Slavonic Translator': ['Церковнославянский переводчик', 'Kirchenslawischer Übersetzer'],
+  'Translate text into Church Slavonic using the Bible Desktop translation service.': ['Перевод текста на церковнославянский язык с помощью сервиса Bible Desktop.', 'Übersetzt Texte mit dem Übersetzungsdienst Bible Desktop ins Kirchenslawische.'],
   'Enter a valid Bible Desktop HTTPS URL.': ['Укажите корректный HTTPS-адрес Bible Desktop.', 'Geben Sie eine gültige HTTPS-Adresse von Bible Desktop ein.'],
   'Add the form with [wp_cu_translator]. The free tier works without a key; an optional key enables higher limits and always stays on the WordPress server.': ['Добавьте форму шорткодом [wp_cu_translator]. Бесплатный режим работает без ключа; необязательный ключ включает повышенные лимиты и всегда остаётся на сервере WordPress.', 'Fügen Sie das Formular mit [wp_cu_translator] hinzu. Der kostenlose Tarif funktioniert ohne Schlüssel; ein optionaler Schlüssel ermöglicht höhere Limits und bleibt immer auf dem WordPress-Server.'],
   'Bible Desktop URL': ['Адрес Bible Desktop', 'Bible-Desktop-Adresse'],
@@ -67,7 +67,7 @@ const escapePo = (value) => JSON.stringify(value);
 
 function metadata(locale, plural) {
   return [
-    'Project-Id-Version: WP CU Translator 1.0.0',
+    'Project-Id-Version: Church Slavonic Translator 1.0.0',
     'Report-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues',
     'POT-Creation-Date: 2026-09-17 00:00+0000',
     'PO-Revision-Date: 2026-09-17 00:00+0000',
@@ -76,7 +76,7 @@ function metadata(locale, plural) {
     'Content-Type: text/plain; charset=UTF-8',
     'Content-Transfer-Encoding: 8bit',
     'Plural-Forms: ' + plural,
-    'X-Domain: wp-cu-translator',
+    'X-Domain: church-slavonic-translator',
     '',
   ].join('\n');
 }
@@ -145,9 +145,9 @@ function moBuffer(locale, index, plural) {
   return output;
 }
 
-const source = readFileSync(resolve('wp-cu-translator.php'), 'utf8');
+const source = readFileSync(resolve('church-slavonic-translator.php'), 'utf8');
 const extracted = new Set([...source.matchAll(/(?:__|esc_html__|esc_attr__)\(\s*'([^']+)'/g)].map((match) => match[1]));
-for (const required of ['WP CU Translator', 'Church Slavonic translator for WordPress powered by the Bible Desktop API.']) extracted.add(required);
+for (const required of ['Church Slavonic Translator', 'Translate text into Church Slavonic using the Bible Desktop translation service.']) extracted.add(required);
 const missing = [...extracted].filter((msgid) => !Object.hasOwn(translations, msgid));
 const stale = Object.keys(translations).filter((msgid) => !extracted.has(msgid));
 if (missing.length || stale.length) {
@@ -155,10 +155,10 @@ if (missing.length || stale.length) {
 }
 
 mkdirSync(resolve('languages'), { recursive: true });
-writeFileSync(resolve('languages/wp-cu-translator.pot'), potDocument());
+writeFileSync(resolve('languages/church-slavonic-translator.pot'), potDocument());
 for (const [locale, details] of Object.entries(locales)) {
-  writeFileSync(resolve(`languages/wp-cu-translator-${locale}.po`), poDocument(locale, details.index, details.plural));
-  writeFileSync(resolve(`languages/wp-cu-translator-${locale}.mo`), moBuffer(locale, details.index, details.plural));
+  writeFileSync(resolve(`languages/church-slavonic-translator-${locale}.po`), poDocument(locale, details.index, details.plural));
+  writeFileSync(resolve(`languages/church-slavonic-translator-${locale}.mo`), moBuffer(locale, details.index, details.plural));
 }
 
 console.log(`Generated ${Object.keys(translations).length} translations for ${Object.keys(locales).join(', ')}.`);

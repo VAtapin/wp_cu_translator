@@ -14,7 +14,7 @@ if ($wordpressRoot === false || ! is_file($wordpressRoot.'/wp-load.php')) {
 require $wordpressRoot.'/wp-load.php';
 require_once ABSPATH.'wp-admin/includes/plugin.php';
 
-$pluginFile = WP_PLUGIN_DIR.'/wp-cu-translator/wp-cu-translator.php';
+$pluginFile = WP_PLUGIN_DIR.'/church-slavonic-translator/church-slavonic-translator.php';
 if (! is_file($pluginFile)) {
     throw new RuntimeException('The test plugin is not installed in WordPress.');
 }
@@ -27,20 +27,20 @@ if (! wp_is_uuid($installationId, 4) || $installationId !== wp_cu_translator_ins
 
 $expected = [
     'en_US' => [
-        'name' => 'WP CU Translator',
-        'description' => 'Church Slavonic translator for WordPress powered by the Bible Desktop API.',
+        'name' => 'Church Slavonic Translator',
+        'description' => 'Translate text into Church Slavonic using the Bible Desktop translation service.',
         'title' => 'Church Slavonic Translator',
         'translating' => 'Translating…',
     ],
     'ru_RU' => [
-        'name' => 'WP CU Translator — церковнославянский переводчик',
-        'description' => 'Церковнославянский переводчик для WordPress на основе API Bible Desktop.',
+        'name' => 'Церковнославянский переводчик',
+        'description' => 'Перевод текста на церковнославянский язык с помощью сервиса Bible Desktop.',
         'title' => 'Церковнославянский переводчик',
         'translating' => 'Переводим…',
     ],
     'de_DE' => [
-        'name' => 'WP CU Translator – Kirchenslawischer Übersetzer',
-        'description' => 'Kirchenslawischer Übersetzer für WordPress mit der Bible Desktop API.',
+        'name' => 'Kirchenslawischer Übersetzer',
+        'description' => 'Übersetzt Texte mit dem Übersetzungsdienst Bible Desktop ins Kirchenslawische.',
         'title' => 'Kirchenslawischer Übersetzer',
         'translating' => 'Übersetzung läuft…',
     ],
@@ -49,10 +49,10 @@ if (! isset($expected[$locale])) {
     throw new RuntimeException('Unsupported smoke-test locale.');
 }
 
-unload_textdomain('wp-cu-translator');
+unload_textdomain('church-slavonic-translator');
 if ($locale !== 'en_US') {
-    $catalog = dirname($pluginFile).'/languages/wp-cu-translator-'.$locale.'.mo';
-    if (! load_textdomain('wp-cu-translator', $catalog)) {
+    $catalog = dirname($pluginFile).'/languages/church-slavonic-translator-'.$locale.'.mo';
+    if (! load_textdomain('church-slavonic-translator', $catalog)) {
         throw new RuntimeException('Could not load '.$catalog);
     }
 }

@@ -1,26 +1,26 @@
-# WP CU Translator — состояние проекта
+# Church Slavonic Translator — состояние проекта
 
 ## Реализовано
 
-- Подготовлен WordPress-плагин версии 1.0.0 с шорткодом `[wp_cu_translator]`.
+- Подготовлен WordPress-плагин `Church Slavonic Translator` версии 1.0.0 с WordPress.org slug/text domain `church-slavonic-translator` и шорткодом `[wp_cu_translator]`.
 - Перевод выполняется через внешний серверный API Bible Desktop; бесплатный режим работает без ключа, а необязательный ключ повышенных лимитов не передаётся браузеру.
 - При активации создаётся постоянный Installation ID (UUID); бесплатная ИИ-квота учитывается на установку, а не на посетителя.
 - Доступны русский, немецкий, автоопределение языка и параметры церковнославянской орфографии.
 - Добавлены обычное и форматированное копирование, ссылка на Monomakh Unicode и инструкция для Word.
 - Добавлены настройки подключения и бесплатная проверка статуса без вызова OpenAI.
 - Название, описание, админка и публичная форма локализованы на английский, русский и немецкий; язык выбирает WordPress.
-- Подготовлены WordPress `readme.txt`, GitHub README, changelog, release-исключения и tag-driven GitHub Actions workflow.
+- Подготовлены WordPress `readme.txt` с `Tested up to: 7.1`, GitHub README, changelog, `.distignore` и tag-driven GitHub Actions workflow с `10up/action-wordpress-plugin-deploy@stable`.
 
 ## Текущее состояние и решения
 
 - Репозиторий плагина: `VAtapin/wp_cu_translator`.
 - Публичная страница плагина (`Plugin URI`): `https://kalender.georg-kloster.ru/calendar-api`.
 - Плагин всегда передаёт имя клиента, Installation ID и необратимый идентификатор посетителя; `X-API-Key` добавляется только при его настройке.
-- Публичное имя: `WP CU Translator`; slug и каталог ZIP: `wp-cu-translator`.
+- Публичное имя: `Church Slavonic Translator`; slug, text domain и каталог ZIP: `church-slavonic-translator`.
 - Текущая версия: `1.0.0`.
 - GitHub Release создаётся тегом, совпадающим с версией без префикса `v`.
 - WordPress.org deployment выключен до настройки переменной `WORDPRESS_ORG_ENABLED=true` и SVN-секретов.
-- Первый GitHub Release `1.0.0` опубликован с архивами `wp-cu-translator-1.0.0.zip` и `wp-cu-translator.zip`; публикация в WordPress.org не выполнялась.
+- Ранее опубликованный GitHub Release `1.0.0` содержит архивы со старым именем `wp-cu-translator` и предшествует подготовке для WordPress.org. Он не изменялся: новый tag/release и публикация в WordPress.org требуют отдельного решения владельца.
 
 ## Известные проблемы
 
@@ -29,16 +29,17 @@
 ## Следующие действия
 
 - Обновить Bible Desktop и проверить бесплатный и ключевой режимы плагина на целевом WordPress.
-- После обновления production API установить `wp-cu-translator.zip` из GitHub Release и проверить настоящий перевод в бесплатном и ключевом режимах.
+- Перед новым GitHub Release решить конфликт уже занятого тега `1.0.0`: отдельно подтвердить пересоздание старого релиза либо поднять версию.
+- После обновления production API установить финальный ZIP и проверить настоящий перевод в бесплатном и ключевом режимах.
 
 ## Последние проверки
 
-- PHP syntax lint главного файла и uninstall-скрипта прошёл.
-- `node --check assets/wp-cu-translator.js` прошёл.
-- Каталог из 54 строк проверен и собран в POT, русские и немецкие PO/MO-файлы воспроизводимым Node-скриптом.
-- Версии `wp-cu-translator.php` и `readme.txt` совпадают: `1.0.0`.
-- Проверочная сборка ZIP прошла; архив содержит один корневой каталог `wp-cu-translator`, код, assets и пять файлов локализации без release-служебных файлов.
-- В реальном локальном WordPress/SQLite smoke-тест подтвердил Plugin URI, постоянный UUID установки, английские, русские и немецкие название/описание плагина, HTML шорткода и JavaScript-сообщения. Интерактивный браузерный тест перевода ещё не выполнялся, поскольку внешний API пока не опубликован на production.
-- Release workflow проверил версии, PHP/JavaScript, воспроизводимость переводов и собрал оба ZIP-архива; WordPress.org job остался выключен.
+- PHP lint главного файла и uninstall-скрипта, `node --check` JavaScript и генератора переводов прошли.
+- Каталог из 53 строк проверен и собран в POT, русские и немецкие PO/MO-файлы воспроизводимым Node-скриптом; все gettext-вызовы используют `church-slavonic-translator`.
+- Версии `church-slavonic-translator.php` и `readme.txt` совпадают: `1.0.0`; `Tested up to` подтверждён локальным WordPress 7.1.
+- Финальный ZIP содержит один корневой каталог `church-slavonic-translator`, runtime-код, assets и пять файлов локализации без `.git`, `.github`, тестов, скриптов, логов и секретов.
+- Официальный Plugin Check 2.1.0 завершился сообщением `No errors found`; ошибок и предупреждений нет.
+- В реальном локальном WordPress 7.1/SQLite smoke-тест подтвердил Plugin URI, постоянный UUID установки, английские, русские и немецкие название/описание плагина, HTML шорткода и JavaScript-сообщения.
+- WordPress.org deploy не запускался, новый tag/release не создавался.
 
-Последний связанный commit: Set public plugin URI.
+Последний связанный commit: Prepare Church Slavonic Translator for WordPress.org.
