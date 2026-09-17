@@ -3,7 +3,7 @@
  * Plugin Name: Church Slavonic Translator
  * Plugin URI: https://kalender.georg-kloster.ru/calendar-api
  * Description: Translate text into Church Slavonic using the Bible Desktop translation service.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires at least: 6.3
  * Requires PHP: 8.0
  * Author: Vladimir Atapin
@@ -17,7 +17,7 @@
 if (! defined('ABSPATH')) {
     exit;
 }
-define('WP_CU_TRANSLATOR_VERSION', '1.0.0');
+define('WP_CU_TRANSLATOR_VERSION', '1.0.1');
 define('WP_CU_TRANSLATOR_OPTION', 'wp_cu_translator_settings');
 define('WP_CU_TRANSLATOR_INSTALLATION_OPTION', 'wp_cu_translator_installation_id');
 define('WP_CU_TRANSLATOR_FILE', __FILE__);
@@ -121,12 +121,32 @@ function wp_cu_translator_sanitize_settings($input): array
 
 function wp_cu_translator_admin_menu(): void
 {
-    add_options_page(
+    add_menu_page(
         __('Church Slavonic Translator', 'church-slavonic-translator'),
         __('Church Slavonic Translator', 'church-slavonic-translator'),
         'manage_options',
         'wp-cu-translator',
+        'wp_cu_translator_settings_page',
+        'dashicons-translation',
+        80
+    );
+
+    add_submenu_page(
+        'wp-cu-translator',
+        __('Settings', 'church-slavonic-translator'),
+        __('Settings', 'church-slavonic-translator'),
+        'manage_options',
+        'wp-cu-translator',
         'wp_cu_translator_settings_page'
+    );
+
+    add_submenu_page(
+        'wp-cu-translator',
+        __('Shortcodes', 'church-slavonic-translator'),
+        __('Shortcodes', 'church-slavonic-translator'),
+        'manage_options',
+        'wp-cu-translator-shortcodes',
+        'wp_cu_translator_shortcodes_page'
     );
 }
 
@@ -190,7 +210,65 @@ function wp_cu_translator_settings_page(): void
             <?php submit_button(__('Check connection', 'church-slavonic-translator'), 'secondary', 'submit', false); ?>
             <span class="description"><?php echo esc_html__('The check does not send text to OpenAI and does not spend money.', 'church-slavonic-translator'); ?></span>
         </form>
+
+        <hr>
+        <h2><?php echo esc_html__('Shortcodes', 'church-slavonic-translator'); ?></h2>
+        <p><?php echo esc_html__('Add one of these shortcodes in the Shortcode block or HTML block of the WordPress editor.', 'church-slavonic-translator'); ?></p>
+        <?php wp_cu_translator_render_shortcode_reference(); ?>
     </div>
+    <?php
+}
+
+function wp_cu_translator_shortcodes_page(): void
+{
+    if (! current_user_can('manage_options')) {
+        return;
+    }
+    ?>
+    <div class="wrap">
+        <h1><?php echo esc_html__('Shortcodes', 'church-slavonic-translator'); ?></h1>
+        <p><?php echo esc_html__('Add one of these shortcodes in the Shortcode block or HTML block of the WordPress editor.', 'church-slavonic-translator'); ?></p>
+        <?php wp_cu_translator_render_shortcode_reference(); ?>
+    </div>
+    <?php
+}
+
+/**
+ * @return list<array{shortcode: string, description: string}>
+ */
+function wp_cu_translator_shortcodes(): array
+{
+    return [
+        [
+            'shortcode' => '[wp_cu_translator]',
+            'description' => __('Shows the standard Church Slavonic translation form with the default title.', 'church-slavonic-translator'),
+        ],
+        [
+            'shortcode' => '[wp_cu_translator title="Перевод на церковнославянский"]',
+            'description' => __('Shows the same form with a custom heading. Replace the text inside title with your own heading.', 'church-slavonic-translator'),
+        ],
+    ];
+}
+
+function wp_cu_translator_render_shortcode_reference(): void
+{
+    ?>
+    <table class="widefat striped" style="max-width: 900px">
+        <thead>
+            <tr>
+                <th scope="col"><?php echo esc_html__('Shortcode', 'church-slavonic-translator'); ?></th>
+                <th scope="col"><?php echo esc_html__('What it does', 'church-slavonic-translator'); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach (wp_cu_translator_shortcodes() as $shortcode) : ?>
+                <tr>
+                    <td><code><?php echo esc_html($shortcode['shortcode']); ?></code></td>
+                    <td><?php echo esc_html($shortcode['description']); ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
     <?php
 }
 
@@ -215,7 +293,7 @@ function wp_cu_translator_check_connection(): void
         'message' => $message,
     ], MINUTE_IN_SECONDS);
 
-    wp_safe_redirect(admin_url('options-general.php?page=wp-cu-translator'));
+    wp_safe_redirect(admin_url('admin.php?page=wp-cu-translator'));
     exit;
 }
 

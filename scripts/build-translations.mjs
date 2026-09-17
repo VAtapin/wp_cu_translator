@@ -3,6 +3,13 @@ import { resolve } from 'node:path';
 
 const translations = {
   'Church Slavonic Translator': ['Церковнославянский переводчик', 'Kirchenslawischer Übersetzer'],
+  'Settings': ['Настройки', 'Einstellungen'],
+  'Shortcodes': ['Шорткоды', 'Shortcodes'],
+  'Add one of these shortcodes in the Shortcode block or HTML block of the WordPress editor.': ['Добавьте один из этих шорткодов в блок «Шорткод» или HTML-блок редактора WordPress.', 'Fügen Sie einen dieser Shortcodes in den Shortcode-Block oder HTML-Block des WordPress-Editors ein.'],
+  'Shortcode': ['Шорткод', 'Shortcode'],
+  'What it does': ['Назначение', 'Funktion'],
+  'Shows the standard Church Slavonic translation form with the default title.': ['Показывает стандартную форму церковнославянского переводчика с заголовком по умолчанию.', 'Zeigt das Standardformular des kirchenslawischen Übersetzers mit der Standardüberschrift.'],
+  'Shows the same form with a custom heading. Replace the text inside title with your own heading.': ['Показывает ту же форму с собственным заголовком. Замените текст внутри title на свой.', 'Zeigt dasselbe Formular mit einer eigenen Überschrift. Ersetzen Sie den Text in title durch Ihre Überschrift.'],
   'Translate text into Church Slavonic using the Bible Desktop translation service.': ['Перевод текста на церковнославянский язык с помощью сервиса Bible Desktop.', 'Übersetzt Texte mit dem Übersetzungsdienst Bible Desktop ins Kirchenslawische.'],
   'Enter a valid Bible Desktop HTTPS URL.': ['Укажите корректный HTTPS-адрес Bible Desktop.', 'Geben Sie eine gültige HTTPS-Adresse von Bible Desktop ein.'],
   'Add the form with [wp_cu_translator]. The free tier works without a key; an optional key enables higher limits and always stays on the WordPress server.': ['Добавьте форму шорткодом [wp_cu_translator]. Бесплатный режим работает без ключа; необязательный ключ включает повышенные лимиты и всегда остаётся на сервере WordPress.', 'Fügen Sie das Formular mit [wp_cu_translator] hinzu. Der kostenlose Tarif funktioniert ohne Schlüssel; ein optionaler Schlüssel ermöglicht höhere Limits und bleibt immer auf dem WordPress-Server.'],
@@ -67,7 +74,7 @@ const escapePo = (value) => JSON.stringify(value);
 
 function metadata(locale, plural) {
   return [
-    'Project-Id-Version: Church Slavonic Translator 1.0.0',
+    'Project-Id-Version: Church Slavonic Translator 1.0.1',
     'Report-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues',
     'POT-Creation-Date: 2026-09-17 00:00+0000',
     'PO-Revision-Date: 2026-09-17 00:00+0000',

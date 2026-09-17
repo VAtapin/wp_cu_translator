@@ -74,6 +74,11 @@ if (! str_contains($html, $expected[$locale]['title'])) {
     throw new RuntimeException('Translated shortcode title does not match for '.$locale);
 }
 
+$shortcodes = wp_cu_translator_shortcodes();
+if (($shortcodes[0]['shortcode'] ?? '') !== '[wp_cu_translator]' || ! str_contains((string) ($shortcodes[1]['shortcode'] ?? ''), 'title=')) {
+    throw new RuntimeException('Shortcode reference does not list the default and custom-title forms.');
+}
+
 $localizedData = (string) wp_scripts()->get_data('wp-cu-translator', 'data');
 if (! preg_match('/var WPCUTranslator = (.+);/', $localizedData, $match)) {
     throw new RuntimeException('Localized JavaScript configuration was not generated for '.$locale);

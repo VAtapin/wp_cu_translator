@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- Added a dedicated WordPress admin menu for the translator with Settings and Shortcodes pages.
+- Added ready-to-copy shortcode examples and explanations in the plugin administration.
+
 ## 1.0.0
 
 - Added the `[wp_cu_translator]` shortcode and responsive translation form.

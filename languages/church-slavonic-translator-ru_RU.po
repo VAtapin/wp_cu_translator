@@ -1,8 +1,29 @@
 msgid ""
-msgstr "Project-Id-Version: Church Slavonic Translator 1.0.0\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-09-17 00:00+0000\nPO-Revision-Date: 2026-09-17 00:00+0000\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\nX-Domain: church-slavonic-translator\n"
+msgstr "Project-Id-Version: Church Slavonic Translator 1.0.1\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-09-17 00:00+0000\nPO-Revision-Date: 2026-09-17 00:00+0000\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\nX-Domain: church-slavonic-translator\n"
 
 msgid "Church Slavonic Translator"
 msgstr "Церковнославянский переводчик"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Shortcodes"
+msgstr "Шорткоды"
+
+msgid "Add one of these shortcodes in the Shortcode block or HTML block of the WordPress editor."
+msgstr "Добавьте один из этих шорткодов в блок «Шорткод» или HTML-блок редактора WordPress."
+
+msgid "Shortcode"
+msgstr "Шорткод"
+
+msgid "What it does"
+msgstr "Назначение"
+
+msgid "Shows the standard Church Slavonic translation form with the default title."
+msgstr "Показывает стандартную форму церковнославянского переводчика с заголовком по умолчанию."
+
+msgid "Shows the same form with a custom heading. Replace the text inside title with your own heading."
+msgstr "Показывает ту же форму с собственным заголовком. Замените текст внутри title на свой."
 
 msgid "Translate text into Church Slavonic using the Bible Desktop translation service."
 msgstr "Перевод текста на церковнославянский язык с помощью сервиса Bible Desktop."
