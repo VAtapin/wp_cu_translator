@@ -31,7 +31,6 @@
 
 - Обновить Bible Desktop и проверить бесплатный и ключевой режимы плагина на целевом WordPress.
 - Установить ZIP `church-slavonic-translator.zip` из последнего GitHub Release на целевом WordPress и проверить настоящий перевод в бесплатном и ключевом режимах.
-- После обновления production API установить финальный ZIP и проверить настоящий перевод в бесплатном и ключевом режимах.
 
 ## Последние проверки
 
@@ -39,10 +38,9 @@
 - GitHub API подтвердил созданный Release `1.0.1` и оба ZIP-asset, включая постоянное имя для ссылки на последнюю версию.
 - PHP lint главного файла и uninstall-скрипта, `node --check` JavaScript и генератора переводов прошли.
 - Каталог из 53 строк проверен и собран в POT, русские и немецкие PO/MO-файлы воспроизводимым Node-скриптом; все gettext-вызовы используют `church-slavonic-translator`.
-- Версии `church-slavonic-translator.php` и `readme.txt` совпадают: `1.0.0`; `Tested up to` подтверждён локальным WordPress 7.1.
 - Финальный ZIP содержит один корневой каталог `church-slavonic-translator`, runtime-код, assets и пять файлов локализации без `.git`, `.github`, тестов, скриптов, логов и секретов.
 - Официальный Plugin Check 2.1.0 завершился сообщением `No errors found`; ошибок и предупреждений нет.
 - В реальном локальном WordPress 7.1/SQLite smoke-тест подтвердил Plugin URI, постоянный UUID установки, английские, русские и немецкие название/описание плагина, HTML шорткода и JavaScript-сообщения.
-- WordPress.org deploy не запускался, новый tag/release не создавался.
+- WordPress.org deploy не запускался и остаётся выключенным; GitHub Release `1.0.1` опубликован отдельно.
 
-Последний связанный commit: Record 1.0.1 release.
+Последний связанный commit: Correct release status.
