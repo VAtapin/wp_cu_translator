@@ -1,4 +1,116 @@
-.wp-cu-translator__text {
+:where(.wp-cu-translator) {
+    display: block;
+    max-width: 48rem;
+    margin-block: 1.5rem;
+    color: inherit;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__title) {
+    margin: 0 0 1.25rem;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__form) {
+    display: grid;
+    gap: 1rem;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__label) {
+    display: grid;
+    gap: 0.45rem;
+    font-weight: 600;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__textarea),
+:where(.wp-cu-translator .wp-cu-translator__select) {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.7em 0.8em;
+    border: 1px solid #b8b8b8;
+    border-radius: 0.35rem;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__textarea) {
+    min-height: 10rem;
+    resize: vertical;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__grid) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__options) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem 1rem;
+    margin: 0;
+    padding: 0.75rem 1rem 1rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.35rem;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__legend) {
+    padding-inline: 0.25rem;
+    font-weight: 600;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__option) {
+    display: flex;
+    gap: 0.45rem;
+    align-items: center;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__checkbox) {
+    inline-size: 1rem;
+    block-size: 1rem;
+    margin: 0;
+    accent-color: currentColor;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__submit),
+:where(.wp-cu-translator .wp-cu-translator__action) {
+    inline-size: fit-content;
+    padding: 0.65em 1em;
+    border: 1px solid currentColor;
+    border-radius: 0.35rem;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__actions) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1rem;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__status),
+:where(.wp-cu-translator .wp-cu-translator__match),
+:where(.wp-cu-translator .wp-cu-translator__hint) {
+    margin: 0;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__result) {
+    margin-top: 1.5rem;
+}
+
+:where(.wp-cu-translator .wp-cu-translator__text) {
+    margin-top: 0.75rem;
     font-family: "Monomakh Unicode", "Times New Roman", serif;
+    line-height: 1.65;
     white-space: pre-wrap;
+}
+
+@media (max-width: 38rem) {
+    :where(.wp-cu-translator .wp-cu-translator__grid),
+    :where(.wp-cu-translator .wp-cu-translator__options) {
+        grid-template-columns: 1fr;
+    }
 }

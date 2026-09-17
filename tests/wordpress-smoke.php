@@ -77,9 +77,30 @@ if (! str_contains($html, '<h3 class="wp-cu-translator__title">')) {
     throw new RuntimeException('Translator shortcode title must use an h3 heading.');
 }
 
-$stylesheet = trim((string) file_get_contents(dirname($pluginFile).'/assets/wp-cu-translator.css'));
-if ($stylesheet !== ".wp-cu-translator__text {\n    font-family: \"Monomakh Unicode\", \"Times New Roman\", serif;\n    white-space: pre-wrap;\n}") {
-    throw new RuntimeException('Translator stylesheet must contain only the Church Slavonic result text style.');
+$stylesheet = (string) file_get_contents(dirname($pluginFile).'/assets/wp-cu-translator.css');
+foreach ([
+    ':where(.wp-cu-translator)',
+    ':where(.wp-cu-translator .wp-cu-translator__form)',
+    ':where(.wp-cu-translator .wp-cu-translator__grid)',
+    ':where(.wp-cu-translator .wp-cu-translator__options)',
+    'font-family: "Monomakh Unicode", "Times New Roman", serif;',
+] as $expectedCss) {
+    if (! str_contains($stylesheet, $expectedCss)) {
+        throw new RuntimeException('Translator stylesheet is missing its universal frontend rule: '.$expectedCss);
+    }
+}
+if (str_contains($stylesheet, '!important')) {
+    throw new RuntimeException('Translator stylesheet must not use !important.');
+}
+foreach ([
+    'class="wp-cu-translator__textarea"',
+    'class="wp-cu-translator__select"',
+    'class="wp-cu-translator__option"',
+    'class="wp-cu-translator__action"',
+] as $expectedClass) {
+    if (! str_contains($html, $expectedClass)) {
+        throw new RuntimeException('Translator frontend HTML is missing its styling hook: '.$expectedClass);
+    }
 }
 
 $shortcodes = wp_cu_translator_shortcodes();

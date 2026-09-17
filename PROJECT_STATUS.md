@@ -2,14 +2,14 @@
 
 ## Реализовано
 
-- Подготовлен WordPress-плагин `Church Slavonic Translator` версии 1.0.3 с WordPress.org slug/text domain `church-slavonic-translator` и шорткодом `[wp_cu_translator]`.
+- Подготовлен WordPress-плагин `Church Slavonic Translator` версии 1.0.4 с WordPress.org slug/text domain `church-slavonic-translator` и шорткодом `[wp_cu_translator]`.
 - Перевод выполняется через внешний серверный API Bible Desktop; бесплатный режим работает без ключа, а необязательный ключ повышенных лимитов не передаётся браузеру.
 - При активации создаётся постоянный Installation ID (UUID); бесплатная ИИ-квота учитывается на установку, а не на посетителя.
 - Доступны русский, немецкий, автоопределение языка и параметры церковнославянской орфографии.
 - Добавлены обычное и форматированное копирование, ссылка на Monomakh Unicode и инструкция для Word.
 - Добавлены настройки подключения и бесплатная проверка статуса без вызова OpenAI.
 - Плагин имеет собственное верхнее меню WordPress: «Настройки» для подключения и «Шорткоды» с готовыми примерами и пояснением параметра `title`; та же таблица есть внизу настроек.
-- Заголовок формы — семантический `h3`; весь интерфейс, включая контейнер, поля, кнопки, чекбоксы и компоновку, наследуется от активной темы WordPress. Собственный CSS оставлен только для Monomakh Unicode и переносов строк результата.
+- Заголовок формы — семантический `h3`. Для страниц без собственных правил темы добавлена адаптивная базовая компоновка с нулевой специфичностью `:where()` и без `!important`; CSS сайта может переопределить каждый интерфейсный элемент. Результат сохраняет Monomakh Unicode и переносы строк.
 - Название, описание, админка и публичная форма локализованы на английский, русский и немецкий; язык выбирает WordPress.
 - Подготовлены WordPress `readme.txt` с `Tested up to: 7.1`, GitHub README, changelog, `.distignore` и tag-driven GitHub Actions workflow с `10up/action-wordpress-plugin-deploy@stable`.
 
@@ -19,7 +19,7 @@
 - Публичная страница плагина (`Plugin URI`): `https://kalender.georg-kloster.ru/calendar-api`.
 - Плагин всегда передаёт имя клиента, Installation ID и необратимый идентификатор посетителя; `X-API-Key` добавляется только при его настройке.
 - Публичное имя: `Church Slavonic Translator`; slug, text domain и каталог ZIP: `church-slavonic-translator`.
-- Текущая версия: `1.0.3`.
+- Текущая версия: `1.0.4`.
 - GitHub Release `1.0.3` создан тегом без префикса `v`; в нём опубликованы `church-slavonic-translator-1.0.3.zip` и постоянный `church-slavonic-translator.zip`.
 - WordPress.org deployment выключен до настройки переменной `WORDPRESS_ORG_ENABLED=true` и SVN-секретов.
 - Ранее опубликованный GitHub Release `1.0.0` содержит архивы со старым именем `wp-cu-translator` и предшествует подготовке для WordPress.org. Он не изменялся: новый tag/release и публикация в WordPress.org требуют отдельного решения владельца.
@@ -31,7 +31,7 @@
 ## Следующие действия
 
 - Обновить Bible Desktop и проверить бесплатный и ключевой режимы плагина на целевом WordPress.
-- Установить ZIP `church-slavonic-translator.zip` на целевом WordPress и проверить настоящий перевод в бесплатном и ключевом режимах.
+- Создать GitHub Release `1.0.4`, затем установить ZIP `church-slavonic-translator.zip` на целевом WordPress и проверить настоящий перевод в бесплатном и ключевом режимах.
 
 ## Последние проверки
 
@@ -45,5 +45,6 @@
 - WordPress.org deploy не запускался и остаётся выключенным; GitHub Release `1.0.2` опубликован отдельно.
 - PHP lint главного файла, uninstall-скрипта и smoke-теста, `node --check` JavaScript и генератора локализаций, пересборка EN/RU/DE-каталогов, точная проверка минимального CSS и `git diff --check` прошли для версии 1.0.3.
 - GitHub API подтвердил Release `1.0.3` и оба ZIP-asset, включая постоянное имя для ссылки на последнюю версию.
+- Для версии 1.0.4 прошли PHP lint главного файла и smoke-теста, `node --check` JavaScript и генератора локализаций, пересборка EN/RU/DE-каталогов, проверка совпадения версий и проверка отсутствия `!important` в базовом CSS.
 
-Последний связанный commit: Record 1.0.3 release.
+Последний связанный commit: Add universal translator fallback styling.

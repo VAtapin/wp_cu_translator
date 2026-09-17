@@ -3,7 +3,7 @@
  * Plugin Name: Church Slavonic Translator
  * Plugin URI: https://kalender.georg-kloster.ru/calendar-api
  * Description: Translate text into Church Slavonic using the Bible Desktop translation service.
- * Version: 1.0.3
+ * Version: 1.0.4
  * Requires at least: 6.3
  * Requires PHP: 8.0
  * Author: Vladimir Atapin
@@ -17,7 +17,7 @@
 if (! defined('ABSPATH')) {
     exit;
 }
-define('WP_CU_TRANSLATOR_VERSION', '1.0.3');
+define('WP_CU_TRANSLATOR_VERSION', '1.0.4');
 define('WP_CU_TRANSLATOR_OPTION', 'wp_cu_translator_settings');
 define('WP_CU_TRANSLATOR_INSTALLATION_OPTION', 'wp_cu_translator_installation_id');
 define('WP_CU_TRANSLATOR_FILE', __FILE__);
@@ -340,24 +340,24 @@ function wp_cu_translator_shortcode($attributes = []): string
         <form class="wp-cu-translator__form" data-wp-cu-translator-form>
             <label class="wp-cu-translator__label">
                 <?php echo esc_html__('Text to translate', 'church-slavonic-translator'); ?>
-                <textarea name="text" rows="7" maxlength="20000" required placeholder="<?php echo esc_attr__('Enter Russian or German text', 'church-slavonic-translator'); ?>"></textarea>
+                <textarea class="wp-cu-translator__textarea" name="text" rows="7" maxlength="20000" required placeholder="<?php echo esc_attr__('Enter Russian or German text', 'church-slavonic-translator'); ?>"></textarea>
             </label>
 
             <div class="wp-cu-translator__grid">
                 <label class="wp-cu-translator__label">
                     <?php echo esc_html__('Source language', 'church-slavonic-translator'); ?>
-                    <select name="source_language">
+                    <select class="wp-cu-translator__select" name="source_language">
                         <option value="auto"><?php echo esc_html__('Detect automatically', 'church-slavonic-translator'); ?></option>
                         <option value="ru"><?php echo esc_html__('Russian', 'church-slavonic-translator'); ?></option>
                         <option value="de"><?php echo esc_html__('German', 'church-slavonic-translator'); ?></option>
                     </select>
                 </label>
                 <fieldset class="wp-cu-translator__options">
-                    <legend><?php echo esc_html__('Orthography', 'church-slavonic-translator'); ?></legend>
-                    <label><input type="checkbox" name="accents" checked> <?php echo esc_html__('Accents', 'church-slavonic-translator'); ?></label>
-                    <label><input type="checkbox" name="titlo" checked> <?php echo esc_html__('Titlo', 'church-slavonic-translator'); ?></label>
-                    <label><input type="checkbox" name="breathings" checked> <?php echo esc_html__('Breathings', 'church-slavonic-translator'); ?></label>
-                    <label><input type="checkbox" name="slavonic_numbers"> <?php echo esc_html__('Slavonic numbers', 'church-slavonic-translator'); ?></label>
+                    <legend class="wp-cu-translator__legend"><?php echo esc_html__('Orthography', 'church-slavonic-translator'); ?></legend>
+                    <label class="wp-cu-translator__option"><input class="wp-cu-translator__checkbox" type="checkbox" name="accents" checked> <?php echo esc_html__('Accents', 'church-slavonic-translator'); ?></label>
+                    <label class="wp-cu-translator__option"><input class="wp-cu-translator__checkbox" type="checkbox" name="titlo" checked> <?php echo esc_html__('Titlo', 'church-slavonic-translator'); ?></label>
+                    <label class="wp-cu-translator__option"><input class="wp-cu-translator__checkbox" type="checkbox" name="breathings" checked> <?php echo esc_html__('Breathings', 'church-slavonic-translator'); ?></label>
+                    <label class="wp-cu-translator__option"><input class="wp-cu-translator__checkbox" type="checkbox" name="slavonic_numbers"> <?php echo esc_html__('Slavonic numbers', 'church-slavonic-translator'); ?></label>
                 </fieldset>
             </div>
 
@@ -369,8 +369,8 @@ function wp_cu_translator_shortcode($attributes = []): string
             <p class="wp-cu-translator__match" data-wp-cu-translator-match hidden></p>
             <div class="wp-cu-translator__text" data-wp-cu-translator-text></div>
             <div class="wp-cu-translator__actions">
-                <button type="button" data-wp-cu-translator-copy><?php echo esc_html__('Copy text', 'church-slavonic-translator'); ?></button>
-                <button type="button" data-wp-cu-translator-copy-rich><?php echo esc_html__('Copy with formatting', 'church-slavonic-translator'); ?></button>
+                <button class="wp-cu-translator__action" type="button" data-wp-cu-translator-copy><?php echo esc_html__('Copy text', 'church-slavonic-translator'); ?></button>
+                <button class="wp-cu-translator__action" type="button" data-wp-cu-translator-copy-rich><?php echo esc_html__('Copy with formatting', 'church-slavonic-translator'); ?></button>
                 <a href="<?php echo esc_url($fontUrl); ?>" download><?php echo esc_html__('Download font', 'church-slavonic-translator'); ?></a>
             </div>
             <p class="wp-cu-translator__hint"><?php echo esc_html__('After downloading, open MonomakhUnicode.ttf and click Install. If Word does not select it automatically, select the pasted text and assign Monomakh Unicode manually.', 'church-slavonic-translator'); ?></p>

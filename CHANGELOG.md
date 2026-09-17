@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.4
+
+- Added responsive fallback styling for the public form with zero-specificity `:where()` selectors and no `!important` declarations.
+- Added dedicated classes for every public form control so a site theme can override the fallback styling cleanly.
+
 ## 1.0.3
 
 - Removed all translator interface styling, so the active WordPress theme controls the form, buttons, checkboxes and layout.
