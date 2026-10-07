@@ -5,7 +5,7 @@ const translations = {
   'Your text is sent to the configured Bible Desktop service and may be processed by OpenAI.': ['Ваш текст отправляется в настроенный сервис Bible Desktop и может обрабатываться OpenAI.', 'Ihr Text wird an den konfigurierten Bible-Desktop-Dienst gesendet und kann von OpenAI verarbeitet werden.'],
   'Terms of Service': ['Условия использования', 'Nutzungsbedingungen'],
   'Privacy Policy': ['Политика конфиденциальности', 'Datenschutzerklärung'],
-  'Atapin Church Slavonic Translator': ['Atapin — Церковнославянский переводчик', 'Atapin — Kirchenslawischer Übersetzer'],
+  'Georg-Kloster Slavonic Translator': ['Georg-Kloster — Церковнославянский переводчик', 'Georg-Kloster — Kirchenslawischer Übersetzer'],
   'Settings': ['Настройки', 'Einstellungen'],
   'Shortcodes': ['Шорткоды', 'Shortcodes'],
   'Add one of these shortcodes in the Shortcode block or HTML block of the WordPress editor.': ['Добавьте один из этих шорткодов в блок «Шорткод» или HTML-блок редактора WordPress.', 'Fügen Sie einen dieser Shortcodes in den Shortcode-Block oder HTML-Block des WordPress-Editors ein.'],
@@ -30,7 +30,7 @@ const translations = {
   'Insufficient permissions.': ['Недостаточно прав.', 'Unzureichende Berechtigungen.'],
   'Connection established. The Bible Desktop API is available.': ['Соединение установлено. Bible Desktop API доступен.', 'Verbindung hergestellt. Die Bible Desktop API ist verfügbar.'],
   'Could not connect: %s': ['Не удалось подключиться: %s', 'Verbindung fehlgeschlagen: %s'],
-  'Atapin Church Slavonic Translator': ['Atapin — Церковнославянский переводчик', 'Atapin — Kirchenslawischer Übersetzer'],
+  'Georg-Kloster Slavonic Translator': ['Georg-Kloster — Церковнославянский переводчик', 'Georg-Kloster — Kirchenslawischer Übersetzer'],
   'Translating…': ['Переводим…', 'Übersetzung läuft…'],
   'Translation could not be completed.': ['Перевод не выполнен.', 'Die Übersetzung konnte nicht abgeschlossen werden.'],
   'Recognized as %s': ['Распознано как %s', 'Erkannt als %s'],
@@ -77,7 +77,7 @@ const escapePo = (value) => JSON.stringify(value);
 
 function metadata(locale, plural) {
   return [
-    'Project-Id-Version: Atapin Church Slavonic Translator 1.0.5',
+    'Project-Id-Version: Georg-Kloster Slavonic Translator 1.0.5',
     'Report-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues',
     'POT-Creation-Date: 2026-09-17 00:00+0000',
     'PO-Revision-Date: 2026-09-17 00:00+0000',
@@ -86,7 +86,7 @@ function metadata(locale, plural) {
     'Content-Type: text/plain; charset=UTF-8',
     'Content-Transfer-Encoding: 8bit',
     'Plural-Forms: ' + plural,
-    'X-Domain: atapin-church-slavonic-translator',
+    'X-Domain: georg-kloster-slavonic-translator',
     '',
   ].join('\n');
 }
@@ -155,9 +155,9 @@ function moBuffer(locale, index, plural) {
   return output;
 }
 
-const source = readFileSync(resolve('atapin-church-slavonic-translator.php'), 'utf8');
+const source = readFileSync(resolve('georg-kloster-slavonic-translator.php'), 'utf8');
 const extracted = new Set([...source.matchAll(/(?:__|esc_html__|esc_attr__)\(\s*'([^']+)'/g)].map((match) => match[1]));
-for (const required of ['Atapin Church Slavonic Translator', 'Translate text into Church Slavonic using the Bible Desktop translation service.']) extracted.add(required);
+for (const required of ['Georg-Kloster Slavonic Translator', 'Translate text into Church Slavonic using the Bible Desktop translation service.']) extracted.add(required);
 const missing = [...extracted].filter((msgid) => !Object.hasOwn(translations, msgid));
 const stale = Object.keys(translations).filter((msgid) => !extracted.has(msgid));
 if (missing.length || stale.length) {
@@ -165,10 +165,10 @@ if (missing.length || stale.length) {
 }
 
 mkdirSync(resolve('languages'), { recursive: true });
-writeFileSync(resolve('languages/atapin-church-slavonic-translator.pot'), potDocument());
+writeFileSync(resolve('languages/georg-kloster-slavonic-translator.pot'), potDocument());
 for (const [locale, details] of Object.entries(locales)) {
-  writeFileSync(resolve(`languages/atapin-church-slavonic-translator-${locale}.po`), poDocument(locale, details.index, details.plural));
-  writeFileSync(resolve(`languages/atapin-church-slavonic-translator-${locale}.mo`), moBuffer(locale, details.index, details.plural));
+  writeFileSync(resolve(`languages/georg-kloster-slavonic-translator-${locale}.po`), poDocument(locale, details.index, details.plural));
+  writeFileSync(resolve(`languages/georg-kloster-slavonic-translator-${locale}.mo`), moBuffer(locale, details.index, details.plural));
 }
 
 console.log(`Generated ${Object.keys(translations).length} translations for ${Object.keys(locales).join(', ')}.`);

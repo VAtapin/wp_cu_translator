@@ -1,4 +1,4 @@
-=== Atapin Church Slavonic Translator ===
+=== Georg-Kloster Slavonic Translator ===
 Contributors: atapin
 Tags: church slavonic, translator, bible, orthodox, ai
 Requires at least: 6.3
@@ -12,7 +12,7 @@ Translate text into Church Slavonic using the Bible Desktop translation service.
 
 == Description ==
 
-Atapin Church Slavonic Translator adds a compact translation form through the `[wp_cu_translator]` shortcode. It accepts Russian and German text, supports automatic language detection and lets the visitor choose accents, titlo, breathings and Slavonic numbers.
+Georg-Kloster Slavonic Translator adds a compact translation form through the `[wp_cu_translator]` shortcode. It accepts Russian and German text, supports automatic language detection and lets the visitor choose accents, titlo, breathings and Slavonic numbers.
 
 The plugin works without an API key using the free public Bible Desktop API tier. The free tier has usage limits to protect the service and control external AI processing costs. An optional API key can be configured for higher limits and additional authorized functionality. No secret API credentials are bundled with the plugin.
 
@@ -24,9 +24,9 @@ Biblical references, exact verses, confidently recognized quotations and cached 
 
 == Installation ==
 
-1. In WordPress open **Plugins → Add New → Upload Plugin** and upload `atapin-church-slavonic-translator.zip`.
-2. Activate **Atapin Church Slavonic Translator**. The free public tier works immediately.
-3. Optionally create a key under **Bible Desktop → System → AI integration → External sites** and save it under **Atapin Church Slavonic Translator → Settings** for higher limits.
+1. In WordPress open **Plugins → Add New → Upload Plugin** and upload `georg-kloster-slavonic-translator.zip`.
+2. Activate **Georg-Kloster Slavonic Translator**. The free public tier works immediately.
+3. Optionally create a key under **Bible Desktop → System → AI integration → External sites** and save it under **Georg-Kloster Slavonic Translator → Settings** for higher limits.
 4. Use **Check connection**. This check does not call OpenAI.
 5. Add `[wp_cu_translator]` to a page.
 
@@ -36,7 +36,7 @@ Optional custom title:
 
 == Shortcodes and settings ==
 
-The plugin has its own WordPress admin menu. **Atapin Church Slavonic Translator → Settings** contains the Bible Desktop URL, optional API key, timeout and connection check. **Atapin Church Slavonic Translator → Shortcodes** lists each supported shortcode with a ready-to-copy example and explanation. The same shortcode reference is also available at the bottom of the settings page.
+The plugin has its own WordPress admin menu. **Georg-Kloster Slavonic Translator → Settings** contains the Bible Desktop URL, optional API key, timeout and connection check. **Georg-Kloster Slavonic Translator → Shortcodes** lists each supported shortcode with a ready-to-copy example and explanation. The same shortcode reference is also available at the bottom of the settings page.
 
 == Frequently Asked Questions ==
 
@@ -73,7 +73,7 @@ The plugin does not create its own database tables and does not store translatio
 == Changelog ==
 
 = 1.0.5 =
-* Use the distinctive Atapin Church Slavonic Translator name and matching WordPress.org slug/text domain.
+* Use the distinctive Georg-Kloster Slavonic Translator name and matching WordPress.org slug/text domain.
 * Document external translation requests, identifiers, font downloads and OpenAI processing, with direct provider terms and privacy links.
 * Inform visitors about external text processing before submission and link to the configured provider documents.
 * Preserve existing shortcode names, settings and installation identifiers.
@@ -91,7 +91,7 @@ The plugin does not create its own database tables and does not store translatio
 * Changed the frontend translator title from an h2 to an h3 heading.
 
 = 1.0.1 =
-* Added a dedicated Atapin Church Slavonic Translator administration menu with Settings and Shortcodes pages.
+* Added a dedicated Georg-Kloster Slavonic Translator administration menu with Settings and Shortcodes pages.
 * Added a shortcode reference with ready-to-copy examples and explanations to the settings page and the separate Shortcodes page.
 
 = 1.0.0 =

@@ -14,7 +14,7 @@ if ($wordpressRoot === false || ! is_file($wordpressRoot.'/wp-load.php')) {
 require $wordpressRoot.'/wp-load.php';
 require_once ABSPATH.'wp-admin/includes/plugin.php';
 
-$pluginFile = WP_PLUGIN_DIR.'/atapin-church-slavonic-translator/atapin-church-slavonic-translator.php';
+$pluginFile = WP_PLUGIN_DIR.'/georg-kloster-slavonic-translator/georg-kloster-slavonic-translator.php';
 if (! is_file($pluginFile)) {
     throw new RuntimeException('The test plugin is not installed in WordPress.');
 }
@@ -42,23 +42,23 @@ if (! wp_is_uuid($installationId, 4) || $installationId !== wp_cu_translator_ins
 
 $expected = [
     'en_US' => [
-        'name' => 'Atapin Church Slavonic Translator',
+        'name' => 'Georg-Kloster Slavonic Translator',
         'description' => 'Translate text into Church Slavonic using the Bible Desktop translation service.',
-        'title' => 'Atapin Church Slavonic Translator',
+        'title' => 'Georg-Kloster Slavonic Translator',
         'translating' => 'Translating…',
         'disclosure' => 'Your text is sent to the configured Bible Desktop service and may be processed by OpenAI.',
     ],
     'ru_RU' => [
-        'name' => 'Atapin — Церковнославянский переводчик',
+        'name' => 'Georg-Kloster — Церковнославянский переводчик',
         'description' => 'Перевод текста на церковнославянский язык с помощью сервиса Bible Desktop.',
-        'title' => 'Atapin — Церковнославянский переводчик',
+        'title' => 'Georg-Kloster — Церковнославянский переводчик',
         'translating' => 'Переводим…',
         'disclosure' => 'Ваш текст отправляется в настроенный сервис Bible Desktop и может обрабатываться OpenAI.',
     ],
     'de_DE' => [
-        'name' => 'Atapin — Kirchenslawischer Übersetzer',
+        'name' => 'Georg-Kloster — Kirchenslawischer Übersetzer',
         'description' => 'Übersetzt Texte mit dem Übersetzungsdienst Bible Desktop ins Kirchenslawische.',
-        'title' => 'Atapin — Kirchenslawischer Übersetzer',
+        'title' => 'Georg-Kloster — Kirchenslawischer Übersetzer',
         'translating' => 'Übersetzung läuft…',
         'disclosure' => 'Ihr Text wird an den konfigurierten Bible-Desktop-Dienst gesendet und kann von OpenAI verarbeitet werden.',
     ],
@@ -67,10 +67,10 @@ if (! isset($expected[$locale])) {
     throw new RuntimeException('Unsupported smoke-test locale.');
 }
 
-unload_textdomain('atapin-church-slavonic-translator');
+unload_textdomain('georg-kloster-slavonic-translator');
 if ($locale !== 'en_US') {
-    $catalog = dirname($pluginFile).'/languages/atapin-church-slavonic-translator-'.$locale.'.mo';
-    if (! load_textdomain('atapin-church-slavonic-translator', $catalog)) {
+    $catalog = dirname($pluginFile).'/languages/georg-kloster-slavonic-translator-'.$locale.'.mo';
+    if (! load_textdomain('georg-kloster-slavonic-translator', $catalog)) {
         throw new RuntimeException('Could not load '.$catalog);
     }
 }

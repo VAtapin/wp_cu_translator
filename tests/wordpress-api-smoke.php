@@ -6,7 +6,7 @@ if ($argc !== 2 || ! is_file($argv[1].'/wp-load.php')) {
     exit(2);
 }
 require $argv[1].'/wp-load.php';
-require_once WP_PLUGIN_DIR.'/atapin-church-slavonic-translator/atapin-church-slavonic-translator.php';
+require_once WP_PLUGIN_DIR.'/georg-kloster-slavonic-translator/georg-kloster-slavonic-translator.php';
 
 // The Kalendar test site has canned HTTP fixtures; bypass only that local fixture.
 $fixture = realpath($argv[1].'/wp-content/mu-plugins/fixtures.php');

@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: Atapin Church Slavonic Translator 1.0.5\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-09-17 00:00+0000\nPO-Revision-Date: 2026-09-17 00:00+0000\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\nX-Domain: atapin-church-slavonic-translator\n"
+msgstr "Project-Id-Version: Georg-Kloster Slavonic Translator 1.0.5\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-09-17 00:00+0000\nPO-Revision-Date: 2026-09-17 00:00+0000\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\nX-Domain: georg-kloster-slavonic-translator\n"
 
 msgid "Your text is sent to the configured Bible Desktop service and may be processed by OpenAI."
 msgstr "Ваш текст отправляется в настроенный сервис Bible Desktop и может обрабатываться OpenAI."
@@ -10,8 +10,8 @@ msgstr "Условия использования"
 msgid "Privacy Policy"
 msgstr "Политика конфиденциальности"
 
-msgid "Atapin Church Slavonic Translator"
-msgstr "Atapin — Церковнославянский переводчик"
+msgid "Georg-Kloster Slavonic Translator"
+msgstr "Georg-Kloster — Церковнославянский переводчик"
 
 msgid "Settings"
 msgstr "Настройки"

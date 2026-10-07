@@ -25,7 +25,7 @@ jobs:
         env:
           TAG: ${{ github.ref_name }}
         run: |
-          version="$(sed -n 's/^ \* Version: \(.*\)$/\1/p' atapin-church-slavonic-translator.php)"
+          version="$(sed -n 's/^ \* Version: \(.*\)$/\1/p' georg-kloster-slavonic-translator.php)"
           stable="$(sed -n 's/^Stable tag: \(.*\)$/\1/p' readme.txt)"
           test "$TAG" = "$version"
           test "$TAG" = "$stable"
@@ -39,19 +39,19 @@ jobs:
         env:
           TAG: ${{ github.ref_name }}
         run: |
-          package="$RUNNER_TEMP/atapin-church-slavonic-translator-package"
-          mkdir -p "$package/atapin-church-slavonic-translator"
-          rsync -a --exclude-from=.distignore ./ "$package/atapin-church-slavonic-translator/"
-          (cd "$package" && zip -qr "$GITHUB_WORKSPACE/atapin-church-slavonic-translator-$TAG.zip" atapin-church-slavonic-translator)
-          cp "atapin-church-slavonic-translator-$TAG.zip" atapin-church-slavonic-translator.zip
+          package="$RUNNER_TEMP/georg-kloster-slavonic-translator-package"
+          mkdir -p "$package/georg-kloster-slavonic-translator"
+          rsync -a --exclude-from=.distignore ./ "$package/georg-kloster-slavonic-translator/"
+          (cd "$package" && zip -qr "$GITHUB_WORKSPACE/georg-kloster-slavonic-translator-$TAG.zip" georg-kloster-slavonic-translator)
+          cp "georg-kloster-slavonic-translator-$TAG.zip" georg-kloster-slavonic-translator.zip
 
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.ref_name }}
         run: |
-          gh release create "$TAG" "atapin-church-slavonic-translator-$TAG.zip" atapin-church-slavonic-translator.zip \
-            --title "Atapin Church Slavonic Translator $TAG" \
+          gh release create "$TAG" "georg-kloster-slavonic-translator-$TAG.zip" georg-kloster-slavonic-translator.zip \
+            --title "Georg-Kloster Slavonic Translator $TAG" \
             --generate-notes
 
   deploy-wordpress-org:
@@ -70,4 +70,4 @@ jobs:
         env:
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-          SLUG: atapin-church-slavonic-translator
+          SLUG: georg-kloster-slavonic-translator

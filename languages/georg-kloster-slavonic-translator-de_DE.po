@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: Atapin Church Slavonic Translator 1.0.5\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-09-17 00:00+0000\nPO-Revision-Date: 2026-09-17 00:00+0000\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Domain: atapin-church-slavonic-translator\n"
+msgstr "Project-Id-Version: Georg-Kloster Slavonic Translator 1.0.5\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-09-17 00:00+0000\nPO-Revision-Date: 2026-09-17 00:00+0000\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Domain: georg-kloster-slavonic-translator\n"
 
 msgid "Your text is sent to the configured Bible Desktop service and may be processed by OpenAI."
 msgstr "Ihr Text wird an den konfigurierten Bible-Desktop-Dienst gesendet und kann von OpenAI verarbeitet werden."
@@ -10,8 +10,8 @@ msgstr "Nutzungsbedingungen"
 msgid "Privacy Policy"
 msgstr "Datenschutzerklärung"
 
-msgid "Atapin Church Slavonic Translator"
-msgstr "Atapin — Kirchenslawischer Übersetzer"
+msgid "Georg-Kloster Slavonic Translator"
+msgstr "Georg-Kloster — Kirchenslawischer Übersetzer"
 
 msgid "Settings"
 msgstr "Einstellungen"

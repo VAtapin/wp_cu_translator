@@ -1,4 +1,4 @@
-# Atapin Church Slavonic Translator
+# Georg-Kloster Slavonic Translator
 
 WordPress-плагин для перевода русского и немецкого текста на церковнославянский язык через [Bible Desktop](https://bible-desktop.com/).
 
@@ -6,11 +6,11 @@ WordPress-плагин для перевода русского и немецк�
 
 ## Установка
 
-Для проверки WordPress.org подготовлен архив `atapin-church-slavonic-translator.zip` версии 1.0.5. GitHub Release для этой версии пока не создавался.
+Для проверки WordPress.org подготовлен архив `georg-kloster-slavonic-translator.zip` версии 1.0.5. GitHub Release для этой версии пока не создавался.
 
-1. В WordPress выберите **Плагины → Добавить новый → Загрузить плагин** и загрузите `atapin-church-slavonic-translator.zip`.
-2. Активируйте **Atapin Church Slavonic Translator** — бесплатный режим уже готов к работе.
-3. При необходимости повышенных лимитов создайте ключ в **Bible Desktop → Система → ИИ-интеграция → Подключение внешних сайтов** и сохраните его в отдельном пункте админ-меню **Atapin Church Slavonic Translator → Настройки**.
+1. В WordPress выберите **Плагины → Добавить новый → Загрузить плагин** и загрузите `georg-kloster-slavonic-translator.zip`.
+2. Активируйте **Georg-Kloster Slavonic Translator** — бесплатный режим уже готов к работе.
+3. При необходимости повышенных лимитов создайте ключ в **Bible Desktop → Система → ИИ-интеграция → Подключение внешних сайтов** и сохраните его в отдельном пункте админ-меню **Georg-Kloster Slavonic Translator → Настройки**.
 4. Нажмите **Проверить соединение**. Проверка не вызывает OpenAI и не расходует деньги.
 5. Добавьте на страницу шорткод `[wp_cu_translator]`.
 
@@ -48,11 +48,11 @@ WordPress-плагин для перевода русского и немецк�
 
 ## Разработка и выпуск
 
-Номер версии должен совпадать в заголовке `atapin-church-slavonic-translator.php`, `readme.txt` и Git-теге. Тег версии запускает GitHub Actions, который:
+Номер версии должен совпадать в заголовке `georg-kloster-slavonic-translator.php`, `readme.txt` и Git-теге. Тег версии запускает GitHub Actions, который:
 
 1. проверяет версии и синтаксис PHP/JavaScript;
 2. проверяет и пересобирает каталоги переводов;
-3. собирает архивы `atapin-church-slavonic-translator-<версия>.zip` и `atapin-church-slavonic-translator.zip`;
+3. собирает архивы `georg-kloster-slavonic-translator-<версия>.zip` и `georg-kloster-slavonic-translator.zip`;
 4. создаёт GitHub Release с обоими файлами.
 
 Публикация в WordPress.org отключена, пока переменная репозитория `WORDPRESS_ORG_ENABLED` не получит значение `true` и не будут настроены секреты `SVN_USERNAME` и `SVN_PASSWORD`.
@@ -61,7 +61,7 @@ WordPress-плагин для перевода русского и немецк�
 
 Проверены категории из письма о другом плагине: название, принадлежность автору, переводы, внешние сервисы и права публичных обработчиков. Письмо не является результатом проверки этого плагина, а успешный Plugin Check сам по себе не гарантирует одобрения каталога.
 
-- **Название:** применены `Atapin Church Slavonic Translator` / `atapin-church-slavonic-translator`: отличительный бренд стоит в начале. Заголовок, readme, text domain, каталоги переводов, сборка, deploy workflow и smoke-тест согласованы. Поиск не обнаружил совпадения нового имени/slug, но решение о резервировании принимает WordPress.org. Если заявка уже подана, запросить изменение slug у Plugins Team. При ручной установке сначала деактивировать предыдущую копию: старый и новый каталоги нельзя активировать одновременно. Настройки, Installation ID и `[wp_cu_translator]` сохраняются; старую копию не удалять через WordPress до переноса настроек, поскольку её uninstall очищает те же options.
+- **Название:** применены `Georg-Kloster Slavonic Translator` / `georg-kloster-slavonic-translator`: отличительный бренд стоит в начале. Заголовок, readme, text domain, каталоги переводов, сборка, deploy workflow и smoke-тест согласованы. Название выбрано владельцем; решение о резервировании slug принимает WordPress.org. Если заявка уже подана, запросить изменение slug у Plugins Team. При ручной установке сначала деактивировать предыдущую копию: старый и новый каталоги нельзя активировать одновременно. Настройки, Installation ID и `[wp_cu_translator]` сохраняются; старую копию не удалять через WordPress до переноса настроек, поскольку её uninstall очищает те же options.
 - **Принадлежность:** `Author` — Vladimir Atapin, `Author URI` — `atapin.de`, а `Plugin URI` указывает на `kalender.georg-kloster.ru`. Kalendar документирует DNS-подтверждение `wordpressorg-atapin-verification`: оба авторитетных сервера `atapin.de` согласованы, для `georg-kloster.ru` на момент предыдущей проверки оставалось расхождение. При запросе ревьюера следует пояснить связь автора с доменами и Bible Desktop; DNS в этой задаче не менялся.
 - **Внешние сервисы:** `readme.txt` раскрывает момент отправки текста, все специальные заголовки, различия между переводом и проверкой соединения, ручную загрузку шрифта, изменение API URL и возможную передачу текста в OpenAI. Документы Bible Desktop `/pages/api-terms` и `/pages/api-privacy` дополнены разделами перевода, UUID/HMAC, OpenAI, кэша и квот; оба сохранены в CMS и проверены на публичных страницах. Исходные тексты и идемпотентная команда обновления находятся в BibleDesktop. Ссылки OpenAI дополняют документы оператора API.
 - **Переводы:** GitHub ZIP сохраняет PO/MO для самостоятельной установки. WordPress.org ZIP и отдельный deploy job исключают PO/MO и используют пакеты translate.wordpress.org; POT и все i18n-вызовы сохранены. Пока языковые пакеты не опубликованы, WordPress.org-пакет использует английские строки.

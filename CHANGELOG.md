@@ -2,7 +2,7 @@
 
 ## 1.0.5
 
-- Rename the plugin and text domain to Atapin Church Slavonic Translator / atapin-church-slavonic-translator while preserving shortcodes, settings and installation IDs.
+- Rename the plugin and text domain to Georg-Kloster Slavonic Translator / georg-kloster-slavonic-translator while preserving shortcodes, settings and installation IDs.
 - Disclose external translation data flows and link to provider terms and privacy documents covering OpenAI processing.
 - Show localized external-processing information and provider document links in the translation form before submission.
 

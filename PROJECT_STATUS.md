@@ -1,8 +1,8 @@
-# Atapin Church Slavonic Translator — состояние проекта
+# Georg-Kloster Slavonic Translator — состояние проекта
 
 ## Реализовано и решения
 
-- WordPress-плагин версии 1.0.5 называется `Atapin Church Slavonic Translator`; WordPress.org slug, text domain, основной PHP-файл и корневой каталог ZIP — `atapin-church-slavonic-translator`.
+- WordPress-плагин версии 1.0.5 называется `Georg-Kloster Slavonic Translator`; WordPress.org slug, text domain, основной PHP-файл и корневой каталог ZIP — `georg-kloster-slavonic-translator`.
 - Сохранены `[wp_cu_translator]`, существующие settings options, Installation UUID и идентификатор API-клиента. Доступны меню настроек/шорткодов, русский/немецкий перевод, орфографические параметры и копирование для Word.
 - Бесплатный серверный API Bible Desktop работает без ключа; необязательный ключ остаётся на WordPress-сервере. Запросы используют HTTPS, проверку TLS и запрет перенаправлений.
 - В readme и форме раскрыты внешняя отправка текста и возможная обработка OpenAI. Условия и политика Bible Desktop `/pages/api-terms` и `/pages/api-privacy` дополнены, опубликованы через CMS и проверены без cookies.
@@ -20,11 +20,13 @@
 - TXT `wordpressorg-atapin-verification` подтверждён на обоих авторитетных DNS-серверах каждого домена `atapin.de` и `georg-kloster.ru`, а также через 1.1.1.1.
 - Проверены структура обычного и WordPress.org ZIP: один правильный корневой каталог, только runtime/readme/assets/languages, без Git, тестов, скриптов или секретов. `git diff --check` прошёл.
 
+- Название исправлено по выбору владельца на `Georg-Kloster Slavonic Translator`; версия 1.0.5 сохранена, поскольку её tag/release ещё не создавался. Повторно прошли PHP lint, JS syntax, воспроизводимая генерация 63 строк, активация нового slug с сохранением settings/UUID и WordPress smoke-тест EN/RU/DE. Plugin Check установленной копии и точного WordPress.org-пакета: No errors found. Оба ZIP пересобраны и проверены по структуре и соответствию runtime-кода исходникам. Серверный API не менялся и повторно не вызывался при исправлении имени.
+
 ## Следующие действия и ограничения
 
 - Установить подготовленный ZIP на целевой WordPress. Перед переходом со старого slug деактивировать предыдущую копию; не активировать обе одновременно. Не запускать uninstall старой копии до переноса настроек: options общие.
-- Если заявка уже подана, запросить у Plugins Team slug `atapin-church-slavonic-translator`; наличие DNS-подтверждения не заменяет решение команды ревью.
+- Если заявка уже подана, запросить у Plugins Team slug `georg-kloster-slavonic-translator`; наличие DNS-подтверждения не заменяет решение команды ревью.
 - При необходимости проверить повышенные лимиты с действующим ключом администратора. Новый GitHub Release и WordPress.org submission остаются отдельными действиями.
 - Установка плагина на production в этой задаче не выполнялась; обновлены только явно разрешённые юридические CMS-страницы Bible Desktop.
 
-Последний связанный commit: `Prepare Atapin translator for WordPress review` (текущая реализация); предыдущая проверка/интеграция — `01cfb70`, предыдущий опубликованный выпуск — `13c779c`.
+Последний связанный commit: `Rename translator to Georg-Kloster` (текущее исправление имени); предыдущая проверка — `621ca6c`, предыдущий опубликованный выпуск — `13c779c`.
