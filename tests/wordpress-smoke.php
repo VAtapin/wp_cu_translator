@@ -14,11 +14,26 @@ if ($wordpressRoot === false || ! is_file($wordpressRoot.'/wp-load.php')) {
 require $wordpressRoot.'/wp-load.php';
 require_once ABSPATH.'wp-admin/includes/plugin.php';
 
-$pluginFile = WP_PLUGIN_DIR.'/church-slavonic-translator/church-slavonic-translator.php';
+$pluginFile = WP_PLUGIN_DIR.'/atapin-church-slavonic-translator/atapin-church-slavonic-translator.php';
 if (! is_file($pluginFile)) {
     throw new RuntimeException('The test plugin is not installed in WordPress.');
 }
 require_once $pluginFile;
+
+$savedSettings = get_option(WP_CU_TRANSLATOR_OPTION);
+$savedInstallationId = get_option(WP_CU_TRANSLATOR_INSTALLATION_OPTION);
+$denyExternalRequest = static function () {
+    throw new RuntimeException('Activation must not contact external services.');
+};
+add_filter('pre_http_request', $denyExternalRequest);
+wp_cu_translator_activate();
+remove_filter('pre_http_request', $denyExternalRequest);
+if ($savedSettings !== false && get_option(WP_CU_TRANSLATOR_OPTION) !== $savedSettings) {
+    throw new RuntimeException('Activation changed the existing settings.');
+}
+if (is_string($savedInstallationId) && wp_is_uuid($savedInstallationId, 4) && get_option(WP_CU_TRANSLATOR_INSTALLATION_OPTION) !== $savedInstallationId) {
+    throw new RuntimeException('Activation changed the existing installation UUID.');
+}
 
 $installationId = wp_cu_translator_installation_id();
 if (! wp_is_uuid($installationId, 4) || $installationId !== wp_cu_translator_installation_id()) {
@@ -27,32 +42,35 @@ if (! wp_is_uuid($installationId, 4) || $installationId !== wp_cu_translator_ins
 
 $expected = [
     'en_US' => [
-        'name' => 'Church Slavonic Translator',
+        'name' => 'Atapin Church Slavonic Translator',
         'description' => 'Translate text into Church Slavonic using the Bible Desktop translation service.',
-        'title' => 'Church Slavonic Translator',
+        'title' => 'Atapin Church Slavonic Translator',
         'translating' => 'Translating…',
+        'disclosure' => 'Your text is sent to the configured Bible Desktop service and may be processed by OpenAI.',
     ],
     'ru_RU' => [
-        'name' => 'Церковнославянский переводчик',
+        'name' => 'Atapin — Церковнославянский переводчик',
         'description' => 'Перевод текста на церковнославянский язык с помощью сервиса Bible Desktop.',
-        'title' => 'Церковнославянский переводчик',
+        'title' => 'Atapin — Церковнославянский переводчик',
         'translating' => 'Переводим…',
+        'disclosure' => 'Ваш текст отправляется в настроенный сервис Bible Desktop и может обрабатываться OpenAI.',
     ],
     'de_DE' => [
-        'name' => 'Kirchenslawischer Übersetzer',
+        'name' => 'Atapin — Kirchenslawischer Übersetzer',
         'description' => 'Übersetzt Texte mit dem Übersetzungsdienst Bible Desktop ins Kirchenslawische.',
-        'title' => 'Kirchenslawischer Übersetzer',
+        'title' => 'Atapin — Kirchenslawischer Übersetzer',
         'translating' => 'Übersetzung läuft…',
+        'disclosure' => 'Ihr Text wird an den konfigurierten Bible-Desktop-Dienst gesendet und kann von OpenAI verarbeitet werden.',
     ],
 ];
 if (! isset($expected[$locale])) {
     throw new RuntimeException('Unsupported smoke-test locale.');
 }
 
-unload_textdomain('church-slavonic-translator');
+unload_textdomain('atapin-church-slavonic-translator');
 if ($locale !== 'en_US') {
-    $catalog = dirname($pluginFile).'/languages/church-slavonic-translator-'.$locale.'.mo';
-    if (! load_textdomain('church-slavonic-translator', $catalog)) {
+    $catalog = dirname($pluginFile).'/languages/atapin-church-slavonic-translator-'.$locale.'.mo';
+    if (! load_textdomain('atapin-church-slavonic-translator', $catalog)) {
         throw new RuntimeException('Could not load '.$catalog);
     }
 }
@@ -72,6 +90,14 @@ wp_cu_translator_register_assets();
 $html = do_shortcode('[wp_cu_translator]');
 if (! str_contains($html, $expected[$locale]['title'])) {
     throw new RuntimeException('Translated shortcode title does not match for '.$locale);
+}
+if (! str_contains($html, $expected[$locale]['disclosure'])) {
+    throw new RuntimeException('The visitor must be informed about external text processing.');
+}
+foreach (['pages/api-terms', 'pages/api-privacy'] as $documentPath) {
+    if (! str_contains($html, esc_url(trailingslashit(wp_cu_translator_settings()['api_url']).$documentPath))) {
+        throw new RuntimeException('The visitor disclosure is missing its provider document link.');
+    }
 }
 if (! str_contains($html, '<h3 class="wp-cu-translator__title">')) {
     throw new RuntimeException('Translator shortcode title must use an h3 heading.');

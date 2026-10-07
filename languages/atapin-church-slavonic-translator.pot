@@ -1,7 +1,16 @@
 msgid ""
-msgstr "Project-Id-Version: Church Slavonic Translator 1.0.4\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-09-17 00:00+0000\nPO-Revision-Date: 2026-09-17 00:00+0000\nLanguage: LANGUAGE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=INTEGER; plural=EXPRESSION;\nX-Domain: church-slavonic-translator\n"
+msgstr "Project-Id-Version: Atapin Church Slavonic Translator 1.0.5\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-09-17 00:00+0000\nPO-Revision-Date: 2026-09-17 00:00+0000\nLanguage: LANGUAGE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=INTEGER; plural=EXPRESSION;\nX-Domain: atapin-church-slavonic-translator\n"
 
-msgid "Church Slavonic Translator"
+msgid "Your text is sent to the configured Bible Desktop service and may be processed by OpenAI."
+msgstr ""
+
+msgid "Terms of Service"
+msgstr ""
+
+msgid "Privacy Policy"
+msgstr ""
+
+msgid "Atapin Church Slavonic Translator"
 msgstr ""
 
 msgid "Settings"

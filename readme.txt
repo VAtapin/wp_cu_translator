@@ -1,10 +1,10 @@
-=== Church Slavonic Translator ===
+=== Atapin Church Slavonic Translator ===
 Contributors: atapin
 Tags: church slavonic, translator, bible, orthodox, ai
 Requires at least: 6.3
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Translate text into Church Slavonic using the Bible Desktop translation service.
 
 == Description ==
 
-Church Slavonic Translator adds a compact translation form through the `[wp_cu_translator]` shortcode. It accepts Russian and German text, supports automatic language detection and lets the visitor choose accents, titlo, breathings and Slavonic numbers.
+Atapin Church Slavonic Translator adds a compact translation form through the `[wp_cu_translator]` shortcode. It accepts Russian and German text, supports automatic language detection and lets the visitor choose accents, titlo, breathings and Slavonic numbers.
 
 The plugin works without an API key using the free public Bible Desktop API tier. The free tier has usage limits to protect the service and control external AI processing costs. An optional API key can be configured for higher limits and additional authorized functionality. No secret API credentials are bundled with the plugin.
 
@@ -24,9 +24,9 @@ Biblical references, exact verses, confidently recognized quotations and cached 
 
 == Installation ==
 
-1. In WordPress open **Plugins → Add New → Upload Plugin** and upload `church-slavonic-translator.zip`.
-2. Activate **Church Slavonic Translator**. The free public tier works immediately.
-3. Optionally create a key under **Bible Desktop → System → AI integration → External sites** and save it under **Church Slavonic Translator → Settings** for higher limits.
+1. In WordPress open **Plugins → Add New → Upload Plugin** and upload `atapin-church-slavonic-translator.zip`.
+2. Activate **Atapin Church Slavonic Translator**. The free public tier works immediately.
+3. Optionally create a key under **Bible Desktop → System → AI integration → External sites** and save it under **Atapin Church Slavonic Translator → Settings** for higher limits.
 4. Use **Check connection**. This check does not call OpenAI.
 5. Add `[wp_cu_translator]` to a page.
 
@@ -36,7 +36,7 @@ Optional custom title:
 
 == Shortcodes and settings ==
 
-The plugin has its own WordPress admin menu. **Church Slavonic Translator → Settings** contains the Bible Desktop URL, optional API key, timeout and connection check. **Church Slavonic Translator → Shortcodes** lists each supported shortcode with a ready-to-copy example and explanation. The same shortcode reference is also available at the bottom of the settings page.
+The plugin has its own WordPress admin menu. **Atapin Church Slavonic Translator → Settings** contains the Bible Desktop URL, optional API key, timeout and connection check. **Atapin Church Slavonic Translator → Shortcodes** lists each supported shortcode with a ready-to-copy example and explanation. The same shortcode reference is also available at the bottom of the settings page.
 
 == Frequently Asked Questions ==
 
@@ -64,13 +64,19 @@ Bible Desktop may send submitted text to OpenAI to generate a translation. Bibli
 
 If an administrator changes **Bible Desktop URL**, the API and font requests use that configured service instead. The administrator must check that service's data handling and inform site visitors before offering the form.
 
-The service is operated by Bible Desktop. API Terms of Service: https://bible-desktop.com/pages/api-terms . API Privacy Policy: https://bible-desktop.com/pages/api-privacy . These documents currently describe the public calendar and reading API; they need to cover the translation and AI processing described above before this plugin is submitted to WordPress.org or enabled on a public site.
+The service is operated by Bible Desktop. API Terms of Service: https://bible-desktop.com/pages/api-terms . API Privacy Policy: https://bible-desktop.com/pages/api-privacy . These documents cover the API, translation data and optional OpenAI processing.
 
 == Privacy ==
 
 The plugin does not create its own database tables and does not store translation text. The Bible Desktop URL, optional external API key, timeout and non-secret installation UUID are stored in the WordPress options table. Requests are subject to the logging, retention and AI settings configured on the connected Bible Desktop server.
 
 == Changelog ==
+
+= 1.0.5 =
+* Use the distinctive Atapin Church Slavonic Translator name and matching WordPress.org slug/text domain.
+* Document external translation requests, identifiers, font downloads and OpenAI processing, with direct provider terms and privacy links.
+* Inform visitors about external text processing before submission and link to the configured provider documents.
+* Preserve existing shortcode names, settings and installation identifiers.
 
 = 1.0.4 =
 * Added a complete responsive fallback layout for the public form, using zero-specificity `:where()` selectors and no `!important` rules.
@@ -85,7 +91,7 @@ The plugin does not create its own database tables and does not store translatio
 * Changed the frontend translator title from an h2 to an h3 heading.
 
 = 1.0.1 =
-* Added a dedicated Church Slavonic Translator administration menu with Settings and Shortcodes pages.
+* Added a dedicated Atapin Church Slavonic Translator administration menu with Settings and Shortcodes pages.
 * Added a shortcode reference with ready-to-copy examples and explanations to the settings page and the separate Shortcodes page.
 
 = 1.0.0 =
