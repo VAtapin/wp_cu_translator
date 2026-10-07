@@ -50,9 +50,15 @@ Use **Copy with formatting** and install Monomakh Unicode from the link below th
 
 == External Services ==
 
-This plugin sends the source text, source-language selection and orthography options from the WordPress server to `https://bible-desktop.com/api/v1/church-slavonic/translate`. A non-secret installation UUID and an irreversible per-visitor HMAC identifier are included in request headers. If configured, the optional Bible Desktop API key is also sent server-to-server. The visitor's original IP address is not sent to Bible Desktop by the plugin.
+This plugin relies on the external Bible Desktop service to translate text into Church Slavonic. Only when a visitor submits the translation form, the WordPress server sends the source text, source-language selection and orthography options to `https://bible-desktop.com/api/v1/church-slavonic/translate`. Request headers include the plugin client name, a non-secret installation UUID for usage quotas and a per-visitor HMAC identifier derived from the visitor's IP address using a WordPress secret for rate limiting. If configured, the optional Bible Desktop API key is also sent server-to-server. The visitor's original IP address is not sent to Bible Desktop by the plugin; the service receives the WordPress server's IP address as part of the network connection.
 
-The connection test calls `https://bible-desktop.com/api/v1/church-slavonic/status` and does not submit text or invoke OpenAI. The Church Slavonic font download links to `https://bible-desktop.com/fonts/MonomakhUnicode.ttf`.
+Only when an administrator presses **Check connection**, the WordPress server calls `https://bible-desktop.com/api/v1/church-slavonic/status`. This request includes the plugin client name, installation UUID and optional API key, but no translation text or visitor identifier, and does not invoke OpenAI. Activation and viewing the translation form do not send requests to Bible Desktop.
+
+When a visitor clicks **Download font**, their browser requests `https://bible-desktop.com/fonts/MonomakhUnicode.ttf` directly from Bible Desktop. This download reveals the visitor's IP address and ordinary browser request information to that service. The plugin does not automatically load the remote font.
+
+Bible Desktop may send submitted text to OpenAI to generate a translation. Biblical references, matching quotations and cached results may be processed without a new OpenAI request. The plugin itself does not connect directly to OpenAI. OpenAI API terms: https://openai.com/policies/business-terms/ ; privacy policy: https://openai.com/policies/privacy-policy/ .
+
+If an administrator changes **Bible Desktop URL**, the API and font requests use that configured service instead. The administrator must check that service's data handling and inform site visitors before offering the form.
 
 The service is operated by Bible Desktop. Review its current terms and privacy information at https://bible-desktop.com/ before enabling the plugin on a public site.
 
