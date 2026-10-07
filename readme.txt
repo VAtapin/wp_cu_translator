@@ -60,7 +60,7 @@ Bible Desktop may send submitted text to OpenAI to generate a translation. Bibli
 
 If an administrator changes **Bible Desktop URL**, the API and font requests use that configured service instead. The administrator must check that service's data handling and inform site visitors before offering the form.
 
-The service is operated by Bible Desktop. Review its current terms and privacy information at https://bible-desktop.com/ before enabling the plugin on a public site.
+The service is operated by Bible Desktop. API Terms of Service: https://bible-desktop.com/pages/api-terms . API Privacy Policy: https://bible-desktop.com/pages/api-privacy . These documents currently describe the public calendar and reading API; they need to cover the translation and AI processing described above before this plugin is submitted to WordPress.org or enabled on a public site.
 
 == Privacy ==
 
