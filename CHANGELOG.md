@@ -1,5 +1,25 @@
 # Changelog
 
+## 1.0.4
+
+- Added responsive fallback styling for the public form with zero-specificity `:where()` selectors and no `!important` declarations.
+- Added dedicated classes for every public form control so a site theme can override the fallback styling cleanly.
+
+## 1.0.3
+
+- Removed all translator interface styling, so the active WordPress theme controls the form, buttons, checkboxes and layout.
+- Kept only the Monomakh Unicode output font and paragraph preservation required for translated Church Slavonic text.
+
+## 1.0.2
+
+- Let the active WordPress theme control the translator typography and standard form controls.
+- Changed the frontend translator title from an h2 to an h3 heading.
+
+## 1.0.1
+
+- Added a dedicated WordPress admin menu for the translator with Settings and Shortcodes pages.
+- Added ready-to-copy shortcode examples and explanations in the plugin administration.
+
 ## 1.0.0
 
 - Added the `[wp_cu_translator]` shortcode and responsive translation form.

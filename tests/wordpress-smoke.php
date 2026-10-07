@@ -73,6 +73,40 @@ $html = do_shortcode('[wp_cu_translator]');
 if (! str_contains($html, $expected[$locale]['title'])) {
     throw new RuntimeException('Translated shortcode title does not match for '.$locale);
 }
+if (! str_contains($html, '<h3 class="wp-cu-translator__title">')) {
+    throw new RuntimeException('Translator shortcode title must use an h3 heading.');
+}
+
+$stylesheet = (string) file_get_contents(dirname($pluginFile).'/assets/wp-cu-translator.css');
+foreach ([
+    ':where(.wp-cu-translator)',
+    ':where(.wp-cu-translator .wp-cu-translator__form)',
+    ':where(.wp-cu-translator .wp-cu-translator__grid)',
+    ':where(.wp-cu-translator .wp-cu-translator__options)',
+    'font-family: "Monomakh Unicode", "Times New Roman", serif;',
+] as $expectedCss) {
+    if (! str_contains($stylesheet, $expectedCss)) {
+        throw new RuntimeException('Translator stylesheet is missing its universal frontend rule: '.$expectedCss);
+    }
+}
+if (str_contains($stylesheet, '!important')) {
+    throw new RuntimeException('Translator stylesheet must not use !important.');
+}
+foreach ([
+    'class="wp-cu-translator__textarea"',
+    'class="wp-cu-translator__select"',
+    'class="wp-cu-translator__option"',
+    'class="wp-cu-translator__action"',
+] as $expectedClass) {
+    if (! str_contains($html, $expectedClass)) {
+        throw new RuntimeException('Translator frontend HTML is missing its styling hook: '.$expectedClass);
+    }
+}
+
+$shortcodes = wp_cu_translator_shortcodes();
+if (($shortcodes[0]['shortcode'] ?? '') !== '[wp_cu_translator]' || ! str_contains((string) ($shortcodes[1]['shortcode'] ?? ''), 'title=')) {
+    throw new RuntimeException('Shortcode reference does not list the default and custom-title forms.');
+}
 
 $localizedData = (string) wp_scripts()->get_data('wp-cu-translator', 'data');
 if (! preg_match('/var WPCUTranslator = (.+);/', $localizedData, $match)) {
