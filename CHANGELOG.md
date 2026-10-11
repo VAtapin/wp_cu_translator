@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.6
+
+- Use English for all source strings and built-in shortcode examples.
+- Preserve Russian and German catalogs and add complete Ukrainian and Polish translations.
+- Validate English source strings, complete catalogs and translation placeholders during release builds.
+
 ## 1.0.5
 
 - Rename the plugin and text domain to Georg-Kloster Slavonic Translator / georg-kloster-slavonic-translator while preserving shortcodes, settings and installation IDs.

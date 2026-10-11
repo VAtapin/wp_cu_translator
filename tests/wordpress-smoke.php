@@ -1,7 +1,7 @@
 <?php
 
 if ($argc !== 3) {
-    fwrite(STDERR, "Usage: php tests/wordpress-smoke.php <wordpress-root> <en_US|ru_RU|de_DE>\n");
+    fwrite(STDERR, "Usage: php tests/wordpress-smoke.php <wordpress-root> <en_US|ru_RU|de_DE|uk|pl_PL>\n");
     exit(2);
 }
 
@@ -62,6 +62,20 @@ $expected = [
         'translating' => 'Übersetzung läuft…',
         'disclosure' => 'Ihr Text wird an den konfigurierten Bible-Desktop-Dienst gesendet und kann von OpenAI verarbeitet werden.',
     ],
+    'uk' => [
+        'name' => 'Georg-Kloster — Церковнослов’янський перекладач',
+        'description' => 'Переклад тексту церковнослов’янською мовою за допомогою сервісу Bible Desktop.',
+        'title' => 'Georg-Kloster — Церковнослов’янський перекладач',
+        'translating' => 'Перекладаємо…',
+        'disclosure' => 'Ваш текст надсилається до налаштованого сервісу Bible Desktop і може оброблятися OpenAI.',
+    ],
+    'pl_PL' => [
+        'name' => 'Georg-Kloster — Tłumacz cerkiewnosłowiański',
+        'description' => 'Tłumacz tekst na język cerkiewnosłowiański za pomocą usługi tłumaczenia Bible Desktop.',
+        'title' => 'Georg-Kloster — Tłumacz cerkiewnosłowiański',
+        'translating' => 'Tłumaczenie…',
+        'disclosure' => 'Twój tekst jest wysyłany do skonfigurowanej usługi Bible Desktop i może być przetwarzany przez OpenAI.',
+    ],
 ];
 if (! isset($expected[$locale])) {
     throw new RuntimeException('Unsupported smoke-test locale.');
@@ -75,7 +89,25 @@ if ($locale !== 'en_US') {
     }
 }
 
+$po = $locale === 'en_US'
+    ? dirname($pluginFile).'/languages/georg-kloster-slavonic-translator.pot'
+    : dirname($pluginFile).'/languages/georg-kloster-slavonic-translator-'.$locale.'.po';
+preg_match_all('/^msgid (".+")\Rmsgstr (".*")$/m', (string) file_get_contents($po), $entries, PREG_SET_ORDER);
+if (count($entries) !== 63) {
+    throw new RuntimeException('Expected all 63 interface strings in '.$po);
+}
+foreach ($entries as $entry) {
+    $msgid = json_decode($entry[1], true, 512, JSON_THROW_ON_ERROR);
+    $translated = $locale === 'en_US' ? $msgid : json_decode($entry[2], true, 512, JSON_THROW_ON_ERROR);
+    if (__($msgid, 'georg-kloster-slavonic-translator') !== $translated) {
+        throw new RuntimeException('Catalog translation mismatch for '.$locale.': '.$msgid);
+    }
+}
+
 $metadata = get_plugin_data($pluginFile, false, true);
+if ($metadata['Version'] !== '1.0.6' || WP_CU_TRANSLATOR_VERSION !== '1.0.6') {
+    throw new RuntimeException('Release version does not match.');
+}
 if (($metadata['PluginURI'] ?? '') !== 'https://kalender.georg-kloster.ru/calendar-api') {
     throw new RuntimeException('Plugin URI does not match.');
 }
@@ -132,6 +164,12 @@ foreach ([
 $shortcodes = wp_cu_translator_shortcodes();
 if (($shortcodes[0]['shortcode'] ?? '') !== '[wp_cu_translator]' || ! str_contains((string) ($shortcodes[1]['shortcode'] ?? ''), 'title=')) {
     throw new RuntimeException('Shortcode reference does not list the default and custom-title forms.');
+}
+if ($shortcodes[1]['shortcode'] !== '[wp_cu_translator title="Church Slavonic translation"]') {
+    throw new RuntimeException('The built-in shortcode example must use English source text.');
+}
+if (! str_contains(do_shortcode('[wp_cu_translator title="Custom heading"]'), 'Custom heading')) {
+    throw new RuntimeException('Custom shortcode headings must be preserved.');
 }
 
 $localizedData = (string) wp_scripts()->get_data('wp-cu-translator', 'data');

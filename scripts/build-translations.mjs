@@ -30,7 +30,6 @@ const translations = {
   'Insufficient permissions.': ['Недостаточно прав.', 'Unzureichende Berechtigungen.'],
   'Connection established. The Bible Desktop API is available.': ['Соединение установлено. Bible Desktop API доступен.', 'Verbindung hergestellt. Die Bible Desktop API ist verfügbar.'],
   'Could not connect: %s': ['Не удалось подключиться: %s', 'Verbindung fehlgeschlagen: %s'],
-  'Georg-Kloster Slavonic Translator': ['Georg-Kloster — Церковнославянский переводчик', 'Georg-Kloster — Kirchenslawischer Übersetzer'],
   'Translating…': ['Переводим…', 'Übersetzung läuft…'],
   'Translation could not be completed.': ['Перевод не выполнен.', 'Die Übersetzung konnte nicht abgeschlossen werden.'],
   'Recognized as %s': ['Распознано как %s', 'Erkannt als %s'],
@@ -68,19 +67,93 @@ const translations = {
   'Bible Desktop returned HTTP error %d.': ['Bible Desktop вернул ошибку HTTP %d.', 'Bible Desktop hat den HTTP-Fehler %d zurückgegeben.'],
 };
 
+const additionalTranslations = {
+  'Your text is sent to the configured Bible Desktop service and may be processed by OpenAI.': ['Ваш текст надсилається до налаштованого сервісу Bible Desktop і може оброблятися OpenAI.', 'Twój tekst jest wysyłany do skonfigurowanej usługi Bible Desktop i może być przetwarzany przez OpenAI.'],
+  'Terms of Service': ['Умови використання', 'Warunki korzystania'],
+  'Privacy Policy': ['Політика конфіденційності', 'Polityka prywatności'],
+  'Georg-Kloster Slavonic Translator': ['Georg-Kloster — Церковнослов’янський перекладач', 'Georg-Kloster — Tłumacz cerkiewnosłowiański'],
+  'Settings': ['Налаштування', 'Ustawienia'],
+  'Shortcodes': ['Шорткоди', 'Shortcode'],
+  'Add one of these shortcodes in the Shortcode block or HTML block of the WordPress editor.': ['Додайте один із цих шорткодів до блоку «Шорткод» або HTML-блоку редактора WordPress.', 'Dodaj jeden z tych shortcode’ów w bloku Shortcode lub bloku HTML edytora WordPress.'],
+  'Shortcode': ['Шорткод', 'Shortcode'],
+  'What it does': ['Призначення', 'Działanie'],
+  'Shows the standard Church Slavonic translation form with the default title.': ['Показує стандартну форму церковнослов’янського перекладу із заголовком за замовчуванням.', 'Wyświetla standardowy formularz tłumaczenia na język cerkiewnosłowiański z domyślnym tytułem.'],
+  'Shows the same form with a custom heading. Replace the text inside title with your own heading.': ['Показує ту саму форму з власним заголовком. Замініть текст у title на свій заголовок.', 'Wyświetla ten sam formularz z własnym nagłówkiem. Zastąp tekst w title swoim nagłówkiem.'],
+  'Translate text into Church Slavonic using the Bible Desktop translation service.': ['Переклад тексту церковнослов’янською мовою за допомогою сервісу Bible Desktop.', 'Tłumacz tekst na język cerkiewnosłowiański za pomocą usługi tłumaczenia Bible Desktop.'],
+  'Enter a valid Bible Desktop HTTPS URL.': ['Вкажіть коректну HTTPS-адресу Bible Desktop.', 'Wprowadź prawidłowy adres HTTPS Bible Desktop.'],
+  'Add the form with [wp_cu_translator]. The free tier works without a key; an optional key enables higher limits and always stays on the WordPress server.': ['Додайте форму за допомогою [wp_cu_translator]. Безкоштовний режим працює без ключа; необов’язковий ключ збільшує ліміти й завжди залишається на сервері WordPress.', 'Dodaj formularz za pomocą [wp_cu_translator]. Bezpłatny tryb działa bez klucza; opcjonalny klucz zwiększa limity i zawsze pozostaje na serwerze WordPress.'],
+  'Bible Desktop URL': ['Адреса Bible Desktop', 'Adres Bible Desktop'],
+  'Example:': ['Наприклад:', 'Przykład:'],
+  'Bible Desktop API key': ['Ключ API Bible Desktop', 'Klucz API Bible Desktop'],
+  'The key is saved. Leave the field empty to keep it.': ['Ключ збережено. Залиште поле порожнім, щоб зберегти його.', 'Klucz został zapisany. Pozostaw pole puste, aby go zachować.'],
+  'Optional. Without a key, the plugin uses the free public tier. Add a key for higher limits.': ['Необов’язково. Без ключа плагін використовує безкоштовний публічний режим. Додайте ключ для збільшення лімітів.', 'Opcjonalnie. Bez klucza wtyczka korzysta z bezpłatnego trybu publicznego. Dodaj klucz, aby zwiększyć limity.'],
+  'Delete the saved key': ['Видалити збережений ключ', 'Usuń zapisany klucz'],
+  'Timeout': ['Час очікування', 'Limit czasu'],
+  'seconds': ['секунд', 'sekund'],
+  'Save settings': ['Зберегти налаштування', 'Zapisz ustawienia'],
+  'Check connection': ['Перевірити з’єднання', 'Sprawdź połączenie'],
+  'The check does not send text to OpenAI and does not spend money.': ['Перевірка не надсилає текст до OpenAI й не витрачає кошти.', 'Sprawdzenie nie wysyła tekstu do OpenAI i nie powoduje kosztów.'],
+  'Insufficient permissions.': ['Недостатньо прав.', 'Brak wymaganych uprawnień.'],
+  'Connection established. The Bible Desktop API is available.': ['З’єднання встановлено. API Bible Desktop доступний.', 'Połączenie nawiązane. API Bible Desktop jest dostępne.'],
+  'Could not connect: %s': ['Не вдалося підключитися: %s', 'Nie udało się połączyć: %s'],
+  'Translating…': ['Перекладаємо…', 'Tłumaczenie…'],
+  'Translation could not be completed.': ['Не вдалося завершити переклад.', 'Nie udało się ukończyć tłumaczenia.'],
+  'Recognized as %s': ['Розпізнано як %s', 'Rozpoznano jako %s'],
+  'Ready — the result was loaded from cache.': ['Готово — результат завантажено з кешу.', 'Gotowe — wynik został wczytany z pamięci podręcznej.'],
+  'Ready.': ['Готово.', 'Gotowe.'],
+  'Copied': ['Скопійовано', 'Skopiowano'],
+  'Could not copy': ['Не вдалося скопіювати', 'Nie udało się skopiować'],
+  'Plain text copied': ['Скопійовано звичайний текст', 'Skopiowano zwykły tekst'],
+  'Text to translate': ['Текст для перекладу', 'Tekst do przetłumaczenia'],
+  'Enter Russian or German text': ['Введіть російський або німецький текст', 'Wprowadź tekst rosyjski lub niemiecki'],
+  'Source language': ['Мова оригіналу', 'Język źródłowy'],
+  'Detect automatically': ['Визначити автоматично', 'Wykryj automatycznie'],
+  'Russian': ['Російська', 'Rosyjski'],
+  'German': ['Німецька', 'Niemiecki'],
+  'Orthography': ['Правопис', 'Ortografia'],
+  'Accents': ['Наголоси', 'Akcenty'],
+  'Titlo': ['Титла', 'Titła'],
+  'Breathings': ['Придихи', 'Przydechy'],
+  'Slavonic numbers': ['Слов’янські числа', 'Liczby słowiańskie'],
+  'Translate': ['Перекласти', 'Przetłumacz'],
+  'Copy text': ['Копіювати текст', 'Kopiuj tekst'],
+  'Copy with formatting': ['Копіювати з форматуванням', 'Kopiuj z formatowaniem'],
+  'Download font': ['Завантажити шрифт', 'Pobierz czcionkę'],
+  'After downloading, open MonomakhUnicode.ttf and click Install. If Word does not select it automatically, select the pasted text and assign Monomakh Unicode manually.': ['Після завантаження відкрийте MonomakhUnicode.ttf і натисніть «Встановити». Якщо Word не вибере шрифт автоматично, виділіть вставлений текст і призначте Monomakh Unicode вручну.', 'Po pobraniu otwórz MonomakhUnicode.ttf i kliknij Zainstaluj. Jeśli Word nie wybierze czcionki automatycznie, zaznacz wklejony tekst i ręcznie przypisz Monomakh Unicode.'],
+  'Enter text to translate.': ['Введіть текст для перекладу.', 'Wprowadź tekst do przetłumaczenia.'],
+  'The selected source language is not supported.': ['Вибрана мова оригіналу не підтримується.', 'Wybrany język źródłowy nie jest obsługiwany.'],
+  'The text is too long.': ['Текст надто довгий.', 'Tekst jest zbyt długi.'],
+  'Could not connect to Bible Desktop.': ['Не вдалося підключитися до Bible Desktop.', 'Nie udało się połączyć z Bible Desktop.'],
+  'The Bible Desktop API key is invalid.': ['Ключ API Bible Desktop недійсний.', 'Klucz API Bible Desktop jest nieprawidłowy.'],
+  'Check the entered text and translation settings.': ['Перевірте введений текст і налаштування перекладу.', 'Sprawdź wprowadzony tekst i ustawienia tłumaczenia.'],
+  'The translation request limit has been reached. Please try again later.': ['Досягнуто ліміту запитів на переклад. Спробуйте пізніше.', 'Osiągnięto limit żądań tłumaczenia. Spróbuj ponownie później.'],
+  'The higher translation limit has been reached. Please try again later.': ['Досягнуто збільшеного ліміту перекладів. Спробуйте пізніше.', 'Osiągnięto podwyższony limit tłumaczeń. Spróbuj ponownie później.'],
+  'The free daily limit has been reached. Add an API key for higher limits or try again after the reset.': ['Досягнуто безкоштовного добового ліміту. Додайте ключ API для збільшення лімітів або повторіть після скидання.', 'Osiągnięto bezpłatny limit dzienny. Dodaj klucz API, aby zwiększyć limity, lub spróbuj ponownie po ich zresetowaniu.'],
+  'The translation service is temporarily unavailable.': ['Сервіс перекладу тимчасово недоступний.', 'Usługa tłumaczenia jest tymczasowo niedostępna.'],
+  'Bible Desktop returned HTTP error %d.': ['Bible Desktop повернув помилку HTTP %d.', 'Bible Desktop zwrócił błąd HTTP %d.'],
+};
+for (const [msgid, values] of Object.entries(translations)) {
+  if (!additionalTranslations[msgid] || additionalTranslations[msgid].length !== 2) {
+    throw new Error(`Missing Ukrainian/Polish translations: ${msgid}`);
+  }
+  values.push(...additionalTranslations[msgid]);
+}
+
 const locales = {
   ru_RU: { index: 0, plural: 'nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);' },
   de_DE: { index: 1, plural: 'nplurals=2; plural=(n != 1);' },
+  uk: { index: 2, plural: 'nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);' },
+  pl_PL: { index: 3, plural: 'nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);' },
 };
 
 const escapePo = (value) => JSON.stringify(value);
 
 function metadata(locale, plural) {
   return [
-    'Project-Id-Version: Georg-Kloster Slavonic Translator 1.0.5',
+    'Project-Id-Version: Georg-Kloster Slavonic Translator 1.0.6',
     'Report-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues',
-    'POT-Creation-Date: 2026-09-17 00:00+0000',
-    'PO-Revision-Date: 2026-09-17 00:00+0000',
+    'POT-Creation-Date: 2026-10-11 00:00+0000',
+    'PO-Revision-Date: 2026-10-11 00:00+0000',
     'Language: ' + locale,
     'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',
@@ -160,6 +233,16 @@ const extracted = new Set([...source.matchAll(/(?:__|esc_html__|esc_attr__)\(\s*
 for (const required of ['Georg-Kloster Slavonic Translator', 'Translate text into Church Slavonic using the Bible Desktop translation service.']) extracted.add(required);
 const missing = [...extracted].filter((msgid) => !Object.hasOwn(translations, msgid));
 const stale = Object.keys(translations).filter((msgid) => !extracted.has(msgid));
+for (const [msgid, values] of Object.entries(translations)) {
+  if (/[^\x00-\x7F…—]/u.test(msgid)) throw new Error(`Non-English source string: ${msgid}`);
+  const placeholders = (text) => (text.match(/%(?:\d+\$)?[sd]/g) || []).sort().join('|');
+  for (const value of values) {
+    if (!value.trim() || placeholders(value) !== placeholders(msgid)) {
+      throw new Error(`Empty translation or mismatched placeholders: ${msgid}`);
+    }
+  }
+}
+if (/[\p{Script=Cyrillic}]/u.test(source)) throw new Error('Plugin source must use English strings, including shortcode examples.');
 if (missing.length || stale.length) {
   throw new Error(`Translation catalog mismatch. Missing: ${missing.join(' | ') || '-'}; stale: ${stale.join(' | ') || '-'}`);
 }

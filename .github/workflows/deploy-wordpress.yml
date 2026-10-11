@@ -33,6 +33,7 @@ jobs:
           node --check assets/wp-cu-translator.js
           node --check scripts/build-translations.mjs
           node scripts/build-translations.mjs
+          node tests/translations.mjs
           git diff --exit-code -- languages
 
       - name: Build installation ZIP
@@ -44,13 +45,14 @@ jobs:
           rsync -a --exclude-from=.distignore ./ "$package/georg-kloster-slavonic-translator/"
           (cd "$package" && zip -qr "$GITHUB_WORKSPACE/georg-kloster-slavonic-translator-$TAG.zip" georg-kloster-slavonic-translator)
           cp "georg-kloster-slavonic-translator-$TAG.zip" georg-kloster-slavonic-translator.zip
+          cp "georg-kloster-slavonic-translator-$TAG.zip" "georg-kloster-slavonic-translator-wordpress-org-$TAG.zip"
 
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.ref_name }}
         run: |
-          gh release create "$TAG" "georg-kloster-slavonic-translator-$TAG.zip" georg-kloster-slavonic-translator.zip \
+          gh release create "$TAG" "georg-kloster-slavonic-translator-$TAG.zip" georg-kloster-slavonic-translator.zip "georg-kloster-slavonic-translator-wordpress-org-$TAG.zip" \
             --title "Georg-Kloster Slavonic Translator $TAG" \
             --generate-notes
 
@@ -61,9 +63,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Use WordPress.org language packs
-        run: printf '\nlanguages/*.po\nlanguages/*.mo\n' >> .distignore
 
       - name: Deploy to WordPress.org
         uses: 10up/action-wordpress-plugin-deploy@stable

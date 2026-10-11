@@ -4,7 +4,7 @@ Tags: church slavonic, translator, bible, orthodox, ai
 Requires at least: 6.3
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,7 @@ The plugin works without an API key using the free public Bible Desktop API tier
 
 The browser sends the form to WordPress. WordPress then contacts Bible Desktop server-to-server, so an optional Bible Desktop API key is never included in the page HTML or JavaScript.
 
-The plugin name, description, settings page, messages and public form are available in English, Russian and German. WordPress selects the language from its current locale.
+The plugin name, description, settings page, messages and public form are available in English, Russian, German, Ukrainian and Polish. WordPress selects the language from its current locale.
 
 Biblical references, exact verses, confidently recognized quotations and cached results can be returned without a new paid OpenAI request. Other texts use the model and spending limits configured by the Bible Desktop administrator.
 
@@ -32,7 +32,7 @@ Biblical references, exact verses, confidently recognized quotations and cached 
 
 Optional custom title:
 
-`[wp_cu_translator title="Перевод на церковнославянский"]`
+`[wp_cu_translator title="Church Slavonic translation"]`
 
 == Shortcodes and settings ==
 
@@ -71,6 +71,11 @@ The service is operated by Bible Desktop. API Terms of Service: https://bible-de
 The plugin does not create its own database tables and does not store translation text. The Bible Desktop URL, optional external API key, timeout and non-secret installation UUID are stored in the WordPress options table. Requests are subject to the logging, retention and AI settings configured on the connected Bible Desktop server.
 
 == Changelog ==
+
+= 1.0.6 =
+* Use English source strings, including built-in shortcode examples.
+* Preserve Russian and German translations and add complete Ukrainian and Polish translations.
+* Validate source language, catalog coverage and translation placeholders in release builds.
 
 = 1.0.5 =
 * Use the distinctive Georg-Kloster Slavonic Translator name and matching WordPress.org slug/text domain.
