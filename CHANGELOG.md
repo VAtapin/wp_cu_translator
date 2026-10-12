@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.7
+
+- Prefix the localized JavaScript object as georsltr_config and test frontend translation requests using that object.
+- Exclude PO/MO only from the WordPress.org package; preserve RU/DE/UK/PL in source and direct-installation releases.
+
 ## 1.0.6
 
 - Use English for all source strings and built-in shortcode examples.

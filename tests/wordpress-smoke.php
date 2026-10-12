@@ -105,7 +105,7 @@ foreach ($entries as $entry) {
 }
 
 $metadata = get_plugin_data($pluginFile, false, true);
-if ($metadata['Version'] !== '1.0.6' || WP_CU_TRANSLATOR_VERSION !== '1.0.6') {
+if ($metadata['Version'] !== '1.0.7' || WP_CU_TRANSLATOR_VERSION !== '1.0.7') {
     throw new RuntimeException('Release version does not match.');
 }
 if (($metadata['PluginURI'] ?? '') !== 'https://kalender.georg-kloster.ru/calendar-api') {
@@ -173,7 +173,7 @@ if (! str_contains(do_shortcode('[wp_cu_translator title="Custom heading"]'), 'C
 }
 
 $localizedData = (string) wp_scripts()->get_data('wp-cu-translator', 'data');
-if (! preg_match('/var WPCUTranslator = (.+);/', $localizedData, $match)) {
+if (! preg_match('/var georsltr_config = (.+);/', $localizedData, $match)) {
     throw new RuntimeException('Localized JavaScript configuration was not generated for '.$locale);
 }
 $javascriptConfig = json_decode($match[1], true, 512, JSON_THROW_ON_ERROR);

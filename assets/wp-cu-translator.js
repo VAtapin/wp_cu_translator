@@ -1,7 +1,7 @@
 (() => {
     'use strict';
 
-    const config = window.WPCUTranslator || {};
+    const config = window.georsltr_config || {};
     const strings = config.strings || {};
     const message = (key, fallback) => strings[key] || fallback;
 
