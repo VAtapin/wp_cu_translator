@@ -2,6 +2,11 @@ name: Update WordPress.org screenshots and readme
 
 on:
   workflow_dispatch:
+    inputs:
+      update_readme:
+        description: Publish readme changes as well as directory images
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -15,6 +20,9 @@ jobs:
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
+      - name: Preserve published readme for image-only updates
+        if: ${{ !inputs.update_readme }}
+        run: curl --fail --silent --show-error --proto '=https' --tlsv1.2 https://plugins.svn.wordpress.org/georg-kloster-slavonic-translator/trunk/readme.txt --output readme.txt
       - name: Validate screenshot inventory
         run: |
           for number in 1 2 3 4 5; do
