@@ -6,7 +6,7 @@ WordPress-плагин для перевода русского и немецк�
 
 ## Установка
 
-Версия 1.0.8 подготовлена для [WordPress.org](https://wordpress.org/plugins/georg-kloster-slavonic-translator/) и GitHub Release. Для установки используйте `georg-kloster-slavonic-translator-1.0.8.zip`, для обновления заявки WordPress.org — `georg-kloster-slavonic-translator-wordpress-org-1.0.8.zip`. Установочный ZIP содержит все четыре перевода RU/DE/UK/PL. ZIP для WordPress.org содержит английские исходные строки и POT; переводы для каталога доставляются отдельно через translate.wordpress.org. Исходные PO/MO остаются в репозитории.
+Версия 1.0.8 опубликована в [WordPress.org](https://wordpress.org/plugins/georg-kloster-slavonic-translator/) и GitHub Release. Для установки используйте `georg-kloster-slavonic-translator-1.0.8.zip`, для обновления заявки WordPress.org — `georg-kloster-slavonic-translator-wordpress-org-1.0.8.zip`. Установочный ZIP содержит все четыре перевода RU/DE/UK/PL. ZIP для WordPress.org содержит английские исходные строки и POT; переводы для каталога доставляются отдельно через translate.wordpress.org. Исходные PO/MO остаются в репозитории.
 
 1. В WordPress выберите **Плагины → Добавить новый → Загрузить плагин** и загрузите `georg-kloster-slavonic-translator.zip`.
 2. Активируйте **Georg-Kloster Slavonic Translator** — бесплатный режим уже готов к работе.
@@ -89,3 +89,7 @@ WordPress-плагин для перевода русского и немецк�
 ## Публикация WordPress.org — 13 октября 2026
 
 Версия 1.0.7 опубликована через GitHub Actions в SVN trunk и tags/1.0.7 (revision 3743834). Dry run и фактическая публикация прошли; публичный WordPress.org ZIP и оба SVN-каталога побайтно проверены против исходников. `WORDPRESS_ORG_ENABLED=true` включена, поэтому следующие Git-теги запускают публикацию автоматически после успешной сборки Release.
+
+Версия 1.0.8 опубликована из Git-тега через run `38400274889`: SVN revision `3743949`, все runtime-файлы и публичный ZIP совпали с исходниками. Пять скриншотов находятся в SVN assets и отображаются на странице каталога. WordPress.org показывает стандартную задержку распространения обновления до шести часов; прямой ZIP уже доступен.
+
+Для последующих изменений скриншотов, утверждённых иконок и подписей используйте ручной workflow **Update WordPress.org screenshots and readme**. Он отправляет только `.wordpress-org` и `readme.txt` в assets/trunk/stable tag, сохраняя runtime-код. Версию менять для таких обновлений не требуется.
