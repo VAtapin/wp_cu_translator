@@ -6,7 +6,7 @@ const originals = (file) => [...readFileSync(file, 'utf8').matchAll(/^msgid (".+
 const interfaceSource = originals(`${directory}/interface-source.pot`);
 const readmeSource = originals(`${directory}/readme-source.pot`);
 assert.equal(interfaceSource.length, 93);
-assert.equal(readmeSource.length, 66);
+assert.equal(readmeSource.length, 68);
 const readme = readFileSync('readme.txt', 'utf8');
 const changelog = readme.split(/^== Changelog ==\r?$/m)[1]?.split(/^== [^=]+ ==\r?$/m)[0];
 assert.ok(changelog, 'Missing changelog in readme.txt');
@@ -50,4 +50,4 @@ for (const locale of ['ru_RU', 'de_DE', 'uk', 'pl_PL']) {
   });
   writeFileSync(`${directory}/readme-${locale}.po`, document(locale, 'WordPress.org readme', readmeEntries, metadata));
 }
-console.log('WordPress.org catalogs generated and validated: 93 interface strings and 66 readme strings per locale.');
+console.log('WordPress.org catalogs generated and validated: 93 interface strings and 68 readme strings per locale.');

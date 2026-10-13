@@ -64,5 +64,7 @@
   "Zapytania słownikowe i zapytania o hasła WordPress wysyła do skonfigurowanej usługi Bible Desktop dopiero po działaniu użytkownika: <code>/api/dictionaries/AZBYKA_CU_FULL/search</code>, <code>/api/dictionaries/AZBYKA_CU_FULL/alphabet</code> i <code>/api/dictionaries/AZBYKA_CU_FULL/entries/{key}</code>. Przesyłane są zapytanie, tryb, rozdział lub klucz hasła oraz istniejące nagłówki klienta i instalacji wtyczki; opcjonalnie skonfigurowany klucz API również pozostaje po stronie serwera. Udane odpowiedzi WordPress może buforować przez pięć minut. Słownik nie wywołuje OpenAI. Źródło: https://azbyka.ru/otechnik/Spravochniki/polnyj-pravoslavnyj-tserkovnoslavjanskij-slovar/ . Kliknięcie odnośnika do źródła otwiera Azbykę bezpośrednio.",
   "Dodano samodzielny słownik cerkiewnosłowiański, wyszukiwanie słów i znaczeń, przeglądanie według alfabetu i wyszukiwanie zaznaczonego słowa.",
   "Uwzględniany jest bieżący język strony WPML i zachowywany w żądaniach AJAX.",
-  "Usunięto czarne tło na zewnątrz zatwierdzonego logo; używane są przezroczyste ikony PNG."
+  "Usunięto czarne tło na zewnątrz zatwierdzonego logo; używane są przezroczyste ikony PNG.",
+  "Monomakh Unicode jest dołączony lokalnie do liter alfabetu słownika i haseł.",
+  "Sprawdzono przełączanie języka strony z dołączonymi tłumaczeniami bez zainstalowanego pakietu językowego."
 ]

@@ -64,5 +64,7 @@
   "Wörterbuch- und Artikelanfragen sendet WordPress erst nach einer Benutzeraktion an den konfigurierten Bible-Desktop-Dienst: <code>/api/dictionaries/AZBYKA_CU_FULL/search</code>, <code>/api/dictionaries/AZBYKA_CU_FULL/alphabet</code> und <code>/api/dictionaries/AZBYKA_CU_FULL/entries/{key}</code>. Übertragen werden Suchanfrage, Modus, Kapitel oder Artikelschlüssel sowie die bestehenden Client- und Installationsheader des Plugins; ein optional konfigurierter API-Schlüssel bleibt ebenfalls serverseitig. Erfolgreiche Antworten kann WordPress fünf Minuten zwischenspeichern. Das Wörterbuch ruft OpenAI nicht auf. Quelle: https://azbyka.ru/otechnik/Spravochniki/polnyj-pravoslavnyj-tserkovnoslavjanskij-slovar/ . Ein Klick auf einen Quellenlink öffnet Azbyka direkt.",
   "Ein eigenständiges kirchenslawisches Wörterbuch, Wort- und Bedeutungssuche, alphabetisches Blättern und Nachschlagen ausgewählter Wörter wurden hinzugefügt.",
   "Die aktuelle WPML-Seitensprache wird berücksichtigt und in AJAX-Anfragen beibehalten.",
-  "Der schwarze Hintergrund außerhalb des bestätigten Logos wurde entfernt; transparente PNG-Symbole werden verwendet."
+  "Der schwarze Hintergrund außerhalb des bestätigten Logos wurde entfernt; transparente PNG-Symbole werden verwendet.",
+  "Monomakh Unicode wird lokal für die Buchstaben des Wörterbuchalphabets und die Stichwörter mitgeliefert.",
+  "Der Wechsel der Seitensprache mit mitgelieferten Übersetzungen ohne installiertes Sprachpaket wurde geprüft."
 ]

@@ -199,3 +199,9 @@ msgstr "Die aktuelle WPML-Seitensprache wird berücksichtigt und in AJAX-Anfrage
 
 msgid "Remove the black exterior from the approved logo and use transparent PNG icons."
 msgstr "Der schwarze Hintergrund außerhalb des bestätigten Logos wurde entfernt; transparente PNG-Symbole werden verwendet."
+
+msgid "Bundle Monomakh Unicode locally for dictionary alphabet letters and headwords."
+msgstr "Monomakh Unicode wird lokal für die Buchstaben des Wörterbuchalphabets und die Stichwörter mitgeliefert."
+
+msgid "Verify page language switching with bundled translations and no installed language pack."
+msgstr "Der Wechsel der Seitensprache mit mitgelieferten Übersetzungen ohne installiertes Sprachpaket wurde geprüft."

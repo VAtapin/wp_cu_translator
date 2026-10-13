@@ -4,7 +4,7 @@ Tags: church slavonic, translator, bible, orthodox, ai
 Requires at least: 6.3
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -87,6 +87,10 @@ The plugin does not create its own database tables and does not store translatio
 5. Russian interface with localized labels and the external-processing notice.
 
 == Changelog ==
+
+= 1.1.1 =
+* Bundle Monomakh Unicode locally for dictionary alphabet letters and headwords.
+* Verify page language switching with bundled translations and no installed language pack.
 
 = 1.1.0 =
 * Add a standalone Church Slavonic dictionary, word and meaning search, alphabet browsing and selected-word lookup.

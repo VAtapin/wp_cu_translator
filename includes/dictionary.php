@@ -130,7 +130,7 @@ function wp_cu_translator_dictionary_shortcode($attributes = []): string
                     </select>
                 </label>
                 <label class="wp-cu-translator__label"><?php echo esc_html__('Alphabet', 'georg-kloster-slavonic-translator'); ?>
-                    <select class="wp-cu-translator__select" name="letter">
+                    <select class="wp-cu-translator__select georsltr-dictionary__alphabet" name="letter">
                         <option value=""><?php echo esc_html__('All letters', 'georg-kloster-slavonic-translator'); ?></option>
                     </select>
                 </label>

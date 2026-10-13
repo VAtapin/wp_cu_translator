@@ -105,7 +105,7 @@ foreach ($entries as $entry) {
 }
 
 $metadata = get_plugin_data($pluginFile, false, true);
-if ($metadata['Version'] !== '1.1.0' || WP_CU_TRANSLATOR_VERSION !== '1.1.0') {
+if ($metadata['Version'] !== '1.1.1' || WP_CU_TRANSLATOR_VERSION !== '1.1.1') {
     throw new RuntimeException('Release version does not match.');
 }
 if (($metadata['PluginURI'] ?? '') !== 'https://kalender.georg-kloster.ru/calendar-api') {
@@ -154,6 +154,18 @@ foreach ([
 }
 if (str_contains($stylesheet, '!important')) {
     throw new RuntimeException('Translator stylesheet must not use !important.');
+}
+$fontStyle = wp_styles()->registered['georsltr-font'] ?? null;
+if (! $fontStyle || ! in_array('georsltr-font', wp_styles()->registered['wp-cu-translator']->deps, true)) {
+    throw new RuntimeException('The translator must enqueue its bundled Church Slavonic font.');
+}
+$fontCss = (string) file_get_contents(dirname($pluginFile).'/assets/fonts.css');
+if (! str_contains($fontCss, "url('fonts/MonomakhUnicode.ttf')") || ! is_file(dirname($pluginFile).'/assets/fonts/MonomakhUnicode.ttf') || ! is_file(dirname($pluginFile).'/assets/fonts/OFL-Monomakh.txt')) {
+    throw new RuntimeException('The local font and its license must be bundled.');
+}
+$dictionaryCss = (string) file_get_contents(dirname($pluginFile).'/assets/dictionary.css');
+if (! str_contains($html, 'georsltr-dictionary__alphabet') || ! str_contains($dictionaryCss, '.georsltr-dictionary__alphabet option') || ! str_contains($dictionaryCss, "font-family: 'Monomakh Unicode'")) {
+    throw new RuntimeException('Dictionary alphabet options must use the Church Slavonic font.');
 }
 foreach ([
     'class="wp-cu-translator__textarea"',

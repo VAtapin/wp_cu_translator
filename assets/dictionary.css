@@ -5,6 +5,7 @@
 .georsltr-tools > [role="tabpanel"] > .wp-cu-translator { margin-top: 0.75rem; }
 .georsltr-dictionary .georsltr-dictionary__form { display: grid; gap: 1rem; }
 .georsltr-dictionary .georsltr-dictionary__filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.georsltr-dictionary .georsltr-dictionary__alphabet, .georsltr-dictionary .georsltr-dictionary__alphabet option { font-family: 'Monomakh Unicode', 'Times New Roman', serif; }
 .georsltr-dictionary .georsltr-dictionary__results { display: grid; gap: 0.6rem; margin-block: 1rem; }
 .georsltr-dictionary .georsltr-dictionary__entry { padding: 1rem; text-align: start; border: 1px solid #dce5df; border-radius: 0.65rem; background: #f5f8f4; color: #233b31; font: inherit; cursor: pointer; }
 .georsltr-dictionary .georsltr-dictionary__entry strong, .georsltr-dictionary .georsltr-dictionary__entry span { display: block; overflow-wrap: anywhere; }

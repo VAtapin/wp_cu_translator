@@ -4,6 +4,15 @@ require $argv[1].'/wp-load.php';
 require_once WP_PLUGIN_DIR.'/georg-kloster-slavonic-translator/georg-kloster-slavonic-translator.php';
 set_exception_handler(static function (Throwable $error): void { fwrite(STDERR, $error->getMessage()."\n"); exit(1); });
 $pageLanguage = 'en';
+$mode = $argv[2] ?? '';
+if (in_array($mode, ['bundled-only', 'without-catalogs'], true)) {
+    add_filter('pre_load_textdomain', static function ($loaded, $domain, $file) use ($mode) {
+        if ($domain === 'georg-kloster-slavonic-translator' && ($mode === 'without-catalogs' || str_starts_with($file, WP_LANG_DIR.'/'))) {
+            return false;
+        }
+        return $loaded;
+    }, 10, 3);
+}
 add_filter('locale', static fn () => 'en_US');
 add_filter('determine_locale', static fn () => 'en_US');
 add_filter('wpml_current_language', static function () use (&$pageLanguage) { return $pageLanguage; });

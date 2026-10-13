@@ -3,7 +3,7 @@
  * Plugin Name: Georg-Kloster Slavonic Translator
  * Plugin URI: https://kalender.georg-kloster.ru/calendar-api
  * Description: Translate text into Church Slavonic and search its dictionary through Bible Desktop.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Requires at least: 6.3
  * Requires PHP: 8.0
  * Author: Vladimir Atapin
@@ -17,7 +17,7 @@
 if (! defined('ABSPATH')) {
     exit;
 }
-define('WP_CU_TRANSLATOR_VERSION', '1.1.0');
+define('WP_CU_TRANSLATOR_VERSION', '1.1.1');
 define('WP_CU_TRANSLATOR_OPTION', 'wp_cu_translator_settings');
 define('WP_CU_TRANSLATOR_INSTALLATION_OPTION', 'wp_cu_translator_installation_id');
 define('WP_CU_TRANSLATOR_FILE', __FILE__);
@@ -347,7 +347,8 @@ function wp_cu_translator_check_connection(): void
 
 function wp_cu_translator_register_assets(): void
 {
-    wp_register_style('wp-cu-translator', WP_CU_TRANSLATOR_URL.'assets/wp-cu-translator.css', [], WP_CU_TRANSLATOR_VERSION);
+    wp_register_style('georsltr-font', WP_CU_TRANSLATOR_URL.'assets/fonts.css', [], WP_CU_TRANSLATOR_VERSION);
+    wp_register_style('wp-cu-translator', WP_CU_TRANSLATOR_URL.'assets/wp-cu-translator.css', ['georsltr-font'], WP_CU_TRANSLATOR_VERSION);
     wp_register_script('wp-cu-translator', WP_CU_TRANSLATOR_URL.'assets/wp-cu-translator.js', [], WP_CU_TRANSLATOR_VERSION, true);
 }
 
