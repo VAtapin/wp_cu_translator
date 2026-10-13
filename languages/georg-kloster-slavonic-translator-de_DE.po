@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: Georg-Kloster Slavonic Translator 1.0.9\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-10-11 00:00+0000\nPO-Revision-Date: 2026-10-11 00:00+0000\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Domain: georg-kloster-slavonic-translator\n"
+msgstr "Project-Id-Version: Georg-Kloster Slavonic Translator 1.1.0\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-10-11 00:00+0000\nPO-Revision-Date: 2026-10-11 00:00+0000\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Domain: georg-kloster-slavonic-translator\n"
 
 msgid "Your text is sent to the configured Bible Desktop service and may be processed by OpenAI."
 msgstr "Ihr Text wird an den konfigurierten Bible-Desktop-Dienst gesendet und kann von OpenAI verarbeitet werden."
@@ -34,8 +34,8 @@ msgstr "Zeigt das Standardformular des kirchenslawischen Übersetzers mit der St
 msgid "Shows the same form with a custom heading. Replace the text inside title with your own heading."
 msgstr "Zeigt dasselbe Formular mit einer eigenen Überschrift. Ersetzen Sie den Text in title durch Ihre Überschrift."
 
-msgid "Translate text into Church Slavonic using the Bible Desktop translation service."
-msgstr "Übersetzt Texte mit dem Übersetzungsdienst Bible Desktop ins Kirchenslawische."
+msgid "Translate text into Church Slavonic and search its dictionary through Bible Desktop."
+msgstr "Übersetzt Texte ins Kirchenslawische und durchsucht das Wörterbuch über Bible Desktop."
 
 msgid "Enter a valid Bible Desktop HTTPS URL."
 msgstr "Geben Sie eine gültige HTTPS-Adresse von Bible Desktop ein."
@@ -189,3 +189,84 @@ msgstr "Der Übersetzungsdienst ist vorübergehend nicht verfügbar."
 
 msgid "Bible Desktop returned HTTP error %d."
 msgstr "Bible Desktop hat den HTTP-Fehler %d zurückgegeben."
+
+msgid "Searching…"
+msgstr "Suche läuft…"
+
+msgid "The dictionary service is temporarily unavailable."
+msgstr "Der Wörterbuchdienst ist vorübergehend nicht verfügbar."
+
+msgid "No matching entries found."
+msgstr "Keine passenden Einträge gefunden."
+
+msgid "Copy word"
+msgstr "Wort kopieren"
+
+msgid "Read the source"
+msgstr "Quelle lesen"
+
+msgid "Use in translator"
+msgstr "Im Übersetzer verwenden"
+
+msgid "Select a word in the translation first."
+msgstr "Wählen Sie zuerst ein Wort in der Übersetzung aus."
+
+msgid "Look up selected word"
+msgstr "Ausgewähltes Wort nachschlagen"
+
+msgid "Language tools"
+msgstr "Sprachwerkzeuge"
+
+msgid "Translator"
+msgstr "Übersetzer"
+
+msgid "Dictionary"
+msgstr "Wörterbuch"
+
+msgid "Church Slavonic dictionary"
+msgstr "Kirchenslawisches Wörterbuch"
+
+msgid "Word or Russian meaning"
+msgstr "Wort oder russische Bedeutung"
+
+msgid "Search in"
+msgstr "Suchen nach"
+
+msgid "Church Slavonic word"
+msgstr "Kirchenslawisches Wort"
+
+msgid "Russian meaning"
+msgstr "Russische Bedeutung"
+
+msgid "Alphabet"
+msgstr "Alphabet"
+
+msgid "All letters"
+msgstr "Alle Buchstaben"
+
+msgid "Search with or without accents. Definitions are in Russian; a meaning match is not a sentence translation."
+msgstr "Suchen Sie mit oder ohne Akzente. Definitionen sind auf Russisch; ein Bedeutungstreffer ist keine Satzübersetzung."
+
+msgid "Search"
+msgstr "Suchen"
+
+msgid "Dictionary searches are sent to the configured Bible Desktop service. Entries retain their original spelling and source attribution."
+msgstr "Wörterbuchanfragen werden an den konfigurierten Bible-Desktop-Dienst gesendet. Die Einträge behalten ihre Originalschreibung und Quellenangabe."
+
+msgid "Load more"
+msgstr "Mehr laden"
+
+msgid "Check the dictionary search parameters."
+msgstr "Prüfen Sie die Wörterbuch-Suchparameter."
+
+msgid "Too many dictionary requests. Please try again later."
+msgstr "Zu viele Wörterbuchanfragen. Versuchen Sie es später erneut."
+
+msgid "Shows only the translation form, without the dictionary tab."
+msgstr "Zeigt nur das Übersetzungsformular ohne Wörterbuch-Tab."
+
+msgid "Shows the standalone Church Slavonic dictionary with word, meaning and alphabet search."
+msgstr "Zeigt das eigenständige kirchenslawische Wörterbuch mit Wort-, Bedeutungs- und Alphabetsuche."
+
+msgid "Shows the dictionary with a custom heading."
+msgstr "Zeigt das Wörterbuch mit einer eigenen Überschrift."

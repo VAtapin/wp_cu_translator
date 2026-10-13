@@ -2,8 +2,8 @@
 msgid ""
 msgstr "Project-Id-Version: WordPress.org readme\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-10-11 00:00+0000\nPO-Revision-Date: 2026-10-11 00:00+0000\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\nX-Domain: georg-kloster-slavonic-translator\n"
 
-msgid "Translate text into Church Slavonic using the Bible Desktop translation service."
-msgstr "Tłumacz tekst na język cerkiewnosłowiański za pomocą usługi tłumaczenia Bible Desktop."
+msgid "Translate text into Church Slavonic and search its dictionary through Bible Desktop."
+msgstr "Tłumacz tekst na język cerkiewnosłowiański i przeszukuj słownik za pomocą Bible Desktop."
 
 msgid "Georg-Kloster Slavonic Translator"
 msgstr "Georg-Kloster — Tłumacz cerkiewnosłowiański"
@@ -178,3 +178,24 @@ msgstr "Zapewniono działanie zapytań o tłumaczenie, gdy motywy blokowe render
 
 msgid "Redesign the responsive translation form with the approved Georg-Kloster logo, a separate options panel and clearer translation results."
 msgstr "Przeprojektowano responsywny formularz tłumaczenia: zatwierdzone logo Georg-Kloster, osobny panel opcji i czytelniejsze wyniki tłumaczenia."
+
+msgid "Dictionary"
+msgstr "Słownik"
+
+msgid "The Dictionary tab searches the complete Church Slavonic dictionary supplied by Bible Desktop from Azbyka. Search by original or civil spelling, by Russian meaning, or by alphabet chapter. Definitions remain in Russian. Meaning matches are dictionary references, not automatic sentence translations. Original spelling and source links are retained; morphology and audio are not generated."
+msgstr "Karta Słownik przeszukuje pełny słownik cerkiewnosłowiański udostępniany przez Bible Desktop na podstawie Azbyki. Szukaj według oryginalnej lub cywilnej pisowni, znaczenia po rosyjsku albo rozdziału alfabetu. Definicje pozostają po rosyjsku. Dopasowania znaczeń są informacjami słownikowymi, a nie automatycznym tłumaczeniem zdań. Zachowane są oryginalna pisownia i odnośniki do źródła; morfologia i audio nie są generowane."
+
+msgid "Use <code>[wp_cu_dictionary]</code> for the standalone dictionary, <code>[wp_cu_translator]</code> for both tools, or <code>[wp_cu_translator dictionary=\"no\"]</code> for translation only. Custom title attributes are supported."
+msgstr "Użyj <code>[wp_cu_dictionary]</code> dla samodzielnego słownika, <code>[wp_cu_translator]</code> dla obu narzędzi lub <code>[wp_cu_translator dictionary=\"no\"]</code> tylko dla tłumacza. Obsługiwane są własne nagłówki przez atrybut title."
+
+msgid "Dictionary searches and article requests are sent by WordPress to the configured Bible Desktop service only after user interaction: <code>/api/dictionaries/AZBYKA_CU_FULL/search</code>, <code>/api/dictionaries/AZBYKA_CU_FULL/alphabet</code> and <code>/api/dictionaries/AZBYKA_CU_FULL/entries/{key}</code>. They transmit the search, mode, chapter or article key and the existing plugin client and installation headers; an optional configured API key also stays server-side. Successful responses may be cached by WordPress for five minutes. The dictionary does not call OpenAI. Source: https://azbyka.ru/otechnik/Spravochniki/polnyj-pravoslavnyj-tserkovnoslavjanskij-slovar/ . Clicking a source link opens Azbyka directly."
+msgstr "Zapytania słownikowe i zapytania o hasła WordPress wysyła do skonfigurowanej usługi Bible Desktop dopiero po działaniu użytkownika: <code>/api/dictionaries/AZBYKA_CU_FULL/search</code>, <code>/api/dictionaries/AZBYKA_CU_FULL/alphabet</code> i <code>/api/dictionaries/AZBYKA_CU_FULL/entries/{key}</code>. Przesyłane są zapytanie, tryb, rozdział lub klucz hasła oraz istniejące nagłówki klienta i instalacji wtyczki; opcjonalnie skonfigurowany klucz API również pozostaje po stronie serwera. Udane odpowiedzi WordPress może buforować przez pięć minut. Słownik nie wywołuje OpenAI. Źródło: https://azbyka.ru/otechnik/Spravochniki/polnyj-pravoslavnyj-tserkovnoslavjanskij-slovar/ . Kliknięcie odnośnika do źródła otwiera Azbykę bezpośrednio."
+
+msgid "Add a standalone Church Slavonic dictionary, word and meaning search, alphabet browsing and selected-word lookup."
+msgstr "Dodano samodzielny słownik cerkiewnosłowiański, wyszukiwanie słów i znaczeń, przeglądanie według alfabetu i wyszukiwanie zaznaczonego słowa."
+
+msgid "Follow the current WPML page language and preserve it in AJAX requests."
+msgstr "Uwzględniany jest bieżący język strony WPML i zachowywany w żądaniach AJAX."
+
+msgid "Remove the black exterior from the approved logo and use transparent PNG icons."
+msgstr "Usunięto czarne tło na zewnątrz zatwierdzonego logo; używane są przezroczyste ikony PNG."

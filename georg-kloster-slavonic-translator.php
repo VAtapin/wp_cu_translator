@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Georg-Kloster Slavonic Translator
  * Plugin URI: https://kalender.georg-kloster.ru/calendar-api
- * Description: Translate text into Church Slavonic using the Bible Desktop translation service.
- * Version: 1.0.9
+ * Description: Translate text into Church Slavonic and search its dictionary through Bible Desktop.
+ * Version: 1.1.0
  * Requires at least: 6.3
  * Requires PHP: 8.0
  * Author: Vladimir Atapin
@@ -17,11 +17,12 @@
 if (! defined('ABSPATH')) {
     exit;
 }
-define('WP_CU_TRANSLATOR_VERSION', '1.0.9');
+define('WP_CU_TRANSLATOR_VERSION', '1.1.0');
 define('WP_CU_TRANSLATOR_OPTION', 'wp_cu_translator_settings');
 define('WP_CU_TRANSLATOR_INSTALLATION_OPTION', 'wp_cu_translator_installation_id');
 define('WP_CU_TRANSLATOR_FILE', __FILE__);
 define('WP_CU_TRANSLATOR_URL', plugin_dir_url(__FILE__));
+require_once __DIR__.'/includes/dictionary.php';
 
 register_activation_hook(__FILE__, 'wp_cu_translator_activate');
 
@@ -34,13 +35,48 @@ add_action('wp_ajax_wp_cu_translator_translate', 'wp_cu_translator_ajax_translat
 add_action('wp_ajax_nopriv_wp_cu_translator_translate', 'wp_cu_translator_ajax_translate');
 add_shortcode('wp_cu_translator', 'wp_cu_translator_shortcode');
 
-function wp_cu_translator_load_textdomain(): void
+function wp_cu_translator_ui_locale(): string
 {
-    $locale = determine_locale();
-    $catalog = plugin_dir_path(__FILE__).'languages/georg-kloster-slavonic-translator-'.$locale.'.mo';
+    $locale = is_admin() ? determine_locale() : get_locale();
+    if (! is_admin()) {
+        // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Documented external WPML hook.
+        $language = apply_filters('wpml_current_language', null);
+        if (is_string($language) && did_action('wp')) {
+            // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Documented external WPML hook.
+            $languages = apply_filters('wpml_active_languages', null, ['skip_missing' => 0]);
+            $pageLocale = is_array($languages) ? ($languages[$language]['default_locale'] ?? null) : null;
+            if (is_string($pageLocale) && preg_match('/^[a-z]{2,3}(?:_[A-Za-z0-9]+)*$/D', $pageLocale)) {
+                $locale = $pageLocale;
+            }
+        }
+    }
+    return $locale;
+}
 
-    if (is_readable($catalog)) {
-        load_textdomain('georg-kloster-slavonic-translator', $catalog, $locale);
+function wp_cu_translator_load_textdomain(?string $requestedLocale = null): void
+{
+    $domain = 'georg-kloster-slavonic-translator';
+    $locale = $requestedLocale ?? wp_cu_translator_ui_locale();
+    static $loadedLocale = null;
+    if ($loadedLocale !== null && $loadedLocale !== $locale) {
+        unload_textdomain($domain, true);
+    }
+    // phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- Also supports direct installations with bundled catalogs and WPML domain discovery.
+    load_plugin_textdomain($domain, false, dirname(plugin_basename(__FILE__)).'/languages');
+    // Register with WordPress/WPML and prefer the standard directory language pack.
+    foreach ([WP_LANG_DIR.'/plugins/'.$domain.'-'.$locale.'.mo', plugin_dir_path(__FILE__).'languages/'.$domain.'-'.$locale.'.mo'] as $catalog) {
+        if (is_readable($catalog)) {
+            load_textdomain($domain, $catalog, $locale);
+        }
+    }
+    $loadedLocale = $locale;
+}
+
+function wp_cu_translator_request_locale($input): void
+{
+    $locale = is_string($input) ? sanitize_text_field($input) : '';
+    if (strlen($locale) <= 30 && preg_match('/^[a-z]{2,3}(?:_[A-Za-z0-9]+)*$/D', $locale)) {
+        wp_cu_translator_load_textdomain($locale);
     }
 }
 
@@ -247,6 +283,18 @@ function wp_cu_translator_shortcodes(): array
             'shortcode' => '[wp_cu_translator title="Church Slavonic translation"]',
             'description' => __('Shows the same form with a custom heading. Replace the text inside title with your own heading.', 'georg-kloster-slavonic-translator'),
         ],
+        [
+            'shortcode' => '[wp_cu_translator dictionary="no"]',
+            'description' => __('Shows only the translation form, without the dictionary tab.', 'georg-kloster-slavonic-translator'),
+        ],
+        [
+            'shortcode' => '[wp_cu_dictionary]',
+            'description' => __('Shows the standalone Church Slavonic dictionary with word, meaning and alphabet search.', 'georg-kloster-slavonic-translator'),
+        ],
+        [
+            'shortcode' => '[wp_cu_dictionary title="Church Slavonic dictionary"]',
+            'description' => __('Shows the dictionary with a custom heading.', 'georg-kloster-slavonic-translator'),
+        ],
     ];
 }
 
@@ -310,8 +358,12 @@ function wp_cu_translator_register_assets(): void
  */
 function wp_cu_translator_shortcode($attributes = []): string
 {
+    wp_cu_translator_load_textdomain();
     $attributes = is_array($attributes) ? $attributes : [];
-    $attributes = shortcode_atts(['title' => __('Georg-Kloster Slavonic Translator', 'georg-kloster-slavonic-translator')], $attributes, 'wp_cu_translator');
+    $attributes = shortcode_atts(['title' => __('Georg-Kloster Slavonic Translator', 'georg-kloster-slavonic-translator'), 'dictionary' => 'yes'], $attributes, 'wp_cu_translator');
+    if ($attributes['dictionary'] !== 'no') {
+        return wp_cu_translator_dictionary_combined($attributes);
+    }
     /* translators: %s: Recognized Bible reference, for example John 3:16. */
     $recognizedAs = __('Recognized as %s', 'georg-kloster-slavonic-translator');
     // Block themes may render shortcodes before wp_enqueue_scripts runs.
@@ -343,6 +395,7 @@ function wp_cu_translator_shortcode($attributes = []): string
             <h3 class="wp-cu-translator__title"><?php echo esc_html((string) $attributes['title']); ?></h3>
         </header>
         <form class="wp-cu-translator__form" data-wp-cu-translator-form>
+            <input type="hidden" name="georsltr_locale" value="<?php echo esc_attr(wp_cu_translator_ui_locale()); ?>">
             <div class="wp-cu-translator__workspace">
             <label class="wp-cu-translator__label">
                 <?php echo esc_html__('Text to translate', 'georg-kloster-slavonic-translator'); ?>
@@ -398,6 +451,7 @@ function wp_cu_translator_shortcode($attributes = []): string
 function wp_cu_translator_ajax_translate(): void
 {
     check_ajax_referer('wp_cu_translator_translate', 'nonce');
+    wp_cu_translator_request_locale(isset($_POST['georsltr_locale']) && is_string($_POST['georsltr_locale']) ? sanitize_text_field(wp_unslash($_POST['georsltr_locale'])) : '');
 
     $text = isset($_POST['text']) ? sanitize_textarea_field(wp_unslash($_POST['text'])) : '';
     $sourceLanguage = isset($_POST['source_language']) ? sanitize_key(wp_unslash($_POST['source_language'])) : 'auto';

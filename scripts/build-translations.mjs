@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const translations = {
@@ -13,7 +13,7 @@ const translations = {
   'What it does': ['Назначение', 'Funktion'],
   'Shows the standard Church Slavonic translation form with the default title.': ['Показывает стандартную форму церковнославянского переводчика с заголовком по умолчанию.', 'Zeigt das Standardformular des kirchenslawischen Übersetzers mit der Standardüberschrift.'],
   'Shows the same form with a custom heading. Replace the text inside title with your own heading.': ['Показывает ту же форму с собственным заголовком. Замените текст внутри title на свой.', 'Zeigt dasselbe Formular mit einer eigenen Überschrift. Ersetzen Sie den Text in title durch Ihre Überschrift.'],
-  'Translate text into Church Slavonic using the Bible Desktop translation service.': ['Перевод текста на церковнославянский язык с помощью сервиса Bible Desktop.', 'Übersetzt Texte mit dem Übersetzungsdienst Bible Desktop ins Kirchenslawische.'],
+  'Translate text into Church Slavonic and search its dictionary through Bible Desktop.': ['Перевод текста на церковнославянский язык и поиск в словаре через Bible Desktop.', 'Übersetzt Texte ins Kirchenslawische und durchsucht das Wörterbuch über Bible Desktop.'],
   'Enter a valid Bible Desktop HTTPS URL.': ['Укажите корректный HTTPS-адрес Bible Desktop.', 'Geben Sie eine gültige HTTPS-Adresse von Bible Desktop ein.'],
   'Add the form with [wp_cu_translator]. The free tier works without a key; an optional key enables higher limits and always stays on the WordPress server.': ['Добавьте форму шорткодом [wp_cu_translator]. Бесплатный режим работает без ключа; необязательный ключ включает повышенные лимиты и всегда остаётся на сервере WordPress.', 'Fügen Sie das Formular mit [wp_cu_translator] hinzu. Der kostenlose Tarif funktioniert ohne Schlüssel; ein optionaler Schlüssel ermöglicht höhere Limits und bleibt immer auf dem WordPress-Server.'],
   'Bible Desktop URL': ['Адрес Bible Desktop', 'Bible-Desktop-Adresse'],
@@ -79,7 +79,7 @@ const additionalTranslations = {
   'What it does': ['Призначення', 'Działanie'],
   'Shows the standard Church Slavonic translation form with the default title.': ['Показує стандартну форму церковнослов’янського перекладу із заголовком за замовчуванням.', 'Wyświetla standardowy formularz tłumaczenia na język cerkiewnosłowiański z domyślnym tytułem.'],
   'Shows the same form with a custom heading. Replace the text inside title with your own heading.': ['Показує ту саму форму з власним заголовком. Замініть текст у title на свій заголовок.', 'Wyświetla ten sam formularz z własnym nagłówkiem. Zastąp tekst w title swoim nagłówkiem.'],
-  'Translate text into Church Slavonic using the Bible Desktop translation service.': ['Переклад тексту церковнослов’янською мовою за допомогою сервісу Bible Desktop.', 'Tłumacz tekst na język cerkiewnosłowiański za pomocą usługi tłumaczenia Bible Desktop.'],
+  'Translate text into Church Slavonic and search its dictionary through Bible Desktop.': ['Переклад тексту церковнослов’янською мовою та пошук у словнику через Bible Desktop.', 'Tłumacz tekst na język cerkiewnosłowiański i przeszukuj słownik za pomocą Bible Desktop.'],
   'Enter a valid Bible Desktop HTTPS URL.': ['Вкажіть коректну HTTPS-адресу Bible Desktop.', 'Wprowadź prawidłowy adres HTTPS Bible Desktop.'],
   'Add the form with [wp_cu_translator]. The free tier works without a key; an optional key enables higher limits and always stays on the WordPress server.': ['Додайте форму за допомогою [wp_cu_translator]. Безкоштовний режим працює без ключа; необов’язковий ключ збільшує ліміти й завжди залишається на сервері WordPress.', 'Dodaj formularz za pomocą [wp_cu_translator]. Bezpłatny tryb działa bez klucza; opcjonalny klucz zwiększa limity i zawsze pozostaje na serwerze WordPress.'],
   'Bible Desktop URL': ['Адреса Bible Desktop', 'Adres Bible Desktop'],
@@ -139,6 +139,171 @@ for (const [msgid, values] of Object.entries(translations)) {
   values.push(...additionalTranslations[msgid]);
 }
 
+Object.assign(translations, {
+  "Searching…": [
+    "Ищем…",
+    "Suche läuft…",
+    "Шукаємо…",
+    "Wyszukiwanie…"
+  ],
+  "The dictionary service is temporarily unavailable.": [
+    "Словарный сервис временно недоступен.",
+    "Der Wörterbuchdienst ist vorübergehend nicht verfügbar.",
+    "Словниковий сервіс тимчасово недоступний.",
+    "Usługa słownika jest tymczasowo niedostępna."
+  ],
+  "No matching entries found.": [
+    "Подходящие статьи не найдены.",
+    "Keine passenden Einträge gefunden.",
+    "Відповідних статей не знайдено.",
+    "Nie znaleziono pasujących haseł."
+  ],
+  "Copy word": [
+    "Копировать слово",
+    "Wort kopieren",
+    "Копіювати слово",
+    "Kopiuj słowo"
+  ],
+  "Read the source": [
+    "Читать источник",
+    "Quelle lesen",
+    "Читати джерело",
+    "Czytaj źródło"
+  ],
+  "Use in translator": [
+    "Вставить в переводчик",
+    "Im Übersetzer verwenden",
+    "Вставити в перекладач",
+    "Użyj w tłumaczu"
+  ],
+  "Select a word in the translation first.": [
+    "Сначала выделите слово в переводе.",
+    "Wählen Sie zuerst ein Wort in der Übersetzung aus.",
+    "Спочатку виділіть слово в перекладі.",
+    "Najpierw zaznacz słowo w tłumaczeniu."
+  ],
+  "Look up selected word": [
+    "Найти выделенное слово",
+    "Ausgewähltes Wort nachschlagen",
+    "Знайти виділене слово",
+    "Wyszukaj zaznaczone słowo"
+  ],
+  "Language tools": [
+    "Языковые инструменты",
+    "Sprachwerkzeuge",
+    "Мовні інструменти",
+    "Narzędzia językowe"
+  ],
+  "Translator": [
+    "Переводчик",
+    "Übersetzer",
+    "Перекладач",
+    "Tłumacz"
+  ],
+  "Dictionary": [
+    "Словарь",
+    "Wörterbuch",
+    "Словник",
+    "Słownik"
+  ],
+  "Church Slavonic dictionary": [
+    "Церковнославянский словарь",
+    "Kirchenslawisches Wörterbuch",
+    "Церковнослов’янський словник",
+    "Słownik cerkiewnosłowiański"
+  ],
+  "Word or Russian meaning": [
+    "Слово или русское значение",
+    "Wort oder russische Bedeutung",
+    "Слово або російське значення",
+    "Słowo lub znaczenie po rosyjsku"
+  ],
+  "Search in": [
+    "Искать по",
+    "Suchen nach",
+    "Шукати за",
+    "Szukaj według"
+  ],
+  "Church Slavonic word": [
+    "Церковнославянское слово",
+    "Kirchenslawisches Wort",
+    "Церковнослов’янське слово",
+    "Słowo cerkiewnosłowiańskie"
+  ],
+  "Russian meaning": [
+    "Русское значение",
+    "Russische Bedeutung",
+    "Російське значення",
+    "Znaczenie po rosyjsku"
+  ],
+  "Alphabet": [
+    "Алфавит",
+    "Alphabet",
+    "Абетка",
+    "Alfabet"
+  ],
+  "All letters": [
+    "Все буквы",
+    "Alle Buchstaben",
+    "Усі літери",
+    "Wszystkie litery"
+  ],
+  "Search with or without accents. Definitions are in Russian; a meaning match is not a sentence translation.": [
+    "Ищите с ударениями или без них. Толкования — на русском; совпадение по значению не является переводом предложения.",
+    "Suchen Sie mit oder ohne Akzente. Definitionen sind auf Russisch; ein Bedeutungstreffer ist keine Satzübersetzung.",
+    "Шукайте з наголосами або без них. Тлумачення — російською; збіг за значенням не є перекладом речення.",
+    "Szukaj z akcentami lub bez nich. Definicje są po rosyjsku; dopasowanie znaczenia nie jest tłumaczeniem zdania."
+  ],
+  "Search": [
+    "Найти",
+    "Suchen",
+    "Знайти",
+    "Szukaj"
+  ],
+  "Dictionary searches are sent to the configured Bible Desktop service. Entries retain their original spelling and source attribution.": [
+    "Словарные запросы отправляются в настроенный сервис Bible Desktop. Статьи сохраняют исходное написание и указание источника.",
+    "Wörterbuchanfragen werden an den konfigurierten Bible-Desktop-Dienst gesendet. Die Einträge behalten ihre Originalschreibung und Quellenangabe.",
+    "Словникові запити надсилаються до налаштованого сервісу Bible Desktop. Статті зберігають оригінальне написання та посилання на джерело.",
+    "Zapytania słownikowe są wysyłane do skonfigurowanej usługi Bible Desktop. Hasła zachowują oryginalną pisownię i wskazanie źródła."
+  ],
+  "Load more": [
+    "Показать ещё",
+    "Mehr laden",
+    "Показати ще",
+    "Pokaż więcej"
+  ],
+  "Check the dictionary search parameters.": [
+    "Проверьте параметры поиска в словаре.",
+    "Prüfen Sie die Wörterbuch-Suchparameter.",
+    "Перевірте параметри пошуку в словнику.",
+    "Sprawdź parametry wyszukiwania w słowniku."
+  ],
+  "Too many dictionary requests. Please try again later.": [
+    "Слишком много словарных запросов. Попробуйте позже.",
+    "Zu viele Wörterbuchanfragen. Versuchen Sie es später erneut.",
+    "Забагато словникових запитів. Спробуйте пізніше.",
+    "Zbyt wiele zapytań słownikowych. Spróbuj ponownie później."
+  ],
+  "Shows only the translation form, without the dictionary tab.": [
+    "Показывает только форму перевода без вкладки словаря.",
+    "Zeigt nur das Übersetzungsformular ohne Wörterbuch-Tab.",
+    "Показує лише форму перекладу без вкладки словника.",
+    "Wyświetla tylko formularz tłumaczenia bez karty słownika."
+  ],
+  "Shows the standalone Church Slavonic dictionary with word, meaning and alphabet search.": [
+    "Показывает отдельный церковнославянский словарь с поиском по слову, значению и алфавиту.",
+    "Zeigt das eigenständige kirchenslawische Wörterbuch mit Wort-, Bedeutungs- und Alphabetsuche.",
+    "Показує окремий церковнослов’янський словник із пошуком за словом, значенням та абеткою.",
+    "Wyświetla samodzielny słownik cerkiewnosłowiański z wyszukiwaniem słów, znaczeń i według alfabetu."
+  ],
+  "Shows the dictionary with a custom heading.": [
+    "Показывает словарь с собственным заголовком.",
+    "Zeigt das Wörterbuch mit einer eigenen Überschrift.",
+    "Показує словник із власним заголовком.",
+    "Wyświetla słownik z własnym nagłówkiem."
+  ]
+});
+
 const locales = {
   ru_RU: { index: 0, plural: 'nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);' },
   de_DE: { index: 1, plural: 'nplurals=2; plural=(n != 1);' },
@@ -150,7 +315,7 @@ const escapePo = (value) => JSON.stringify(value);
 
 function metadata(locale, plural) {
   return [
-    'Project-Id-Version: Georg-Kloster Slavonic Translator 1.0.9',
+    'Project-Id-Version: Georg-Kloster Slavonic Translator 1.1.0',
     'Report-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues',
     'POT-Creation-Date: 2026-10-11 00:00+0000',
     'PO-Revision-Date: 2026-10-11 00:00+0000',
@@ -228,9 +393,9 @@ function moBuffer(locale, index, plural) {
   return output;
 }
 
-const source = readFileSync(resolve('georg-kloster-slavonic-translator.php'), 'utf8');
+const source = [readFileSync(resolve('georg-kloster-slavonic-translator.php'), 'utf8'), ...(existsSync('includes') ? readdirSync('includes').filter(name => name.endsWith('.php')).map(name => readFileSync('includes/'+name, 'utf8')) : [])].join('\n');
 const extracted = new Set([...source.matchAll(/(?:__|esc_html__|esc_attr__)\(\s*'([^']+)'/g)].map((match) => match[1]));
-for (const required of ['Georg-Kloster Slavonic Translator', 'Translate text into Church Slavonic using the Bible Desktop translation service.']) extracted.add(required);
+for (const required of ['Georg-Kloster Slavonic Translator', 'Translate text into Church Slavonic and search its dictionary through Bible Desktop.']) extracted.add(required);
 const missing = [...extracted].filter((msgid) => !Object.hasOwn(translations, msgid));
 const stale = Object.keys(translations).filter((msgid) => !extracted.has(msgid));
 for (const [msgid, values] of Object.entries(translations)) {

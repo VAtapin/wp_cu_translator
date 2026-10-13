@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { mkdtempSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdtempSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 
@@ -19,6 +19,7 @@ for (const [name, modifiedSource, modifiedGenerator, error] of [
 ]) {
   const directory = mkdtempSync(join(tmpdir(), `translator-${name}-`));
   writeFileSync(join(directory, 'georg-kloster-slavonic-translator.php'), modifiedSource);
+  cpSync('includes', join(directory, 'includes'), { recursive: true });
   writeFileSync(join(directory, 'build-translations.mjs'), modifiedGenerator);
   const result = spawnSync(process.execPath, [resolve(directory, 'build-translations.mjs')], { cwd: directory, encoding: 'utf8' });
   assert.notEqual(result.status, 0, `${name} must fail the release check.`);

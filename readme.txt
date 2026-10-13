@@ -4,11 +4,11 @@ Tags: church slavonic, translator, bible, orthodox, ai
 Requires at least: 6.3
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.0.9
+Stable tag: 1.1.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Translate text into Church Slavonic using the Bible Desktop translation service.
+Translate text into Church Slavonic and search its dictionary through Bible Desktop.
 
 == Description ==
 
@@ -21,6 +21,14 @@ The browser sends the form to WordPress. WordPress then contacts Bible Desktop s
 The plugin name, description, settings page, messages and public form are available in English, Russian, German, Ukrainian and Polish. WordPress selects the language from its current locale.
 
 Biblical references, exact verses, confidently recognized quotations and cached results can be returned without a new paid OpenAI request. Other texts use the model and spending limits configured by the Bible Desktop administrator.
+
+== Dictionary ==
+
+The Dictionary tab searches the complete Church Slavonic dictionary supplied by Bible Desktop from Azbyka. Search by original or civil spelling, by Russian meaning, or by alphabet chapter. Definitions remain in Russian. Meaning matches are dictionary references, not automatic sentence translations. Original spelling and source links are retained; morphology and audio are not generated.
+
+Use <code>[wp_cu_dictionary]</code> for the standalone dictionary, <code>[wp_cu_translator]</code> for both tools, or <code>[wp_cu_translator dictionary="no"]</code> for translation only. Custom title attributes are supported.
+
+Dictionary searches and article requests are sent by WordPress to the configured Bible Desktop service only after user interaction: <code>/api/dictionaries/AZBYKA_CU_FULL/search</code>, <code>/api/dictionaries/AZBYKA_CU_FULL/alphabet</code> and <code>/api/dictionaries/AZBYKA_CU_FULL/entries/{key}</code>. They transmit the search, mode, chapter or article key and the existing plugin client and installation headers; an optional configured API key also stays server-side. Successful responses may be cached by WordPress for five minutes. The dictionary does not call OpenAI. Source: https://azbyka.ru/otechnik/Spravochniki/polnyj-pravoslavnyj-tserkovnoslavjanskij-slovar/ . Clicking a source link opens Azbyka directly.
 
 == Installation ==
 
@@ -79,6 +87,11 @@ The plugin does not create its own database tables and does not store translatio
 5. Russian interface with localized labels and the external-processing notice.
 
 == Changelog ==
+
+= 1.1.0 =
+* Add a standalone Church Slavonic dictionary, word and meaning search, alphabet browsing and selected-word lookup.
+* Follow the current WPML page language and preserve it in AJAX requests.
+* Remove the black exterior from the approved logo and use transparent PNG icons.
 
 = 1.0.9 =
 * Redesign the responsive translation form with the approved Georg-Kloster logo, a separate options panel and clearer translation results.

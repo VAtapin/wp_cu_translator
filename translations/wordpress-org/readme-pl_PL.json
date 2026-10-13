@@ -57,5 +57,12 @@
   "Niemiecki interfejs z opcjami języka źródłowego i pisowni.",
   "Rosyjski interfejs z przetłumaczonymi etykietami i informacją o przetwarzaniu przez usługę zewnętrzną.",
   "Zapewniono działanie zapytań o tłumaczenie, gdy motywy blokowe renderują krótki kod przed standardowym mechanizmem rejestracji zasobów.",
-  "Przeprojektowano responsywny formularz tłumaczenia: zatwierdzone logo Georg-Kloster, osobny panel opcji i czytelniejsze wyniki tłumaczenia."
+  "Przeprojektowano responsywny formularz tłumaczenia: zatwierdzone logo Georg-Kloster, osobny panel opcji i czytelniejsze wyniki tłumaczenia.",
+  "Słownik",
+  "Karta Słownik przeszukuje pełny słownik cerkiewnosłowiański udostępniany przez Bible Desktop na podstawie Azbyki. Szukaj według oryginalnej lub cywilnej pisowni, znaczenia po rosyjsku albo rozdziału alfabetu. Definicje pozostają po rosyjsku. Dopasowania znaczeń są informacjami słownikowymi, a nie automatycznym tłumaczeniem zdań. Zachowane są oryginalna pisownia i odnośniki do źródła; morfologia i audio nie są generowane.",
+  "Użyj <code>[wp_cu_dictionary]</code> dla samodzielnego słownika, <code>[wp_cu_translator]</code> dla obu narzędzi lub <code>[wp_cu_translator dictionary=\"no\"]</code> tylko dla tłumacza. Obsługiwane są własne nagłówki przez atrybut title.",
+  "Zapytania słownikowe i zapytania o hasła WordPress wysyła do skonfigurowanej usługi Bible Desktop dopiero po działaniu użytkownika: <code>/api/dictionaries/AZBYKA_CU_FULL/search</code>, <code>/api/dictionaries/AZBYKA_CU_FULL/alphabet</code> i <code>/api/dictionaries/AZBYKA_CU_FULL/entries/{key}</code>. Przesyłane są zapytanie, tryb, rozdział lub klucz hasła oraz istniejące nagłówki klienta i instalacji wtyczki; opcjonalnie skonfigurowany klucz API również pozostaje po stronie serwera. Udane odpowiedzi WordPress może buforować przez pięć minut. Słownik nie wywołuje OpenAI. Źródło: https://azbyka.ru/otechnik/Spravochniki/polnyj-pravoslavnyj-tserkovnoslavjanskij-slovar/ . Kliknięcie odnośnika do źródła otwiera Azbykę bezpośrednio.",
+  "Dodano samodzielny słownik cerkiewnosłowiański, wyszukiwanie słów i znaczeń, przeglądanie według alfabetu i wyszukiwanie zaznaczonego słowa.",
+  "Uwzględniany jest bieżący język strony WPML i zachowywany w żądaniach AJAX.",
+  "Usunięto czarne tło na zewnątrz zatwierdzonego logo; używane są przezroczyste ikony PNG."
 ]

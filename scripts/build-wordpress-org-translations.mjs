@@ -5,8 +5,8 @@ const directory = 'translations/wordpress-org';
 const originals = (file) => [...readFileSync(file, 'utf8').matchAll(/^msgid (".+")\r?$/gm)].map((match) => JSON.parse(match[1]));
 const interfaceSource = originals(`${directory}/interface-source.pot`);
 const readmeSource = originals(`${directory}/readme-source.pot`);
-assert.equal(interfaceSource.length, 66);
-assert.equal(readmeSource.length, 59);
+assert.equal(interfaceSource.length, 93);
+assert.equal(readmeSource.length, 66);
 const unchangedMetadata = new Set(['Vladimir Atapin', 'https://atapin.de/', 'https://kalender.georg-kloster.ru/calendar-api']);
 const markers = (text, regex) => (text.match(regex) || []).sort();
 const validate = (source, translation) => {
@@ -43,4 +43,4 @@ for (const locale of ['ru_RU', 'de_DE', 'uk', 'pl_PL']) {
   });
   writeFileSync(`${directory}/readme-${locale}.po`, document(locale, 'WordPress.org readme', readmeEntries, metadata));
 }
-console.log('WordPress.org catalogs generated and validated: 66 interface strings and 59 readme strings per locale.');
+console.log('WordPress.org catalogs generated and validated: 93 interface strings and 66 readme strings per locale.');

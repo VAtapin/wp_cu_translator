@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: Georg-Kloster Slavonic Translator 1.0.9\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-10-11 00:00+0000\nPO-Revision-Date: 2026-10-11 00:00+0000\nLanguage: LANGUAGE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=INTEGER; plural=EXPRESSION;\nX-Domain: georg-kloster-slavonic-translator\n"
+msgstr "Project-Id-Version: Georg-Kloster Slavonic Translator 1.1.0\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-10-11 00:00+0000\nPO-Revision-Date: 2026-10-11 00:00+0000\nLanguage: LANGUAGE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=INTEGER; plural=EXPRESSION;\nX-Domain: georg-kloster-slavonic-translator\n"
 
 msgid "Your text is sent to the configured Bible Desktop service and may be processed by OpenAI."
 msgstr ""
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Shows the same form with a custom heading. Replace the text inside title with your own heading."
 msgstr ""
 
-msgid "Translate text into Church Slavonic using the Bible Desktop translation service."
+msgid "Translate text into Church Slavonic and search its dictionary through Bible Desktop."
 msgstr ""
 
 msgid "Enter a valid Bible Desktop HTTPS URL."
@@ -188,4 +188,85 @@ msgid "The translation service is temporarily unavailable."
 msgstr ""
 
 msgid "Bible Desktop returned HTTP error %d."
+msgstr ""
+
+msgid "Searching…"
+msgstr ""
+
+msgid "The dictionary service is temporarily unavailable."
+msgstr ""
+
+msgid "No matching entries found."
+msgstr ""
+
+msgid "Copy word"
+msgstr ""
+
+msgid "Read the source"
+msgstr ""
+
+msgid "Use in translator"
+msgstr ""
+
+msgid "Select a word in the translation first."
+msgstr ""
+
+msgid "Look up selected word"
+msgstr ""
+
+msgid "Language tools"
+msgstr ""
+
+msgid "Translator"
+msgstr ""
+
+msgid "Dictionary"
+msgstr ""
+
+msgid "Church Slavonic dictionary"
+msgstr ""
+
+msgid "Word or Russian meaning"
+msgstr ""
+
+msgid "Search in"
+msgstr ""
+
+msgid "Church Slavonic word"
+msgstr ""
+
+msgid "Russian meaning"
+msgstr ""
+
+msgid "Alphabet"
+msgstr ""
+
+msgid "All letters"
+msgstr ""
+
+msgid "Search with or without accents. Definitions are in Russian; a meaning match is not a sentence translation."
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Dictionary searches are sent to the configured Bible Desktop service. Entries retain their original spelling and source attribution."
+msgstr ""
+
+msgid "Load more"
+msgstr ""
+
+msgid "Check the dictionary search parameters."
+msgstr ""
+
+msgid "Too many dictionary requests. Please try again later."
+msgstr ""
+
+msgid "Shows only the translation form, without the dictionary tab."
+msgstr ""
+
+msgid "Shows the standalone Church Slavonic dictionary with word, meaning and alphabet search."
+msgstr ""
+
+msgid "Shows the dictionary with a custom heading."
 msgstr ""

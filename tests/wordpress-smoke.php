@@ -43,35 +43,35 @@ if (! wp_is_uuid($installationId, 4) || $installationId !== wp_cu_translator_ins
 $expected = [
     'en_US' => [
         'name' => 'Georg-Kloster Slavonic Translator',
-        'description' => 'Translate text into Church Slavonic using the Bible Desktop translation service.',
+        'description' => 'Translate text into Church Slavonic and search its dictionary through Bible Desktop.',
         'title' => 'Georg-Kloster Slavonic Translator',
         'translating' => 'Translating…',
         'disclosure' => 'Your text is sent to the configured Bible Desktop service and may be processed by OpenAI.',
     ],
     'ru_RU' => [
         'name' => 'Georg-Kloster — Церковнославянский переводчик',
-        'description' => 'Перевод текста на церковнославянский язык с помощью сервиса Bible Desktop.',
+        'description' => 'Перевод текста на церковнославянский язык и поиск в словаре через Bible Desktop.',
         'title' => 'Georg-Kloster — Церковнославянский переводчик',
         'translating' => 'Переводим…',
         'disclosure' => 'Ваш текст отправляется в настроенный сервис Bible Desktop и может обрабатываться OpenAI.',
     ],
     'de_DE' => [
         'name' => 'Georg-Kloster — Kirchenslawischer Übersetzer',
-        'description' => 'Übersetzt Texte mit dem Übersetzungsdienst Bible Desktop ins Kirchenslawische.',
+        'description' => 'Übersetzt Texte ins Kirchenslawische und durchsucht das Wörterbuch über Bible Desktop.',
         'title' => 'Georg-Kloster — Kirchenslawischer Übersetzer',
         'translating' => 'Übersetzung läuft…',
         'disclosure' => 'Ihr Text wird an den konfigurierten Bible-Desktop-Dienst gesendet und kann von OpenAI verarbeitet werden.',
     ],
     'uk' => [
         'name' => 'Georg-Kloster — Церковнослов’янський перекладач',
-        'description' => 'Переклад тексту церковнослов’янською мовою за допомогою сервісу Bible Desktop.',
+        'description' => 'Переклад тексту церковнослов’янською мовою та пошук у словнику через Bible Desktop.',
         'title' => 'Georg-Kloster — Церковнослов’янський перекладач',
         'translating' => 'Перекладаємо…',
         'disclosure' => 'Ваш текст надсилається до налаштованого сервісу Bible Desktop і може оброблятися OpenAI.',
     ],
     'pl_PL' => [
         'name' => 'Georg-Kloster — Tłumacz cerkiewnosłowiański',
-        'description' => 'Tłumacz tekst na język cerkiewnosłowiański za pomocą usługi tłumaczenia Bible Desktop.',
+        'description' => 'Tłumacz tekst na język cerkiewnosłowiański i przeszukuj słownik za pomocą Bible Desktop.',
         'title' => 'Georg-Kloster — Tłumacz cerkiewnosłowiański',
         'translating' => 'Tłumaczenie…',
         'disclosure' => 'Twój tekst jest wysyłany do skonfigurowanej usługi Bible Desktop i może być przetwarzany przez OpenAI.',
@@ -93,8 +93,8 @@ $po = $locale === 'en_US'
     ? dirname($pluginFile).'/languages/georg-kloster-slavonic-translator.pot'
     : dirname($pluginFile).'/languages/georg-kloster-slavonic-translator-'.$locale.'.po';
 preg_match_all('/^msgid (".+")\Rmsgstr (".*")$/m', (string) file_get_contents($po), $entries, PREG_SET_ORDER);
-if (count($entries) !== 63) {
-    throw new RuntimeException('Expected all 63 interface strings in '.$po);
+if (count($entries) !== 90) {
+    throw new RuntimeException('Expected all 90 interface strings in '.$po);
 }
 foreach ($entries as $entry) {
     $msgid = json_decode($entry[1], true, 512, JSON_THROW_ON_ERROR);
@@ -105,7 +105,7 @@ foreach ($entries as $entry) {
 }
 
 $metadata = get_plugin_data($pluginFile, false, true);
-if ($metadata['Version'] !== '1.0.9' || WP_CU_TRANSLATOR_VERSION !== '1.0.9') {
+if ($metadata['Version'] !== '1.1.0' || WP_CU_TRANSLATOR_VERSION !== '1.1.0') {
     throw new RuntimeException('Release version does not match.');
 }
 if (($metadata['PluginURI'] ?? '') !== 'https://kalender.georg-kloster.ru/calendar-api') {

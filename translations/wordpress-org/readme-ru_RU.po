@@ -2,8 +2,8 @@
 msgid ""
 msgstr "Project-Id-Version: WordPress.org readme\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-10-11 00:00+0000\nPO-Revision-Date: 2026-10-11 00:00+0000\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\nX-Domain: georg-kloster-slavonic-translator\n"
 
-msgid "Translate text into Church Slavonic using the Bible Desktop translation service."
-msgstr "Перевод текста на церковнославянский язык с помощью сервиса Bible Desktop."
+msgid "Translate text into Church Slavonic and search its dictionary through Bible Desktop."
+msgstr "Перевод текста на церковнославянский язык и поиск в словаре через Bible Desktop."
 
 msgid "Georg-Kloster Slavonic Translator"
 msgstr "Georg-Kloster — Церковнославянский переводчик"
@@ -178,3 +178,24 @@ msgstr "Обеспечена работа запросов перевода, к�
 
 msgid "Redesign the responsive translation form with the approved Georg-Kloster logo, a separate options panel and clearer translation results."
 msgstr "Обновлена адаптивная форма перевода: утверждённый логотип Georg-Kloster, отдельная панель параметров и более наглядный результат."
+
+msgid "Dictionary"
+msgstr "Словарь"
+
+msgid "The Dictionary tab searches the complete Church Slavonic dictionary supplied by Bible Desktop from Azbyka. Search by original or civil spelling, by Russian meaning, or by alphabet chapter. Definitions remain in Russian. Meaning matches are dictionary references, not automatic sentence translations. Original spelling and source links are retained; morphology and audio are not generated."
+msgstr "Вкладка «Словарь» позволяет искать в полном церковнославянском словаре, предоставляемом Bible Desktop по материалам Азбуки. Ищите по исходному или гражданскому написанию, русскому значению либо разделу алфавита. Толкования остаются на русском. Совпадения по значению — словарные справки, а не автоматический перевод предложений. Исходное написание и ссылки на источник сохраняются; морфология и аудио не генерируются."
+
+msgid "Use <code>[wp_cu_dictionary]</code> for the standalone dictionary, <code>[wp_cu_translator]</code> for both tools, or <code>[wp_cu_translator dictionary=\"no\"]</code> for translation only. Custom title attributes are supported."
+msgstr "Используйте <code>[wp_cu_dictionary]</code> для отдельного словаря, <code>[wp_cu_translator]</code> для обоих инструментов или <code>[wp_cu_translator dictionary=\"no\"]</code> только для переводчика. Поддерживаются собственные заголовки через атрибут title."
+
+msgid "Dictionary searches and article requests are sent by WordPress to the configured Bible Desktop service only after user interaction: <code>/api/dictionaries/AZBYKA_CU_FULL/search</code>, <code>/api/dictionaries/AZBYKA_CU_FULL/alphabet</code> and <code>/api/dictionaries/AZBYKA_CU_FULL/entries/{key}</code>. They transmit the search, mode, chapter or article key and the existing plugin client and installation headers; an optional configured API key also stays server-side. Successful responses may be cached by WordPress for five minutes. The dictionary does not call OpenAI. Source: https://azbyka.ru/otechnik/Spravochniki/polnyj-pravoslavnyj-tserkovnoslavjanskij-slovar/ . Clicking a source link opens Azbyka directly."
+msgstr "Словарные запросы и запросы статей WordPress отправляет в настроенный сервис Bible Desktop только после действия пользователя: <code>/api/dictionaries/AZBYKA_CU_FULL/search</code>, <code>/api/dictionaries/AZBYKA_CU_FULL/alphabet</code> и <code>/api/dictionaries/AZBYKA_CU_FULL/entries/{key}</code>. Передаются запрос, режим, раздел или ключ статьи и существующие заголовки клиента и установки плагина; необязательный настроенный ключ API также остаётся на сервере. Успешные ответы WordPress может кэшировать на пять минут. Словарь не обращается к OpenAI. Источник: https://azbyka.ru/otechnik/Spravochniki/polnyj-pravoslavnyj-tserkovnoslavjanskij-slovar/ . При нажатии ссылки на источник Азбука открывается напрямую."
+
+msgid "Add a standalone Church Slavonic dictionary, word and meaning search, alphabet browsing and selected-word lookup."
+msgstr "Добавлены отдельный церковнославянский словарь, поиск по слову и значению, просмотр по алфавиту и поиск выделенного слова."
+
+msgid "Follow the current WPML page language and preserve it in AJAX requests."
+msgstr "Учитывается текущий язык страницы WPML, который сохраняется в запросах AJAX."
+
+msgid "Remove the black exterior from the approved logo and use transparent PNG icons."
+msgstr "Удалён чёрный фон снаружи утверждённого логотипа; используются прозрачные PNG-иконки."

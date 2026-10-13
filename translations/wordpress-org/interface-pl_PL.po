@@ -2,200 +2,281 @@
 msgid ""
 msgstr "Project-Id-Version: WordPress.org interface\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-10-11 00:00+0000\nPO-Revision-Date: 2026-10-11 00:00+0000\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\nX-Domain: georg-kloster-slavonic-translator\n"
 
-msgid "Bible Desktop returned HTTP error %d."
-msgstr "Bible Desktop zwrócił błąd HTTP %d."
-
-msgid "The translation service is temporarily unavailable."
-msgstr "Usługa tłumaczenia jest tymczasowo niedostępna."
-
-msgid "The translation request limit has been reached. Please try again later."
-msgstr "Osiągnięto limit żądań tłumaczenia. Spróbuj ponownie później."
-
-msgid "Check the entered text and translation settings."
-msgstr "Sprawdź wprowadzony tekst i ustawienia tłumaczenia."
-
-msgid "The Bible Desktop API key is invalid."
-msgstr "Klucz API Bible Desktop jest nieprawidłowy."
-
-msgid "The free daily limit has been reached. Add an API key for higher limits or try again after the reset."
-msgstr "Osiągnięto bezpłatny limit dzienny. Dodaj klucz API, aby zwiększyć limity, lub spróbuj ponownie po ich zresetowaniu."
-
-msgid "The higher translation limit has been reached. Please try again later."
-msgstr "Osiągnięto podwyższony limit tłumaczeń. Spróbuj ponownie później."
-
-msgid "Could not connect to Bible Desktop."
-msgstr "Nie udało się połączyć z Bible Desktop."
-
-msgid "The text is too long."
-msgstr "Tekst jest zbyt długi."
-
-msgid "The selected source language is not supported."
-msgstr "Wybrany język źródłowy nie jest obsługiwany."
-
-msgid "Enter text to translate."
-msgstr "Wprowadź tekst do przetłumaczenia."
-
-msgid "After downloading, open MonomakhUnicode.ttf and click Install. If Word does not select it automatically, select the pasted text and assign Monomakh Unicode manually."
-msgstr "Po pobraniu otwórz MonomakhUnicode.ttf i kliknij Zainstaluj. Jeśli Word nie wybierze czcionki automatycznie, zaznacz wklejony tekst i ręcznie przypisz Monomakh Unicode."
-
-msgid "Download font"
-msgstr "Pobierz czcionkę"
-
-msgid "Copy with formatting"
-msgstr "Kopiuj z formatowaniem"
-
-msgid "Copy text"
-msgstr "Kopiuj tekst"
-
-msgid "Translate"
-msgstr "Przetłumacz"
-
-msgid "Privacy Policy"
-msgstr "Polityka prywatności"
+msgid "Your text is sent to the configured Bible Desktop service and may be processed by OpenAI."
+msgstr "Twój tekst jest wysyłany do skonfigurowanej usługi Bible Desktop i może być przetwarzany przez OpenAI."
 
 msgid "Terms of Service"
 msgstr "Warunki korzystania"
 
-msgid "Your text is sent to the configured Bible Desktop service and may be processed by OpenAI."
-msgstr "Twój tekst jest wysyłany do skonfigurowanej usługi Bible Desktop i może być przetwarzany przez OpenAI."
+msgid "Privacy Policy"
+msgstr "Polityka prywatności"
 
-msgid "Slavonic numbers"
-msgstr "Liczby słowiańskie"
-
-msgid "Breathings"
-msgstr "Przydechy"
-
-msgid "Titlo"
-msgstr "Titła"
-
-msgid "Accents"
-msgstr "Akcenty"
-
-msgid "Orthography"
-msgstr "Ortografia"
-
-msgid "German"
-msgstr "Niemiecki"
-
-msgid "Russian"
-msgstr "Rosyjski"
-
-msgid "Detect automatically"
-msgstr "Wykryj automatycznie"
-
-msgid "Source language"
-msgstr "Język źródłowy"
-
-msgid "Enter Russian or German text"
-msgstr "Wprowadź tekst rosyjski lub niemiecki"
-
-msgid "Text to translate"
-msgstr "Tekst do przetłumaczenia"
-
-msgid "Plain text copied"
-msgstr "Skopiowano zwykły tekst"
-
-msgid "Could not copy"
-msgstr "Nie udało się skopiować"
-
-msgid "Copied"
-msgstr "Skopiowano"
-
-msgid "Ready."
-msgstr "Gotowe."
-
-msgid "Ready — the result was loaded from cache."
-msgstr "Gotowe — wynik został wczytany z pamięci podręcznej."
-
-msgid "Translation could not be completed."
-msgstr "Nie udało się ukończyć tłumaczenia."
-
-msgid "Translating…"
-msgstr "Tłumaczenie…"
-
-msgid "Recognized as %s"
-msgstr "Rozpoznano jako %s"
-
-msgid "Could not connect: %s"
-msgstr "Nie udało się połączyć: %s"
-
-msgid "Connection established. The Bible Desktop API is available."
-msgstr "Połączenie nawiązane. API Bible Desktop jest dostępne."
-
-msgid "Insufficient permissions."
-msgstr "Brak wymaganych uprawnień."
-
-msgid "What it does"
-msgstr "Działanie"
-
-msgid "Shortcode"
-msgstr "Shortcode"
-
-msgid "Shows the same form with a custom heading. Replace the text inside title with your own heading."
-msgstr "Wyświetla ten sam formularz z własnym nagłówkiem. Zastąp tekst w title swoim nagłówkiem."
-
-msgid "Shows the standard Church Slavonic translation form with the default title."
-msgstr "Wyświetla standardowy formularz tłumaczenia na język cerkiewnosłowiański z domyślnym tytułem."
-
-msgid "Add one of these shortcodes in the Shortcode block or HTML block of the WordPress editor."
-msgstr "Dodaj jeden z tych shortcode’ów w bloku Shortcode lub bloku HTML edytora WordPress."
-
-msgid "The check does not send text to OpenAI and does not spend money."
-msgstr "Sprawdzenie nie wysyła tekstu do OpenAI i nie powoduje kosztów."
-
-msgid "Check connection"
-msgstr "Sprawdź połączenie"
-
-msgid "Save settings"
-msgstr "Zapisz ustawienia"
-
-msgid "seconds"
-msgstr "sekund"
-
-msgid "Timeout"
-msgstr "Limit czasu"
-
-msgid "Delete the saved key"
-msgstr "Usuń zapisany klucz"
-
-msgid "Optional. Without a key, the plugin uses the free public tier. Add a key for higher limits."
-msgstr "Opcjonalnie. Bez klucza wtyczka korzysta z bezpłatnego trybu publicznego. Dodaj klucz, aby zwiększyć limity."
-
-msgid "The key is saved. Leave the field empty to keep it."
-msgstr "Klucz został zapisany. Pozostaw pole puste, aby go zachować."
-
-msgid "Bible Desktop API key"
-msgstr "Klucz API Bible Desktop"
-
-msgid "Example:"
-msgstr "Przykład:"
-
-msgid "Bible Desktop URL"
-msgstr "Adres Bible Desktop"
-
-msgid "Add the form with [wp_cu_translator]. The free tier works without a key; an optional key enables higher limits and always stays on the WordPress server."
-msgstr "Dodaj formularz za pomocą [wp_cu_translator]. Bezpłatny tryb działa bez klucza; opcjonalny klucz zwiększa limity i zawsze pozostaje na serwerze WordPress."
-
-msgid "Shortcodes"
-msgstr "Shortcode"
+msgid "Georg-Kloster Slavonic Translator"
+msgstr "Georg-Kloster — Tłumacz cerkiewnosłowiański"
 
 msgid "Settings"
 msgstr "Ustawienia"
 
+msgid "Shortcodes"
+msgstr "Shortcode"
+
+msgid "Add one of these shortcodes in the Shortcode block or HTML block of the WordPress editor."
+msgstr "Dodaj jeden z tych shortcode’ów w bloku Shortcode lub bloku HTML edytora WordPress."
+
+msgid "Shortcode"
+msgstr "Shortcode"
+
+msgid "What it does"
+msgstr "Działanie"
+
+msgid "Shows the standard Church Slavonic translation form with the default title."
+msgstr "Wyświetla standardowy formularz tłumaczenia na język cerkiewnosłowiański z domyślnym tytułem."
+
+msgid "Shows the same form with a custom heading. Replace the text inside title with your own heading."
+msgstr "Wyświetla ten sam formularz z własnym nagłówkiem. Zastąp tekst w title swoim nagłówkiem."
+
+msgid "Translate text into Church Slavonic and search its dictionary through Bible Desktop."
+msgstr "Tłumacz tekst na język cerkiewnosłowiański i przeszukuj słownik za pomocą Bible Desktop."
+
 msgid "Enter a valid Bible Desktop HTTPS URL."
 msgstr "Wprowadź prawidłowy adres HTTPS Bible Desktop."
 
-msgid "https://atapin.de/"
-msgstr "https://atapin.de/"
+msgid "Add the form with [wp_cu_translator]. The free tier works without a key; an optional key enables higher limits and always stays on the WordPress server."
+msgstr "Dodaj formularz za pomocą [wp_cu_translator]. Bezpłatny tryb działa bez klucza; opcjonalny klucz zwiększa limity i zawsze pozostaje na serwerze WordPress."
+
+msgid "Bible Desktop URL"
+msgstr "Adres Bible Desktop"
+
+msgid "Example:"
+msgstr "Przykład:"
+
+msgid "Bible Desktop API key"
+msgstr "Klucz API Bible Desktop"
+
+msgid "The key is saved. Leave the field empty to keep it."
+msgstr "Klucz został zapisany. Pozostaw pole puste, aby go zachować."
+
+msgid "Optional. Without a key, the plugin uses the free public tier. Add a key for higher limits."
+msgstr "Opcjonalnie. Bez klucza wtyczka korzysta z bezpłatnego trybu publicznego. Dodaj klucz, aby zwiększyć limity."
+
+msgid "Delete the saved key"
+msgstr "Usuń zapisany klucz"
+
+msgid "Timeout"
+msgstr "Limit czasu"
+
+msgid "seconds"
+msgstr "sekund"
+
+msgid "Save settings"
+msgstr "Zapisz ustawienia"
+
+msgid "Check connection"
+msgstr "Sprawdź połączenie"
+
+msgid "The check does not send text to OpenAI and does not spend money."
+msgstr "Sprawdzenie nie wysyła tekstu do OpenAI i nie powoduje kosztów."
+
+msgid "Insufficient permissions."
+msgstr "Brak wymaganych uprawnień."
+
+msgid "Connection established. The Bible Desktop API is available."
+msgstr "Połączenie nawiązane. API Bible Desktop jest dostępne."
+
+msgid "Could not connect: %s"
+msgstr "Nie udało się połączyć: %s"
+
+msgid "Translating…"
+msgstr "Tłumaczenie…"
+
+msgid "Translation could not be completed."
+msgstr "Nie udało się ukończyć tłumaczenia."
+
+msgid "Recognized as %s"
+msgstr "Rozpoznano jako %s"
+
+msgid "Ready — the result was loaded from cache."
+msgstr "Gotowe — wynik został wczytany z pamięci podręcznej."
+
+msgid "Ready."
+msgstr "Gotowe."
+
+msgid "Copied"
+msgstr "Skopiowano"
+
+msgid "Could not copy"
+msgstr "Nie udało się skopiować"
+
+msgid "Plain text copied"
+msgstr "Skopiowano zwykły tekst"
+
+msgid "Text to translate"
+msgstr "Tekst do przetłumaczenia"
+
+msgid "Enter Russian or German text"
+msgstr "Wprowadź tekst rosyjski lub niemiecki"
+
+msgid "Source language"
+msgstr "Język źródłowy"
+
+msgid "Detect automatically"
+msgstr "Wykryj automatycznie"
+
+msgid "Russian"
+msgstr "Rosyjski"
+
+msgid "German"
+msgstr "Niemiecki"
+
+msgid "Orthography"
+msgstr "Ortografia"
+
+msgid "Accents"
+msgstr "Akcenty"
+
+msgid "Titlo"
+msgstr "Titła"
+
+msgid "Breathings"
+msgstr "Przydechy"
+
+msgid "Slavonic numbers"
+msgstr "Liczby słowiańskie"
+
+msgid "Translate"
+msgstr "Przetłumacz"
+
+msgid "Copy text"
+msgstr "Kopiuj tekst"
+
+msgid "Copy with formatting"
+msgstr "Kopiuj z formatowaniem"
+
+msgid "Download font"
+msgstr "Pobierz czcionkę"
+
+msgid "After downloading, open MonomakhUnicode.ttf and click Install. If Word does not select it automatically, select the pasted text and assign Monomakh Unicode manually."
+msgstr "Po pobraniu otwórz MonomakhUnicode.ttf i kliknij Zainstaluj. Jeśli Word nie wybierze czcionki automatycznie, zaznacz wklejony tekst i ręcznie przypisz Monomakh Unicode."
+
+msgid "Enter text to translate."
+msgstr "Wprowadź tekst do przetłumaczenia."
+
+msgid "The selected source language is not supported."
+msgstr "Wybrany język źródłowy nie jest obsługiwany."
+
+msgid "The text is too long."
+msgstr "Tekst jest zbyt długi."
+
+msgid "Could not connect to Bible Desktop."
+msgstr "Nie udało się połączyć z Bible Desktop."
+
+msgid "The Bible Desktop API key is invalid."
+msgstr "Klucz API Bible Desktop jest nieprawidłowy."
+
+msgid "Check the entered text and translation settings."
+msgstr "Sprawdź wprowadzony tekst i ustawienia tłumaczenia."
+
+msgid "The translation request limit has been reached. Please try again later."
+msgstr "Osiągnięto limit żądań tłumaczenia. Spróbuj ponownie później."
+
+msgid "The higher translation limit has been reached. Please try again later."
+msgstr "Osiągnięto podwyższony limit tłumaczeń. Spróbuj ponownie później."
+
+msgid "The free daily limit has been reached. Add an API key for higher limits or try again after the reset."
+msgstr "Osiągnięto bezpłatny limit dzienny. Dodaj klucz API, aby zwiększyć limity, lub spróbuj ponownie po ich zresetowaniu."
+
+msgid "The translation service is temporarily unavailable."
+msgstr "Usługa tłumaczenia jest tymczasowo niedostępna."
+
+msgid "Bible Desktop returned HTTP error %d."
+msgstr "Bible Desktop zwrócił błąd HTTP %d."
+
+msgid "Searching…"
+msgstr "Wyszukiwanie…"
+
+msgid "The dictionary service is temporarily unavailable."
+msgstr "Usługa słownika jest tymczasowo niedostępna."
+
+msgid "No matching entries found."
+msgstr "Nie znaleziono pasujących haseł."
+
+msgid "Copy word"
+msgstr "Kopiuj słowo"
+
+msgid "Read the source"
+msgstr "Czytaj źródło"
+
+msgid "Use in translator"
+msgstr "Użyj w tłumaczu"
+
+msgid "Select a word in the translation first."
+msgstr "Najpierw zaznacz słowo w tłumaczeniu."
+
+msgid "Look up selected word"
+msgstr "Wyszukaj zaznaczone słowo"
+
+msgid "Language tools"
+msgstr "Narzędzia językowe"
+
+msgid "Translator"
+msgstr "Tłumacz"
+
+msgid "Dictionary"
+msgstr "Słownik"
+
+msgid "Church Slavonic dictionary"
+msgstr "Słownik cerkiewnosłowiański"
+
+msgid "Word or Russian meaning"
+msgstr "Słowo lub znaczenie po rosyjsku"
+
+msgid "Search in"
+msgstr "Szukaj według"
+
+msgid "Church Slavonic word"
+msgstr "Słowo cerkiewnosłowiańskie"
+
+msgid "Russian meaning"
+msgstr "Znaczenie po rosyjsku"
+
+msgid "Alphabet"
+msgstr "Alfabet"
+
+msgid "All letters"
+msgstr "Wszystkie litery"
+
+msgid "Search with or without accents. Definitions are in Russian; a meaning match is not a sentence translation."
+msgstr "Szukaj z akcentami lub bez nich. Definicje są po rosyjsku; dopasowanie znaczenia nie jest tłumaczeniem zdania."
+
+msgid "Search"
+msgstr "Szukaj"
+
+msgid "Dictionary searches are sent to the configured Bible Desktop service. Entries retain their original spelling and source attribution."
+msgstr "Zapytania słownikowe są wysyłane do skonfigurowanej usługi Bible Desktop. Hasła zachowują oryginalną pisownię i wskazanie źródła."
+
+msgid "Load more"
+msgstr "Pokaż więcej"
+
+msgid "Check the dictionary search parameters."
+msgstr "Sprawdź parametry wyszukiwania w słowniku."
+
+msgid "Too many dictionary requests. Please try again later."
+msgstr "Zbyt wiele zapytań słownikowych. Spróbuj ponownie później."
+
+msgid "Shows only the translation form, without the dictionary tab."
+msgstr "Wyświetla tylko formularz tłumaczenia bez karty słownika."
+
+msgid "Shows the standalone Church Slavonic dictionary with word, meaning and alphabet search."
+msgstr "Wyświetla samodzielny słownik cerkiewnosłowiański z wyszukiwaniem słów, znaczeń i według alfabetu."
+
+msgid "Shows the dictionary with a custom heading."
+msgstr "Wyświetla słownik z własnym nagłówkiem."
 
 msgid "Vladimir Atapin"
 msgstr "Vladimir Atapin"
 
-msgid "Translate text into Church Slavonic using the Bible Desktop translation service."
-msgstr "Tłumacz tekst na język cerkiewnosłowiański za pomocą usługi tłumaczenia Bible Desktop."
+msgid "https://atapin.de/"
+msgstr "https://atapin.de/"
 
 msgid "https://kalender.georg-kloster.ru/calendar-api"
 msgstr "https://kalender.georg-kloster.ru/calendar-api"
-
-msgid "Georg-Kloster Slavonic Translator"
-msgstr "Georg-Kloster — Tłumacz cerkiewnosłowiański"

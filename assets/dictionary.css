@@ -1,0 +1,18 @@
+.georsltr-tools [hidden], .georsltr-dictionary [hidden] { display: none; }
+.georsltr-tools__tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+.georsltr-tools__tabs button { padding: 0.7rem 1rem; border: 1px solid #bdcec2; border-radius: 0.6rem; background: #fff; color: #17563f; font: inherit; cursor: pointer; }
+.georsltr-tools__tabs button[aria-selected="true"] { background: #17563f; color: #fff; }
+.georsltr-tools > [role="tabpanel"] > .wp-cu-translator { margin-top: 0.75rem; }
+.georsltr-dictionary .georsltr-dictionary__form { display: grid; gap: 1rem; }
+.georsltr-dictionary .georsltr-dictionary__filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.georsltr-dictionary .georsltr-dictionary__results { display: grid; gap: 0.6rem; margin-block: 1rem; }
+.georsltr-dictionary .georsltr-dictionary__entry { padding: 1rem; text-align: start; border: 1px solid #dce5df; border-radius: 0.65rem; background: #f5f8f4; color: #233b31; font: inherit; cursor: pointer; }
+.georsltr-dictionary .georsltr-dictionary__entry strong, .georsltr-dictionary .georsltr-dictionary__entry span { display: block; overflow-wrap: anywhere; }
+.georsltr-dictionary .georsltr-dictionary__entry strong { font-family: 'Monomakh Unicode', 'Times New Roman', serif; font-size: 1.25em; }
+.georsltr-dictionary .georsltr-dictionary__entry span { font-size: 0.875em; margin-top: 0.4rem; }
+.georsltr-dictionary .georsltr-dictionary__article { margin-top: 1rem; padding: 1.25rem; border: 1px solid #dce5df; border-radius: 0.65rem; background: #fcfbf4; overflow-wrap: anywhere; }
+.georsltr-dictionary .georsltr-dictionary__article h4 { margin: 0 0 0.6rem; font-family: 'Monomakh Unicode', 'Times New Roman', serif; font-size: 1.5em; color: inherit; }
+.georsltr-dictionary .georsltr-dictionary__article p { white-space: pre-wrap; }
+.georsltr-dictionary .georsltr-dictionary__article button, .georsltr-dictionary .georsltr-dictionary__article a { margin-inline-end: 0.75rem; }
+.georsltr-tools button:focus-visible, .georsltr-dictionary button:focus-visible { outline: 3px solid #17563f; outline-offset: 3px; }
+@media (max-width: 640px) { .georsltr-dictionary .georsltr-dictionary__filters { grid-template-columns: 1fr; } }

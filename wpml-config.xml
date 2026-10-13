@@ -1,0 +1,12 @@
+<wpml-config>
+    <shortcodes>
+        <shortcode>
+            <tag>wp_cu_translator</tag>
+            <attributes><attribute>title</attribute></attributes>
+        </shortcode>
+        <shortcode>
+            <tag>wp_cu_dictionary</tag>
+            <attributes><attribute>title</attribute></attributes>
+        </shortcode>
+    </shortcodes>
+</wpml-config>

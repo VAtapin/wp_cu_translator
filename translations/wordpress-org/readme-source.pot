@@ -13,7 +13,7 @@ msgstr ""
 
 #. Short description.
 #, gp-priority: high
-msgid "Translate text into Church Slavonic using the Bible Desktop translation service."
+msgid "Translate text into Church Slavonic and search its dictionary through Bible Desktop."
 msgstr ""
 
 #. Plugin name.
@@ -261,4 +261,25 @@ msgid "Ensure translation requests work when block themes render the shortcode b
 msgstr ""
 
 msgid "Redesign the responsive translation form with the approved Georg-Kloster logo, a separate options panel and clearer translation results."
+msgstr ""
+
+msgid "Dictionary"
+msgstr ""
+
+msgid "The Dictionary tab searches the complete Church Slavonic dictionary supplied by Bible Desktop from Azbyka. Search by original or civil spelling, by Russian meaning, or by alphabet chapter. Definitions remain in Russian. Meaning matches are dictionary references, not automatic sentence translations. Original spelling and source links are retained; morphology and audio are not generated."
+msgstr ""
+
+msgid "Use <code>[wp_cu_dictionary]</code> for the standalone dictionary, <code>[wp_cu_translator]</code> for both tools, or <code>[wp_cu_translator dictionary=\"no\"]</code> for translation only. Custom title attributes are supported."
+msgstr ""
+
+msgid "Dictionary searches and article requests are sent by WordPress to the configured Bible Desktop service only after user interaction: <code>/api/dictionaries/AZBYKA_CU_FULL/search</code>, <code>/api/dictionaries/AZBYKA_CU_FULL/alphabet</code> and <code>/api/dictionaries/AZBYKA_CU_FULL/entries/{key}</code>. They transmit the search, mode, chapter or article key and the existing plugin client and installation headers; an optional configured API key also stays server-side. Successful responses may be cached by WordPress for five minutes. The dictionary does not call OpenAI. Source: https://azbyka.ru/otechnik/Spravochniki/polnyj-pravoslavnyj-tserkovnoslavjanskij-slovar/ . Clicking a source link opens Azbyka directly."
+msgstr ""
+
+msgid "Add a standalone Church Slavonic dictionary, word and meaning search, alphabet browsing and selected-word lookup."
+msgstr ""
+
+msgid "Follow the current WPML page language and preserve it in AJAX requests."
+msgstr ""
+
+msgid "Remove the black exterior from the approved logo and use transparent PNG icons."
 msgstr ""

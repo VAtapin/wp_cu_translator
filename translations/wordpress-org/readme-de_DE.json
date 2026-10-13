@@ -57,5 +57,12 @@
   "Deutsche Oberfläche mit Optionen für Ausgangssprache und Orthografie.",
   "Russische Oberfläche mit übersetzten Beschriftungen und dem Hinweis auf externe Verarbeitung.",
   "Übersetzungsanfragen funktionieren auch, wenn Block-Themes den Shortcode vor dem üblichen Hook zur Registrierung der Ressourcen ausgeben.",
-  "Das responsive Übersetzungsformular wurde mit dem bestätigten Georg-Kloster-Logo, einem separaten Optionsbereich und übersichtlicheren Übersetzungsergebnissen neu gestaltet."
+  "Das responsive Übersetzungsformular wurde mit dem bestätigten Georg-Kloster-Logo, einem separaten Optionsbereich und übersichtlicheren Übersetzungsergebnissen neu gestaltet.",
+  "Wörterbuch",
+  "Der Tab „Wörterbuch“ durchsucht das vollständige kirchenslawische Wörterbuch, das Bible Desktop aus Azbyka bereitstellt. Suchen Sie nach Original- oder Zivilschreibung, russischer Bedeutung oder Alphabetkapitel. Definitionen bleiben auf Russisch. Bedeutungstreffer sind Wörterbuchhinweise und keine automatische Satzübersetzung. Originalschreibung und Quellenlinks bleiben erhalten; Morphologie und Audio werden nicht erzeugt.",
+  "Verwenden Sie <code>[wp_cu_dictionary]</code> für das eigenständige Wörterbuch, <code>[wp_cu_translator]</code> für beide Werkzeuge oder <code>[wp_cu_translator dictionary=\"no\"]</code> nur für die Übersetzung. Eigene Überschriften über das Attribut title werden unterstützt.",
+  "Wörterbuch- und Artikelanfragen sendet WordPress erst nach einer Benutzeraktion an den konfigurierten Bible-Desktop-Dienst: <code>/api/dictionaries/AZBYKA_CU_FULL/search</code>, <code>/api/dictionaries/AZBYKA_CU_FULL/alphabet</code> und <code>/api/dictionaries/AZBYKA_CU_FULL/entries/{key}</code>. Übertragen werden Suchanfrage, Modus, Kapitel oder Artikelschlüssel sowie die bestehenden Client- und Installationsheader des Plugins; ein optional konfigurierter API-Schlüssel bleibt ebenfalls serverseitig. Erfolgreiche Antworten kann WordPress fünf Minuten zwischenspeichern. Das Wörterbuch ruft OpenAI nicht auf. Quelle: https://azbyka.ru/otechnik/Spravochniki/polnyj-pravoslavnyj-tserkovnoslavjanskij-slovar/ . Ein Klick auf einen Quellenlink öffnet Azbyka direkt.",
+  "Ein eigenständiges kirchenslawisches Wörterbuch, Wort- und Bedeutungssuche, alphabetisches Blättern und Nachschlagen ausgewählter Wörter wurden hinzugefügt.",
+  "Die aktuelle WPML-Seitensprache wird berücksichtigt und in AJAX-Anfragen beibehalten.",
+  "Der schwarze Hintergrund außerhalb des bestätigten Logos wurde entfernt; transparente PNG-Symbole werden verwendet."
 ]
