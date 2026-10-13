@@ -1,0 +1,159 @@
+# Translation of Georg-Kloster Slavonic Translator. GPL-2.0-or-later.
+msgid ""
+msgstr "Project-Id-Version: WordPress.org readme\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-10-11 00:00+0000\nPO-Revision-Date: 2026-10-11 00:00+0000\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\nX-Domain: georg-kloster-slavonic-translator\n"
+
+msgid "Translate text into Church Slavonic using the Bible Desktop translation service."
+msgstr "Tłumacz tekst na język cerkiewnosłowiański za pomocą usługi tłumaczenia Bible Desktop."
+
+msgid "Georg-Kloster Slavonic Translator"
+msgstr "Georg-Kloster — Tłumacz cerkiewnosłowiański"
+
+msgid "Use <strong>Copy with formatting</strong> and install Monomakh Unicode from the link below the result. If Word does not select it automatically, select the pasted text and assign Monomakh Unicode manually."
+msgstr "Użyj <strong>Kopiuj z formatowaniem</strong> i zainstaluj Monomakh Unicode z odnośnika pod wynikiem. Jeśli Word nie wybierze czcionki automatycznie, zaznacz wklejony tekst i ręcznie przypisz Monomakh Unicode."
+
+msgid "No. Bible references, matching quotations and cached translations may be handled without a new OpenAI request. Global hourly and daily limits remain controlled by Bible Desktop."
+msgstr "Nie. Odwołania biblijne, rozpoznane cytaty i tłumaczenia z pamięci podręcznej mogą być obsługiwane bez nowego żądania do OpenAI. Bible Desktop kontroluje globalne limity godzinowe i dzienne."
+
+msgid "No. Translation requests are proxied by WordPress, and an optional key remains on the WordPress server. The free tier needs no secret key."
+msgstr "Nie. Żądania tłumaczenia przechodzą przez WordPress, a opcjonalny klucz pozostaje na serwerze WordPress. Bezpłatny tryb nie wymaga tajnego klucza."
+
+msgid "How do I use Church Slavonic text in Microsoft Word?"
+msgstr "Jak używać tekstu cerkiewnosłowiańskiego w Microsoft Word?"
+
+msgid "Does every translation cost money?"
+msgstr "Czy każde tłumaczenie kosztuje?"
+
+msgid "Does the plugin expose the API key to visitors?"
+msgstr "Czy klucz API jest widoczny dla odwiedzających?"
+
+msgid "Optional custom title:"
+msgstr "Opcjonalny własny tytuł:"
+
+msgid "Add <code>[wp_cu_translator]</code> to a page."
+msgstr "Dodaj <code>[wp_cu_translator]</code> do strony."
+
+msgid "Use <strong>Check connection</strong>. This check does not call OpenAI."
+msgstr "Użyj <strong>Sprawdź połączenie</strong>. To sprawdzenie nie wywołuje OpenAI."
+
+msgid "Optionally create a key under <strong>Bible Desktop → System → AI integration → External sites</strong> and save it under <strong>Georg-Kloster Slavonic Translator → Settings</strong> for higher limits."
+msgstr "W razie potrzeby utwórz klucz w sekcji <strong>Bible Desktop → System → Integracja AI → Witryny zewnętrzne</strong> i zapisz go w sekcji <strong>Georg-Kloster Slavonic Translator → Ustawienia</strong>, aby zwiększyć limity."
+
+msgid "Activate <strong>Georg-Kloster Slavonic Translator</strong>. The free public tier works immediately."
+msgstr "Włącz <strong>Georg-Kloster Slavonic Translator</strong>. Bezpłatny tryb publiczny działa od razu."
+
+msgid "In WordPress open <strong>Plugins → Add New → Upload Plugin</strong> and upload <code>georg-kloster-slavonic-translator.zip</code>."
+msgstr "W WordPress otwórz <strong>Wtyczki → Dodaj nową → Wyślij wtyczkę na serwer</strong> i prześlij <code>georg-kloster-slavonic-translator.zip</code>."
+
+msgid "The plugin does not create its own database tables and does not store translation text. The Bible Desktop URL, optional external API key, timeout and non-secret installation UUID are stored in the WordPress options table. Requests are subject to the logging, retention and AI settings configured on the connected Bible Desktop server."
+msgstr "Wtyczka nie tworzy własnych tabel bazy danych i nie zapisuje tekstu tłumaczenia. Adres Bible Desktop, opcjonalny zewnętrzny klucz API, limit czasu i niebędący sekretem UUID instalacji są zapisywane w tabeli options WordPress. Rejestrowanie, okresy przechowywania i ustawienia AI dla żądań określa podłączony serwer Bible Desktop."
+
+msgid "The service is operated by Bible Desktop. API Terms of Service: https://bible-desktop.com/pages/api-terms . API Privacy Policy: https://bible-desktop.com/pages/api-privacy . These documents cover the API, translation data and optional OpenAI processing."
+msgstr "Operatorem usługi jest Bible Desktop. Warunki korzystania z API: https://bible-desktop.com/pages/api-terms . Polityka prywatności API: https://bible-desktop.com/pages/api-privacy . Dokumenty dotyczą API, danych tłumaczeń i ewentualnego przetwarzania przez OpenAI."
+
+msgid "If an administrator changes <strong>Bible Desktop URL</strong>, the API and font requests use that configured service instead. The administrator must check that service's data handling and inform site visitors before offering the form."
+msgstr "Jeśli administrator zmieni <strong>Adres Bible Desktop</strong>, żądania API i pobieranie czcionki będą korzystać ze skonfigurowanej usługi. Przed udostępnieniem formularza administrator powinien sprawdzić zasady przetwarzania danych tej usługi i poinformować odwiedzających."
+
+msgid "Bible Desktop may send submitted text to OpenAI to generate a translation. Biblical references, matching quotations and cached results may be processed without a new OpenAI request. The plugin itself does not connect directly to OpenAI. OpenAI API terms: https://openai.com/policies/business-terms/ ; privacy policy: https://openai.com/policies/privacy-policy/ ."
+msgstr "Bible Desktop może przekazywać przesłany tekst do OpenAI w celu tłumaczenia. Odwołania biblijne, rozpoznane cytaty i wyniki z pamięci podręcznej mogą być przetwarzane bez nowego żądania do OpenAI. Sama wtyczka nie łączy się bezpośrednio z OpenAI. Warunki API OpenAI: https://openai.com/policies/business-terms/ ; polityka prywatności: https://openai.com/policies/privacy-policy/ ."
+
+msgid "When a visitor clicks <strong>Download font</strong>, their browser requests <code>https://bible-desktop.com/fonts/MonomakhUnicode.ttf</code> directly from Bible Desktop. This download reveals the visitor's IP address and ordinary browser request information to that service. The plugin does not automatically load the remote font."
+msgstr "Po kliknięciu <strong>Pobierz czcionkę</strong> przeglądarka odwiedzającego pobiera <code>https://bible-desktop.com/fonts/MonomakhUnicode.ttf</code> bezpośrednio z Bible Desktop. Usługa otrzymuje adres IP odwiedzającego i standardowe informacje o żądaniu przeglądarki. Wtyczka nie wczytuje zdalnej czcionki automatycznie."
+
+msgid "Only when an administrator presses <strong>Check connection</strong>, the WordPress server calls <code>https://bible-desktop.com/api/v1/church-slavonic/status</code>. This request includes the plugin client name, installation UUID and optional API key, but no translation text or visitor identifier, and does not invoke OpenAI. Activation and viewing the translation form do not send requests to Bible Desktop."
+msgstr "Serwer WordPress wywołuje <code>https://bible-desktop.com/api/v1/church-slavonic/status</code> wyłącznie po naciśnięciu przez administratora <strong>Sprawdź połączenie</strong>. Żądanie zawiera nazwę klienta wtyczki, UUID instalacji i opcjonalny klucz API, ale nie tekst tłumaczenia ani identyfikator odwiedzającego, i nie wywołuje OpenAI. Włączenie wtyczki i wyświetlenie formularza nie wysyłają żądań do Bible Desktop."
+
+msgid "This plugin relies on the external Bible Desktop service to translate text into Church Slavonic. Only when a visitor submits the translation form, the WordPress server sends the source text, source-language selection and orthography options to <code>https://bible-desktop.com/api/v1/church-slavonic/translate</code>. Request headers include the plugin client name, a non-secret installation UUID for usage quotas and a per-visitor HMAC identifier derived from the visitor's IP address using a WordPress secret for rate limiting. If configured, the optional Bible Desktop API key is also sent server-to-server. The visitor's original IP address is not sent to Bible Desktop by the plugin; the service receives the WordPress server's IP address as part of the network connection."
+msgstr "Wtyczka korzysta z zewnętrznej usługi Bible Desktop do tłumaczenia na język cerkiewnosłowiański. Dopiero po wysłaniu formularza przez odwiedzającego serwer WordPress przesyła tekst źródłowy, wybrany język i opcje ortografii do <code>https://bible-desktop.com/api/v1/church-slavonic/translate</code>. Nagłówki żądania zawierają nazwę klienta wtyczki, niebędący sekretem UUID instalacji do rozliczania limitów i identyfikator HMAC odwiedzającego, obliczony z jego adresu IP przy użyciu sekretu WordPress do ograniczania częstotliwości żądań. Skonfigurowany opcjonalny klucz API również jest przekazywany między serwerami. Wtyczka nie przesyła oryginalnego adresu IP odwiedzającego; usługa otrzymuje adres IP serwera WordPress podczas połączenia sieciowego."
+
+msgid "The plugin has its own WordPress admin menu. <strong>Georg-Kloster Slavonic Translator → Settings</strong> contains the Bible Desktop URL, optional API key, timeout and connection check. <strong>Georg-Kloster Slavonic Translator → Shortcodes</strong> lists each supported shortcode with a ready-to-copy example and explanation. The same shortcode reference is also available at the bottom of the settings page."
+msgstr "Wtyczka ma własne menu administracyjne WordPress. <strong>Georg-Kloster Slavonic Translator → Ustawienia</strong> zawiera adres Bible Desktop, opcjonalny klucz API, limit czasu i sprawdzanie połączenia. <strong>Georg-Kloster Slavonic Translator → Shortcode</strong> zawiera wszystkie obsługiwane shortcode’y z przykładami gotowymi do skopiowania i objaśnieniami. Ta sama lista jest dostępna na dole strony ustawień."
+
+msgid "Biblical references, exact verses, confidently recognized quotations and cached results can be returned without a new paid OpenAI request. Other texts use the model and spending limits configured by the Bible Desktop administrator."
+msgstr "Odwołania biblijne, dokładne wersety, pewnie rozpoznane cytaty i wyniki z pamięci podręcznej mogą być zwracane bez nowego płatnego żądania do OpenAI. Pozostałe teksty korzystają z modelu i limitów wydatków skonfigurowanych przez administratora Bible Desktop."
+
+msgid "The plugin name, description, settings page, messages and public form are available in English, Russian, German, Ukrainian and Polish. WordPress selects the language from its current locale."
+msgstr "Nazwa, opis, strona ustawień, komunikaty i publiczny formularz wtyczki są dostępne po angielsku, rosyjsku, niemiecku, ukraińsku i polsku. WordPress wybiera język zgodnie z bieżącą lokalizacją."
+
+msgid "The browser sends the form to WordPress. WordPress then contacts Bible Desktop server-to-server, so an optional Bible Desktop API key is never included in the page HTML or JavaScript."
+msgstr "Przeglądarka wysyła formularz do WordPress. Następnie WordPress kontaktuje się z Bible Desktop między serwerami, dlatego opcjonalny klucz API nigdy nie trafia do kodu HTML ani JavaScript strony."
+
+msgid "The plugin works without an API key using the free public Bible Desktop API tier. The free tier has usage limits to protect the service and control external AI processing costs. An optional API key can be configured for higher limits and additional authorized functionality. No secret API credentials are bundled with the plugin."
+msgstr "Wtyczka działa bez klucza API przez bezpłatny publiczny tryb Bible Desktop. Limity tego trybu chronią usługę i ograniczają koszty zewnętrznego przetwarzania AI. Opcjonalny klucz API pozwala korzystać z wyższych limitów i dodatkowych autoryzowanych funkcji. Wtyczka nie zawiera tajnych danych dostępu do API."
+
+msgid "Georg-Kloster Slavonic Translator adds a compact translation form through the <code>[wp_cu_translator]</code> shortcode. It accepts Russian and German text, supports automatic language detection and lets the visitor choose accents, titlo, breathings and Slavonic numbers."
+msgstr "Georg-Kloster Slavonic Translator dodaje kompaktowy formularz tłumaczenia przez shortcode <code>[wp_cu_translator]</code>. Przyjmuje tekst rosyjski i niemiecki, obsługuje automatyczne wykrywanie języka oraz wybór akcentów, titeł, przydechów i liczb słowiańskich."
+
+msgid "Privacy"
+msgstr "Prywatność"
+
+msgid "External Services"
+msgstr "Usługi zewnętrzne"
+
+msgid "Shortcodes and settings"
+msgstr "Shortcode i ustawienia"
+
+msgid "Added an immediately usable free public tier, persistent installation UUID, server-side quotas and optional API keys for higher limits."
+msgstr "Dodano gotowy do użycia bezpłatny tryb publiczny, trwały UUID instalacji, limity po stronie serwera i opcjonalne klucze API zwiększające limity."
+
+msgid "Added English, Russian and German localization for plugin metadata, administration and public output."
+msgstr "Dodano angielskie, rosyjskie i niemieckie tłumaczenia metadanych wtyczki, panelu administracyjnego i publicznego interfejsu."
+
+msgid "Added orthography options, plain and formatted copying, and Monomakh Unicode download guidance."
+msgstr "Dodano opcje ortografii, kopiowanie zwykłego i sformatowanego tekstu oraz instrukcję pobierania Monomakh Unicode."
+
+msgid "Added Russian, German and automatic source-language selection."
+msgstr "Dodano wybór rosyjskiego, niemieckiego i automatycznego języka źródłowego."
+
+msgid "Initial release with server-side Bible Desktop integration, connection check and <code>[wp_cu_translator]</code> shortcode."
+msgstr "Pierwsze wydanie z serwerową integracją Bible Desktop, sprawdzaniem połączenia i shortcode’em <code>[wp_cu_translator]</code>."
+
+msgid "Added a shortcode reference with ready-to-copy examples and explanations to the settings page and the separate Shortcodes page."
+msgstr "Do strony ustawień i osobnej strony shortcode’ów dodano listę z przykładami gotowymi do skopiowania i objaśnieniami."
+
+msgid "Added a dedicated Georg-Kloster Slavonic Translator administration menu with Settings and Shortcodes pages."
+msgstr "Dodano osobne menu administracyjne Georg-Kloster Slavonic Translator ze stronami ustawień i shortcode’ów."
+
+msgid "Changed the frontend translator title from an h2 to an h3 heading."
+msgstr "Zmieniono nagłówek publicznego tłumacza z h2 na h3."
+
+msgid "Let the active WordPress theme control the translator typography and standard form controls."
+msgstr "Aktywny motyw WordPress steruje typografią tłumacza i standardowymi elementami formularza."
+
+msgid "Kept only the Monomakh Unicode output font and paragraph preservation required for translated Church Slavonic text."
+msgstr "Zachowano tylko czcionkę wyniku Monomakh Unicode i akapity potrzebne w tekście cerkiewnosłowiańskim."
+
+msgid "Removed all translator interface styling, so the active WordPress theme controls the form, buttons, checkboxes and layout."
+msgstr "Usunięto wszystkie style interfejsu tłumacza: aktywny motyw WordPress steruje formularzem, przyciskami, polami wyboru i układem."
+
+msgid "Added dedicated styling hooks for text, language, orthography and copy controls. Theme CSS can override every interface rule."
+msgstr "Dodano osobne klasy stylów dla tekstu, języka, ortografii i kopiowania. CSS motywu może nadpisywać każdą regułę interfejsu."
+
+msgid "Added a complete responsive fallback layout for the public form, using zero-specificity <code>:where()</code> selectors and no <code>!important</code> rules."
+msgstr "Dodano pełny responsywny układ bazowy publicznego formularza z selektorami <code>:where()</code> o zerowej specyficzności i bez reguł <code>!important</code>."
+
+msgid "Preserve existing shortcode names, settings and installation identifiers."
+msgstr "Zachowano istniejące nazwy shortcode’ów, ustawienia i identyfikatory instalacji."
+
+msgid "Inform visitors about external text processing before submission and link to the configured provider documents."
+msgstr "Przed wysłaniem formularza odwiedzający otrzymują informacje o zewnętrznym przetwarzaniu tekstu oraz odnośniki do dokumentów skonfigurowanej usługi."
+
+msgid "Document external translation requests, identifiers, font downloads and OpenAI processing, with direct provider terms and privacy links."
+msgstr "Udokumentowano zewnętrzne żądania tłumaczeń, identyfikatory, pobieranie czcionki i przetwarzanie OpenAI z bezpośrednimi odnośnikami do warunków i polityki prywatności usługi."
+
+msgid "Use the distinctive Georg-Kloster Slavonic Translator name and matching WordPress.org slug/text domain."
+msgstr "Użyto wyróżniającej nazwy Georg-Kloster Slavonic Translator i zgodnych identyfikatorów slug i text domain WordPress.org."
+
+msgid "Validate source language, catalog coverage and translation placeholders in release builds."
+msgstr "Podczas budowania wydania sprawdzane są język źródłowy, kompletność katalogów i znaczniki zastępcze tłumaczeń."
+
+msgid "Preserve Russian and German translations and add complete Ukrainian and Polish translations."
+msgstr "Zachowano rosyjskie i niemieckie tłumaczenia oraz dodano kompletne ukraińskie i polskie tłumaczenia."
+
+msgid "Use English source strings, including built-in shortcode examples."
+msgstr "Użyto angielskich tekstów źródłowych, w tym wbudowanych przykładów shortcode’ów."
+
+msgid "Use WordPress.org language packs in the directory package while preserving all four bundled translations for direct installation."
+msgstr "Pakiet katalogowy korzysta z pakietów językowych WordPress.org; wszystkie cztery dołączone tłumaczenia zachowano do bezpośredniej instalacji."
+
+msgid "Prefix the JavaScript configuration object consistently in PHP and JavaScript."
+msgstr "Obiekt konfiguracji JavaScript ma spójny prefiks w PHP i JavaScript."

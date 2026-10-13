@@ -1,0 +1,159 @@
+# Translation of Georg-Kloster Slavonic Translator. GPL-2.0-or-later.
+msgid ""
+msgstr "Project-Id-Version: WordPress.org readme\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-10-11 00:00+0000\nPO-Revision-Date: 2026-10-11 00:00+0000\nLanguage: uk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\nX-Domain: georg-kloster-slavonic-translator\n"
+
+msgid "Translate text into Church Slavonic using the Bible Desktop translation service."
+msgstr "Переклад тексту церковнослов’янською мовою за допомогою сервісу Bible Desktop."
+
+msgid "Georg-Kloster Slavonic Translator"
+msgstr "Georg-Kloster — Церковнослов’янський перекладач"
+
+msgid "Use <strong>Copy with formatting</strong> and install Monomakh Unicode from the link below the result. If Word does not select it automatically, select the pasted text and assign Monomakh Unicode manually."
+msgstr "Використовуйте <strong>Копіювати з форматуванням</strong> і встановіть Monomakh Unicode за посиланням під результатом. Якщо Word не вибере шрифт автоматично, виділіть вставлений текст і призначте Monomakh Unicode вручну."
+
+msgid "No. Bible references, matching quotations and cached translations may be handled without a new OpenAI request. Global hourly and daily limits remain controlled by Bible Desktop."
+msgstr "Ні. Біблійні посилання, розпізнані цитати й переклади з кешу можуть оброблятися без нового запиту до OpenAI. Загальні погодинні й добові ліміти контролює Bible Desktop."
+
+msgid "No. Translation requests are proxied by WordPress, and an optional key remains on the WordPress server. The free tier needs no secret key."
+msgstr "Ні. Запити перекладу проходять через WordPress, а необов’язковий ключ залишається на сервері WordPress. Безкоштовному режиму секретний ключ не потрібен."
+
+msgid "How do I use Church Slavonic text in Microsoft Word?"
+msgstr "Як використовувати церковнослов’янський текст у Microsoft Word?"
+
+msgid "Does every translation cost money?"
+msgstr "Чи потрібно платити за кожен переклад?"
+
+msgid "Does the plugin expose the API key to visitors?"
+msgstr "Чи доступний ключ API відвідувачам сайту?"
+
+msgid "Optional custom title:"
+msgstr "Необов’язковий власний заголовок:"
+
+msgid "Add <code>[wp_cu_translator]</code> to a page."
+msgstr "Додайте <code>[wp_cu_translator]</code> на сторінку."
+
+msgid "Use <strong>Check connection</strong>. This check does not call OpenAI."
+msgstr "Натисніть <strong>Перевірити з’єднання</strong>. Ця перевірка не звертається до OpenAI."
+
+msgid "Optionally create a key under <strong>Bible Desktop → System → AI integration → External sites</strong> and save it under <strong>Georg-Kloster Slavonic Translator → Settings</strong> for higher limits."
+msgstr "За потреби створіть ключ у розділі <strong>Bible Desktop → Система → Інтеграція ШІ → Зовнішні сайти</strong> і збережіть його в розділі <strong>Georg-Kloster Slavonic Translator → Налаштування</strong> для збільшення лімітів."
+
+msgid "Activate <strong>Georg-Kloster Slavonic Translator</strong>. The free public tier works immediately."
+msgstr "Активуйте <strong>Georg-Kloster Slavonic Translator</strong>. Безкоштовний публічний режим працює одразу."
+
+msgid "In WordPress open <strong>Plugins → Add New → Upload Plugin</strong> and upload <code>georg-kloster-slavonic-translator.zip</code>."
+msgstr "У WordPress відкрийте <strong>Плагіни → Додати новий → Завантажити плагін</strong> і завантажте <code>georg-kloster-slavonic-translator.zip</code>."
+
+msgid "The plugin does not create its own database tables and does not store translation text. The Bible Desktop URL, optional external API key, timeout and non-secret installation UUID are stored in the WordPress options table. Requests are subject to the logging, retention and AI settings configured on the connected Bible Desktop server."
+msgstr "Плагін не створює власних таблиць бази даних і не зберігає текст перекладу. Адреса Bible Desktop, необов’язковий зовнішній ключ API, час очікування й несекретний UUID встановлення зберігаються в таблиці options WordPress. Журналювання, строки зберігання й налаштування ШІ для запитів визначаються підключеним сервером Bible Desktop."
+
+msgid "The service is operated by Bible Desktop. API Terms of Service: https://bible-desktop.com/pages/api-terms . API Privacy Policy: https://bible-desktop.com/pages/api-privacy . These documents cover the API, translation data and optional OpenAI processing."
+msgstr "Оператор сервісу — Bible Desktop. Умови використання API: https://bible-desktop.com/pages/api-terms . Політика конфіденційності API: https://bible-desktop.com/pages/api-privacy . Документи поширюються на API, дані перекладу й можливу обробку OpenAI."
+
+msgid "If an administrator changes <strong>Bible Desktop URL</strong>, the API and font requests use that configured service instead. The administrator must check that service's data handling and inform site visitors before offering the form."
+msgstr "Якщо адміністратор змінить <strong>Адресу Bible Desktop</strong>, запити API й завантаження шрифту використовуватимуть налаштований сервіс. До розміщення форми адміністратор має перевірити обробку даних цим сервісом і поінформувати відвідувачів."
+
+msgid "Bible Desktop may send submitted text to OpenAI to generate a translation. Biblical references, matching quotations and cached results may be processed without a new OpenAI request. The plugin itself does not connect directly to OpenAI. OpenAI API terms: https://openai.com/policies/business-terms/ ; privacy policy: https://openai.com/policies/privacy-policy/ ."
+msgstr "Bible Desktop може передавати надісланий текст до OpenAI для перекладу. Біблійні посилання, розпізнані цитати й результати з кешу можуть оброблятися без нового запиту до OpenAI. Сам плагін безпосередньо до OpenAI не підключається. Умови API OpenAI: https://openai.com/policies/business-terms/ ; політика конфіденційності: https://openai.com/policies/privacy-policy/ ."
+
+msgid "When a visitor clicks <strong>Download font</strong>, their browser requests <code>https://bible-desktop.com/fonts/MonomakhUnicode.ttf</code> directly from Bible Desktop. This download reveals the visitor's IP address and ordinary browser request information to that service. The plugin does not automatically load the remote font."
+msgstr "Після натискання <strong>Завантажити шрифт</strong> браузер відвідувача запитує <code>https://bible-desktop.com/fonts/MonomakhUnicode.ttf</code> безпосередньо в Bible Desktop. Сервіс отримує IP-адресу відвідувача й звичайні відомості браузерного запиту. Плагін не завантажує віддалений шрифт автоматично."
+
+msgid "Only when an administrator presses <strong>Check connection</strong>, the WordPress server calls <code>https://bible-desktop.com/api/v1/church-slavonic/status</code>. This request includes the plugin client name, installation UUID and optional API key, but no translation text or visitor identifier, and does not invoke OpenAI. Activation and viewing the translation form do not send requests to Bible Desktop."
+msgstr "Лише після натискання адміністратором <strong>Перевірити з’єднання</strong> сервер WordPress звертається до <code>https://bible-desktop.com/api/v1/church-slavonic/status</code>. Запит містить назву клієнта плагіна, UUID встановлення й необов’язковий ключ API, але не текст перекладу чи ідентифікатор відвідувача, і не викликає OpenAI. Активація та перегляд форми не надсилають запитів до Bible Desktop."
+
+msgid "This plugin relies on the external Bible Desktop service to translate text into Church Slavonic. Only when a visitor submits the translation form, the WordPress server sends the source text, source-language selection and orthography options to <code>https://bible-desktop.com/api/v1/church-slavonic/translate</code>. Request headers include the plugin client name, a non-secret installation UUID for usage quotas and a per-visitor HMAC identifier derived from the visitor's IP address using a WordPress secret for rate limiting. If configured, the optional Bible Desktop API key is also sent server-to-server. The visitor's original IP address is not sent to Bible Desktop by the plugin; the service receives the WordPress server's IP address as part of the network connection."
+msgstr "Для перекладу церковнослов’янською плагін використовує зовнішній сервіс Bible Desktop. Лише після надсилання відвідувачем форми сервер WordPress передає вихідний текст, вибрану мову й параметри правопису до <code>https://bible-desktop.com/api/v1/church-slavonic/translate</code>. Заголовки запиту містять назву клієнта плагіна, несекретний UUID встановлення для обліку квоти й HMAC-ідентифікатор відвідувача, обчислений з його IP-адреси за допомогою секрету WordPress для обмеження частоти запитів. Налаштований необов’язковий ключ API також передається між серверами. Саму IP-адресу відвідувача плагін не передає; сервіс бачить IP-адресу сервера WordPress під час мережевого з’єднання."
+
+msgid "The plugin has its own WordPress admin menu. <strong>Georg-Kloster Slavonic Translator → Settings</strong> contains the Bible Desktop URL, optional API key, timeout and connection check. <strong>Georg-Kloster Slavonic Translator → Shortcodes</strong> lists each supported shortcode with a ready-to-copy example and explanation. The same shortcode reference is also available at the bottom of the settings page."
+msgstr "Плагін має власне меню в адмінці WordPress. У розділі <strong>Georg-Kloster Slavonic Translator → Налаштування</strong> розміщено адресу Bible Desktop, необов’язковий ключ API, час очікування й перевірку з’єднання. Розділ <strong>Georg-Kloster Slavonic Translator → Шорткоди</strong> містить усі підтримувані шорткоди з готовими прикладами й поясненнями. Та сама довідка доступна внизу сторінки налаштувань."
+
+msgid "Biblical references, exact verses, confidently recognized quotations and cached results can be returned without a new paid OpenAI request. Other texts use the model and spending limits configured by the Bible Desktop administrator."
+msgstr "Біблійні посилання, точні вірші, впевнено розпізнані цитати й результати з кешу можуть повертатися без нового платного запиту до OpenAI. Для решти текстів використовуються модель і ліміти витрат, налаштовані адміністратором Bible Desktop."
+
+msgid "The plugin name, description, settings page, messages and public form are available in English, Russian, German, Ukrainian and Polish. WordPress selects the language from its current locale."
+msgstr "Назва, опис, сторінка налаштувань, повідомлення й публічна форма плагіна доступні англійською, російською, німецькою, українською та польською. WordPress вибирає мову за поточною локаллю."
+
+msgid "The browser sends the form to WordPress. WordPress then contacts Bible Desktop server-to-server, so an optional Bible Desktop API key is never included in the page HTML or JavaScript."
+msgstr "Браузер надсилає форму до WordPress. Далі WordPress звертається до Bible Desktop між серверами, тому необов’язковий ключ API ніколи не потрапляє до HTML чи JavaScript сторінки."
+
+msgid "The plugin works without an API key using the free public Bible Desktop API tier. The free tier has usage limits to protect the service and control external AI processing costs. An optional API key can be configured for higher limits and additional authorized functionality. No secret API credentials are bundled with the plugin."
+msgstr "Плагін працює без ключа API через безкоштовний публічний режим Bible Desktop. Ліміти безкоштовного режиму захищають сервіс і обмежують витрати на зовнішню обробку ШІ. Необов’язковий ключ API дозволяє використовувати збільшені ліміти й додаткові дозволені можливості. Секретні облікові дані API до плагіна не включені."
+
+msgid "Georg-Kloster Slavonic Translator adds a compact translation form through the <code>[wp_cu_translator]</code> shortcode. It accepts Russian and German text, supports automatic language detection and lets the visitor choose accents, titlo, breathings and Slavonic numbers."
+msgstr "Georg-Kloster Slavonic Translator додає компактну форму перекладу шорткодом <code>[wp_cu_translator]</code>. Приймає російський і німецький текст, підтримує автоматичне визначення мови та вибір наголосів, титл, придихів і слов’янського запису чисел."
+
+msgid "Privacy"
+msgstr "Конфіденційність"
+
+msgid "External Services"
+msgstr "Зовнішні сервіси"
+
+msgid "Shortcodes and settings"
+msgstr "Шорткоди й налаштування"
+
+msgid "Added an immediately usable free public tier, persistent installation UUID, server-side quotas and optional API keys for higher limits."
+msgstr "Додано готовий до роботи безкоштовний публічний режим, постійний UUID встановлення, серверні квоти й необов’язкові ключі API для збільшення лімітів."
+
+msgid "Added English, Russian and German localization for plugin metadata, administration and public output."
+msgstr "Додано англійську, російську й німецьку локалізації для метаданих плагіна, адмінки й публічного інтерфейсу."
+
+msgid "Added orthography options, plain and formatted copying, and Monomakh Unicode download guidance."
+msgstr "Додано параметри правопису, копіювання звичайного й форматованого тексту та інструкцію із завантаження Monomakh Unicode."
+
+msgid "Added Russian, German and automatic source-language selection."
+msgstr "Додано російську, німецьку й автоматичний вибір вихідної мови."
+
+msgid "Initial release with server-side Bible Desktop integration, connection check and <code>[wp_cu_translator]</code> shortcode."
+msgstr "Перший випуск із серверною інтеграцією Bible Desktop, перевіркою з’єднання й шорткодом <code>[wp_cu_translator]</code>."
+
+msgid "Added a shortcode reference with ready-to-copy examples and explanations to the settings page and the separate Shortcodes page."
+msgstr "На сторінку налаштувань і окрему сторінку шорткодів додано довідку з готовими прикладами й поясненнями."
+
+msgid "Added a dedicated Georg-Kloster Slavonic Translator administration menu with Settings and Shortcodes pages."
+msgstr "Додано окреме меню Georg-Kloster Slavonic Translator зі сторінками налаштувань і шорткодів."
+
+msgid "Changed the frontend translator title from an h2 to an h3 heading."
+msgstr "Заголовок публічного перекладача змінено з h2 на h3."
+
+msgid "Let the active WordPress theme control the translator typography and standard form controls."
+msgstr "Типографіка й стандартні елементи форми перекладача керуються активною темою WordPress."
+
+msgid "Kept only the Monomakh Unicode output font and paragraph preservation required for translated Church Slavonic text."
+msgstr "Збережено лише шрифт результату Monomakh Unicode й абзаци, потрібні для церковнослов’янського тексту."
+
+msgid "Removed all translator interface styling, so the active WordPress theme controls the form, buttons, checkboxes and layout."
+msgstr "Видалено всі стилі інтерфейсу перекладача: форма, кнопки, прапорці й компонування керуються активною темою WordPress."
+
+msgid "Added dedicated styling hooks for text, language, orthography and copy controls. Theme CSS can override every interface rule."
+msgstr "Додано окремі класи для тексту, мови, правопису й копіювання. CSS теми може перевизначати будь-яке правило інтерфейсу."
+
+msgid "Added a complete responsive fallback layout for the public form, using zero-specificity <code>:where()</code> selectors and no <code>!important</code> rules."
+msgstr "Додано адаптивне базове компонування публічної форми із селекторами <code>:where()</code> нульової специфічності й без правил <code>!important</code>."
+
+msgid "Preserve existing shortcode names, settings and installation identifiers."
+msgstr "Збережено наявні назви шорткодів, налаштування й ідентифікатори встановлення."
+
+msgid "Inform visitors about external text processing before submission and link to the configured provider documents."
+msgstr "Відвідувачі отримують інформацію про зовнішню обробку тексту до надсилання форми та посилання на документи налаштованого сервісу."
+
+msgid "Document external translation requests, identifiers, font downloads and OpenAI processing, with direct provider terms and privacy links."
+msgstr "Задокументовано зовнішні запити перекладу, ідентифікатори, завантаження шрифту й обробку OpenAI з прямими посиланнями на умови та політику конфіденційності сервісу."
+
+msgid "Use the distinctive Georg-Kloster Slavonic Translator name and matching WordPress.org slug/text domain."
+msgstr "Використовуються вирізнювальна назва Georg-Kloster Slavonic Translator і відповідні slug та text domain WordPress.org."
+
+msgid "Validate source language, catalog coverage and translation placeholders in release builds."
+msgstr "Під час збирання випуску перевіряються вихідна мова, повнота каталогів і параметри підстановки перекладів."
+
+msgid "Preserve Russian and German translations and add complete Ukrainian and Polish translations."
+msgstr "Збережено російський і німецький переклади та додано повні український і польський переклади."
+
+msgid "Use English source strings, including built-in shortcode examples."
+msgstr "Використовуються англійські вихідні рядки, зокрема вбудовані приклади шорткодів."
+
+msgid "Use WordPress.org language packs in the directory package while preserving all four bundled translations for direct installation."
+msgstr "Каталоговий пакет використовує мовні пакети WordPress.org; усі чотири вбудовані переклади збережено для прямого встановлення."
+
+msgid "Prefix the JavaScript configuration object consistently in PHP and JavaScript."
+msgstr "Об’єкт конфігурації JavaScript має узгоджений префікс у PHP та JavaScript."
