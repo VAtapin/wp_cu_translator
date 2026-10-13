@@ -105,7 +105,7 @@ foreach ($entries as $entry) {
 }
 
 $metadata = get_plugin_data($pluginFile, false, true);
-if ($metadata['Version'] !== '1.0.8' || WP_CU_TRANSLATOR_VERSION !== '1.0.8') {
+if ($metadata['Version'] !== '1.0.9' || WP_CU_TRANSLATOR_VERSION !== '1.0.9') {
     throw new RuntimeException('Release version does not match.');
 }
 if (($metadata['PluginURI'] ?? '') !== 'https://kalender.georg-kloster.ru/calendar-api') {
@@ -136,17 +136,20 @@ foreach (['pages/api-terms', 'pages/api-privacy'] as $documentPath) {
 if (! str_contains($html, '<h3 class="wp-cu-translator__title">')) {
     throw new RuntimeException('Translator shortcode title must use an h3 heading.');
 }
+if (! is_file(dirname($pluginFile).'/assets/translator-mark.png') || ! str_contains($html, esc_url(WP_CU_TRANSLATOR_URL.'assets/translator-mark.png'))) {
+    throw new RuntimeException('The approved translator logo must be bundled and rendered locally.');
+}
 
 $stylesheet = (string) file_get_contents(dirname($pluginFile).'/assets/wp-cu-translator.css');
 foreach ([
-    ':where(.wp-cu-translator)',
-    ':where(.wp-cu-translator .wp-cu-translator__form)',
-    ':where(.wp-cu-translator .wp-cu-translator__grid)',
-    ':where(.wp-cu-translator .wp-cu-translator__options)',
-    'font-family: "Monomakh Unicode", "Times New Roman", serif;',
+    '.wp-cu-translator {',
+    '.wp-cu-translator .wp-cu-translator__form',
+    '.wp-cu-translator .wp-cu-translator__workspace',
+    '.wp-cu-translator .wp-cu-translator__options',
+    "font-family: 'Monomakh Unicode', 'Times New Roman', serif;",
 ] as $expectedCss) {
     if (! str_contains($stylesheet, $expectedCss)) {
-        throw new RuntimeException('Translator stylesheet is missing its universal frontend rule: '.$expectedCss);
+        throw new RuntimeException('Translator stylesheet is missing its scoped frontend rule: '.$expectedCss);
     }
 }
 if (str_contains($stylesheet, '!important')) {

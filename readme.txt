@@ -4,7 +4,7 @@ Tags: church slavonic, translator, bible, orthodox, ai
 Requires at least: 6.3
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,11 +74,14 @@ The plugin does not create its own database tables and does not store translatio
 
 1. Public translation form with source-language and Church Slavonic orthography options.
 2. A real biblical translation with recognized reference, copy controls and font download.
-3. WordPress settings with the free public service and optional configuration.
-4. Ready-to-copy shortcode examples in the WordPress administration area.
+3. Responsive translation form on a mobile screen.
+4. German interface with source-language and orthography options.
 5. Russian interface with localized labels and the external-processing notice.
 
 == Changelog ==
+
+= 1.0.9 =
+* Redesign the responsive translation form with the approved Georg-Kloster logo, a separate options panel and clearer translation results.
 
 = 1.0.8 =
 * Ensure translation requests work when block themes render the shortcode before the normal asset-registration hook.

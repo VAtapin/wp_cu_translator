@@ -53,8 +53,9 @@
   "Das JavaScript-Konfigurationsobjekt wird in PHP und JavaScript mit einem einheitlichen Präfix versehen.",
   "Öffentliches Übersetzungsformular mit Auswahl der Ausgangssprache und Optionen für die kirchenslawische Schreibweise.",
   "Eine echte Bibelübersetzung mit erkannter Bibelstelle, Kopierfunktionen und Schrift-Download.",
-  "WordPress-Einstellungen mit dem kostenlosen öffentlichen Dienst und optionaler Konfiguration.",
-  "Kopierfertige Shortcode-Beispiele im WordPress-Administrationsbereich.",
+  "Responsives Übersetzungsformular auf einem mobilen Bildschirm.",
+  "Deutsche Oberfläche mit Optionen für Ausgangssprache und Orthografie.",
   "Russische Oberfläche mit übersetzten Beschriftungen und dem Hinweis auf externe Verarbeitung.",
-  "Übersetzungsanfragen funktionieren auch, wenn Block-Themes den Shortcode vor dem üblichen Hook zur Registrierung der Ressourcen ausgeben."
+  "Übersetzungsanfragen funktionieren auch, wenn Block-Themes den Shortcode vor dem üblichen Hook zur Registrierung der Ressourcen ausgeben.",
+  "Das responsive Übersetzungsformular wurde mit dem bestätigten Georg-Kloster-Logo, einem separaten Optionsbereich und übersichtlicheren Übersetzungsergebnissen neu gestaltet."
 ]

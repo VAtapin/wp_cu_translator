@@ -6,7 +6,7 @@ on:
       version:
         description: Existing release tag to publish to WordPress.org
         required: true
-        default: '1.0.8'
+        default: '1.0.9'
         type: string
       dry_run:
         description: Prepare SVN changes without committing them

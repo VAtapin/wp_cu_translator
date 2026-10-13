@@ -164,14 +164,17 @@ msgstr "Publiczny formularz tłumaczenia z wyborem języka źródłowego i opcja
 msgid "A real biblical translation with recognized reference, copy controls and font download."
 msgstr "Rzeczywiste tłumaczenie biblijne z rozpoznanym odwołaniem, kopiowaniem i pobieraniem czcionki."
 
-msgid "WordPress settings with the free public service and optional configuration."
-msgstr "Ustawienia WordPress z bezpłatną usługą publiczną i opcjonalną konfiguracją."
+msgid "Responsive translation form on a mobile screen."
+msgstr "Responsywny formularz tłumaczenia na ekranie urządzenia mobilnego."
 
-msgid "Ready-to-copy shortcode examples in the WordPress administration area."
-msgstr "Gotowe do skopiowania przykłady krótkich kodów w panelu administracyjnym WordPress."
+msgid "German interface with source-language and orthography options."
+msgstr "Niemiecki interfejs z opcjami języka źródłowego i pisowni."
 
 msgid "Russian interface with localized labels and the external-processing notice."
 msgstr "Rosyjski interfejs z przetłumaczonymi etykietami i informacją o przetwarzaniu przez usługę zewnętrzną."
 
 msgid "Ensure translation requests work when block themes render the shortcode before the normal asset-registration hook."
 msgstr "Zapewniono działanie zapytań o tłumaczenie, gdy motywy blokowe renderują krótki kod przed standardowym mechanizmem rejestracji zasobów."
+
+msgid "Redesign the responsive translation form with the approved Georg-Kloster logo, a separate options panel and clearer translation results."
+msgstr "Przeprojektowano responsywny formularz tłumaczenia: zatwierdzone logo Georg-Kloster, osobny panel opcji i czytelniejsze wyniki tłumaczenia."

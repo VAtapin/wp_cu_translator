@@ -6,7 +6,7 @@ WordPress-плагин для перевода русского и немецк�
 
 ## Установка
 
-Версия 1.0.8 опубликована в [WordPress.org](https://wordpress.org/plugins/georg-kloster-slavonic-translator/) и GitHub Release. Для установки используйте `georg-kloster-slavonic-translator-1.0.8.zip`, для обновления заявки WordPress.org — `georg-kloster-slavonic-translator-wordpress-org-1.0.8.zip`. Установочный ZIP содержит все четыре перевода RU/DE/UK/PL. ZIP для WordPress.org содержит английские исходные строки и POT; переводы для каталога доставляются отдельно через translate.wordpress.org. Исходные PO/MO остаются в репозитории.
+Версия 1.0.9 подготовлена для публикации в [WordPress.org](https://wordpress.org/plugins/georg-kloster-slavonic-translator/) и GitHub Release. Для установки используйте `georg-kloster-slavonic-translator-1.0.9.zip`, для обновления заявки WordPress.org — `georg-kloster-slavonic-translator-wordpress-org-1.0.9.zip`. Установочный ZIP содержит все четыре перевода RU/DE/UK/PL. ZIP для WordPress.org содержит английские исходные строки и POT; переводы для каталога доставляются отдельно через translate.wordpress.org. Исходные PO/MO остаются в репозитории.
 
 1. В WordPress выберите **Плагины → Добавить новый → Загрузить плагин** и загрузите `georg-kloster-slavonic-translator.zip`.
 2. Активируйте **Georg-Kloster Slavonic Translator** — бесплатный режим уже готов к работе.
@@ -48,7 +48,7 @@ WordPress-плагин для перевода русского и немецк�
 
 ## Переводы каталога WordPress.org
 
-`node scripts/build-wordpress-org-translations.mjs` создаёт импортные PO для RU/DE/UK/PL в `translations/wordpress-org`: 66 строк интерфейса и 58 строк описания на язык. Интерфейс берётся из существующих каталогов `languages`, описание — из четырёх JSON. Проверяются HTML, ссылки, примеры кода и placeholders. Папка исключена из установочных архивов.
+`node scripts/build-wordpress-org-translations.mjs` создаёт импортные PO для RU/DE/UK/PL в `translations/wordpress-org`: 66 строк интерфейса и 59 строк описания на язык. Интерфейс берётся из существующих каталогов `languages`, описание — из четырёх JSON. Проверяются HTML, ссылки, примеры кода и placeholders. Папка исключена из установочных архивов.
 
 13 октября русский интерфейс и описание утверждены на 100% в Stable и Development: 66 и 58 строк, включая подписи скриншотов и changelog 1.0.8. Немецкий, украинский и польский полностью загружены в обе ветки как Waiting: публикация требует редактора соответствующего языка. Немецкое предупреждение о заглавной букве в `Sekunden` отражает правильное написание существительного.
 

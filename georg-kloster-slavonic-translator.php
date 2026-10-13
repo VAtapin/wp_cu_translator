@@ -3,7 +3,7 @@
  * Plugin Name: Georg-Kloster Slavonic Translator
  * Plugin URI: https://kalender.georg-kloster.ru/calendar-api
  * Description: Translate text into Church Slavonic using the Bible Desktop translation service.
- * Version: 1.0.8
+ * Version: 1.0.9
  * Requires at least: 6.3
  * Requires PHP: 8.0
  * Author: Vladimir Atapin
@@ -17,7 +17,7 @@
 if (! defined('ABSPATH')) {
     exit;
 }
-define('WP_CU_TRANSLATOR_VERSION', '1.0.8');
+define('WP_CU_TRANSLATOR_VERSION', '1.0.9');
 define('WP_CU_TRANSLATOR_OPTION', 'wp_cu_translator_settings');
 define('WP_CU_TRANSLATOR_INSTALLATION_OPTION', 'wp_cu_translator_installation_id');
 define('WP_CU_TRANSLATOR_FILE', __FILE__);
@@ -338,14 +338,18 @@ function wp_cu_translator_shortcode($attributes = []): string
     ob_start();
     ?>
     <section class="wp-cu-translator" data-wp-cu-translator>
-        <h3 class="wp-cu-translator__title"><?php echo esc_html((string) $attributes['title']); ?></h3>
+        <header class="wp-cu-translator__header">
+            <img class="wp-cu-translator__mark" src="<?php echo esc_url(WP_CU_TRANSLATOR_URL.'assets/translator-mark.png'); ?>" width="48" height="48" alt="">
+            <h3 class="wp-cu-translator__title"><?php echo esc_html((string) $attributes['title']); ?></h3>
+        </header>
         <form class="wp-cu-translator__form" data-wp-cu-translator-form>
+            <div class="wp-cu-translator__workspace">
             <label class="wp-cu-translator__label">
                 <?php echo esc_html__('Text to translate', 'georg-kloster-slavonic-translator'); ?>
-                <textarea class="wp-cu-translator__textarea" name="text" rows="7" maxlength="20000" required placeholder="<?php echo esc_attr__('Enter Russian or German text', 'georg-kloster-slavonic-translator'); ?>"></textarea>
+                <textarea class="wp-cu-translator__textarea" name="text" rows="5" maxlength="20000" required placeholder="<?php echo esc_attr__('Enter Russian or German text', 'georg-kloster-slavonic-translator'); ?>"></textarea>
             </label>
 
-            <div class="wp-cu-translator__grid">
+            <div class="wp-cu-translator__sidebar">
                 <label class="wp-cu-translator__label">
                     <?php echo esc_html__('Source language', 'georg-kloster-slavonic-translator'); ?>
                     <select class="wp-cu-translator__select" name="source_language">
@@ -362,14 +366,17 @@ function wp_cu_translator_shortcode($attributes = []): string
                     <label class="wp-cu-translator__option"><input class="wp-cu-translator__checkbox" type="checkbox" name="slavonic_numbers"> <?php echo esc_html__('Slavonic numbers', 'georg-kloster-slavonic-translator'); ?></label>
                 </fieldset>
             </div>
+            </div>
 
-            <p class="wp-cu-translator__hint">
+            <div class="wp-cu-translator__toolbar">
+                <button class="wp-cu-translator__submit" type="submit"><?php echo esc_html__('Translate', 'georg-kloster-slavonic-translator'); ?></button>
+                <p class="wp-cu-translator__status" data-wp-cu-translator-status role="status" aria-live="polite"></p>
+            </div>
+            <p class="wp-cu-translator__hint wp-cu-translator__privacy">
                 <?php echo esc_html__('Your text is sent to the configured Bible Desktop service and may be processed by OpenAI.', 'georg-kloster-slavonic-translator'); ?>
                 <a href="<?php echo esc_url(trailingslashit(wp_cu_translator_settings()['api_url']).'pages/api-terms'); ?>"><?php echo esc_html__('Terms of Service', 'georg-kloster-slavonic-translator'); ?></a>
                 <a href="<?php echo esc_url(trailingslashit(wp_cu_translator_settings()['api_url']).'pages/api-privacy'); ?>"><?php echo esc_html__('Privacy Policy', 'georg-kloster-slavonic-translator'); ?></a>
             </p>
-            <button class="wp-cu-translator__submit" type="submit"><?php echo esc_html__('Translate', 'georg-kloster-slavonic-translator'); ?></button>
-            <p class="wp-cu-translator__status" data-wp-cu-translator-status role="status" aria-live="polite"></p>
         </form>
 
         <div class="wp-cu-translator__result" data-wp-cu-translator-result hidden>
