@@ -13,3 +13,9 @@ The owner requested a design similar to the main Georg-Kloster logo and supplied
 Prompt: Preserve the main brand composition: Saint George on a pale horse striking a dragon, gold halo, dark red cloak, Orthodox church to the left, emerald green background and rounded gold rim. Render a sharp, high-resolution sibling icon with antique gold embossed details. Integrate an open manuscript book in the lower foreground as the translator badge, with historical Cyrillic and Latin letters connected by a gold translation arrow. Preserve rider, horse, church, palette and substantial brand likeness. No plugin name, words, watermark or UI mockup. Square opaque image.
 
 The plugin directory page uses a banner rather than the search/admin icon. `banner-772x250.png` and `banner-1544x500.png` compose the same approved artwork, without redrawing it, alongside the exact plugin name and “Church Slavonic translation for WordPress” on a dark green field. Both dimensions and the 4 MB limit were checked; the standard banner was visually reviewed.
+
+## Transparent exterior
+
+On 13 October the owner requested removal of the black exterior around the rounded golden frame. The built-in imagegen edit produced `logo-transparent.png`; exact 128/256 PNG exports preserve its alpha, with all four corner pixels verified as alpha 0. `assets/translator-mark.png` uses the same transparent 128px export. The opaque approved source is preserved for provenance.
+
+Edit prompt: Only remove the solid black canvas outside the rounded golden outer frame, including the four black corners and thin surrounding margin. Make that exterior transparent with antialiased alpha edges. Preserve the emerald background, Saint George, horse, dragon, church, book, letterforms, arrow and gold composition inside the frame. Do not redesign or add text. Output square PNG with real alpha transparency.
