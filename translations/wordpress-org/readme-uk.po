@@ -203,5 +203,5 @@ msgstr "Видалено чорне тло зовні затвердженого
 msgid "Bundle Monomakh Unicode locally for dictionary alphabet letters and headwords."
 msgstr "Шрифт Monomakh Unicode включено до плагіна для літер алфавіту та заголовків словникових статей."
 
-msgid "Verify page language switching with bundled translations and no installed language pack."
-msgstr "Перевірено перемикання мови сторінки з вбудованими перекладами без установленого мовного пакета."
+msgid "Provide complete WordPress.org translations for the translator, dictionary and plugin description."
+msgstr "Опубліковано повні переклади WordPress.org для перекладача, словника й опису плагіна."

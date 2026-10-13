@@ -203,5 +203,5 @@ msgstr "Der schwarze Hintergrund außerhalb des bestätigten Logos wurde entfern
 msgid "Bundle Monomakh Unicode locally for dictionary alphabet letters and headwords."
 msgstr "Monomakh Unicode wird lokal für die Buchstaben des Wörterbuchalphabets und die Stichwörter mitgeliefert."
 
-msgid "Verify page language switching with bundled translations and no installed language pack."
-msgstr "Der Wechsel der Seitensprache mit mitgelieferten Übersetzungen ohne installiertes Sprachpaket wurde geprüft."
+msgid "Provide complete WordPress.org translations for the translator, dictionary and plugin description."
+msgstr "Vollständige WordPress.org-Übersetzungen für den Übersetzer, das Wörterbuch und die Plugin-Beschreibung stehen bereit."

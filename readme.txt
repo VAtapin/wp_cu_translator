@@ -90,7 +90,7 @@ The plugin does not create its own database tables and does not store translatio
 
 = 1.1.1 =
 * Bundle Monomakh Unicode locally for dictionary alphabet letters and headwords.
-* Verify page language switching with bundled translations and no installed language pack.
+* Provide complete WordPress.org translations for the translator, dictionary and plugin description.
 
 = 1.1.0 =
 * Add a standalone Church Slavonic dictionary, word and meaning search, alphabet browsing and selected-word lookup.
