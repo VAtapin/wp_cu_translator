@@ -6,7 +6,7 @@ WordPress-плагин для перевода русского и немецк�
 
 ## Установка
 
-Версия 1.0.7 выпускается в GitHub Release. Для установки используйте `georg-kloster-slavonic-translator-1.0.7.zip`, для обновления заявки WordPress.org — `georg-kloster-slavonic-translator-wordpress-org-1.0.7.zip`. Установочный ZIP содержит все четыре перевода RU/DE/UK/PL. ZIP для WordPress.org содержит английские исходные строки и POT; переводы для каталога доставляются отдельно через translate.wordpress.org. Исходные PO/MO остаются в репозитории.
+Версия 1.0.7 опубликована в [WordPress.org](https://wordpress.org/plugins/georg-kloster-slavonic-translator/) и GitHub Release. Для установки используйте `georg-kloster-slavonic-translator-1.0.7.zip`, для обновления заявки WordPress.org — `georg-kloster-slavonic-translator-wordpress-org-1.0.7.zip`. Установочный ZIP содержит все четыре перевода RU/DE/UK/PL. ZIP для WordPress.org содержит английские исходные строки и POT; переводы для каталога доставляются отдельно через translate.wordpress.org. Исходные PO/MO остаются в репозитории.
 
 1. В WordPress выберите **Плагины → Добавить новый → Загрузить плагин** и загрузите `georg-kloster-slavonic-translator.zip`.
 2. Активируйте **Georg-Kloster Slavonic Translator** — бесплатный режим уже готов к работе.
@@ -79,3 +79,7 @@ WordPress-плагин для перевода русского и немецк�
 Замечание о JavaScript-переменной исправлено: PHP и JS используют `georsltr_config`. Каталоговый ZIP и WordPress.org deploy исключают PO/MO; четыре перевода сохраняются в репозитории и установочном ZIP. Проверены оба пакета, frontend AJAX, пять локалей и загрузка стандартных WordPress language packs.
 
 12 октября владелец подтвердил, что Georg-Kloster — его собственный проект/бренд и плагин подаётся официальным владельцем Vladimir Atapin (atapin). Название и slug сохраняются; это пояснение нужно передать ревьюеру. TXT `wordpressorg-atapin-verification` подтверждает управление обоими доменами. Подтверждение владельца и исправленный ZIP не заменяют решение Plugins Team.
+
+## Публикация WordPress.org — 13 октября 2026
+
+Версия 1.0.7 опубликована через GitHub Actions в SVN trunk и tags/1.0.7 (revision 3743834). Dry run и фактическая публикация прошли; публичный WordPress.org ZIP и оба SVN-каталога побайтно проверены против исходников. `WORDPRESS_ORG_ENABLED=true` включена, поэтому следующие Git-теги запускают публикацию автоматически после успешной сборки Release.

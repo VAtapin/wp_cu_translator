@@ -9,7 +9,7 @@
 - Сохранены `[wp_cu_translator]`, пользовательские заголовки, settings и Installation UUID; бесплатный API без ключа, HTTPS/TLS, ограничения доступа и уведомление о внешней обработке не менялись.
 - main → origin/main. По письму владельца от 13 октября WordPress.org одобрил Georg-Kloster Slavonic Translator и выдал SVN `https://plugins.svn.wordpress.org/georg-kloster-slavonic-translator`, username `atapin`; имя/slug подтверждены.
 - GitHub Actions поддерживает первый ручной выпуск существующего тега 1.0.7 и автоматическую SVN-публикацию следующих тегов после успешного release job. Есть dry run, повторные проверки release-кода и последовательный запуск SVN.
-- В репозитории уже имеются secrets `SVN_USERNAME` / `SVN_PASSWORD`; значения не прочитаны и не изменены. Публикация включается variable `WORDPRESS_ORG_ENABLED=true`.
+- В репозитории уже имеются secrets `SVN_USERNAME` / `SVN_PASSWORD`; значения не прочитаны и не изменены. Variable `WORDPRESS_ORG_ENABLED=true` включена; существующие SVN credentials прошли фактическую публикацию.
 
 ## Проверки 12 октября 2026
 
@@ -24,14 +24,19 @@
 
 ## Следующие действия и ограничения
 
-- Первая SVN-публикация 1.0.7 запускается после включения variable и dry run; фактический SVN commit и публичный ZIP требуют отдельной проверки. Approval не означает, что код уже опубликован.
+- Версия 1.0.7 опубликована через GitHub Actions 13 октября: SVN revision `3743834`, trunk и tags/1.0.7. WordPress.org API подтверждает имя/версию, публичный ZIP отвечает HTTP 200.
+- Следующие выпуски публикуются новым Git-тегом после успешных проверок; повторно отправлять уже опубликованный 1.0.7 не требуется.
 - Production и каталог Kalendar не обновлялись. WordPress устанавливается/обновляется ZIP через админку.
 - Старые настройки общие: не включать одновременно разные slug-копии и не запускать uninstall старой копии до переноса settings.
 - Пользовательский распакованный каталог `atapin-church-slavonic-translator-wordpress-org-1.0.5/` сохранён и не включается в commit.
 
-Последний связанный commit: `Enable GitHub Actions publication to WordPress SVN` (настройка публикации); подтверждение владельца — `2b790ee`, выпуск 1.0.7 — `6ed320b`.
+Последний связанный commit: `Record verified WordPress.org publication` (подтверждение публикации); настройка workflow — `07ec654`, подтверждение владельца — `2b790ee`, исходники 1.0.7 — `6ed320b`.
 
 ## Проверки настройки публикации — 13 октября 2026
 
 - SVN root HTTP 200, стандартные assets/tags/trunk доступны.
 - actionlint 1.7.12 и Bash syntax проверки нового workflow прошли. Frontend и translation regression прошли. Runtime-код 1.0.7 не менялся.
+
+- Dry run `38394346696` и публикация `38394490231` завершились success. Ручной запуск использовал существующий тег 1.0.7; старые Git-теги и Release не менялись.
+- Все 6 файлов в SVN trunk/tags и скачанном WordPress.org ZIP побайтно совпали с проверенными исходниками; PO/MO отсутствуют. Публичный ZIP SHA-256: `140dad6b310dcdf4a41d4b8b4b4ebd74d45cd4aedab367b6a43ee2a19a14facc`.
+- Публичная страница: https://wordpress.org/plugins/georg-kloster-slavonic-translator/ . ZIP: https://downloads.wordpress.org/plugin/georg-kloster-slavonic-translator.1.0.7.zip .
