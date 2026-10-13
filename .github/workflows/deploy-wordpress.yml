@@ -1,6 +1,17 @@
 name: Build and release WordPress plugin
 
 on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Existing release tag to publish to WordPress.org
+        required: true
+        default: '1.0.7'
+        type: string
+      dry_run:
+        description: Prepare SVN changes without committing them
+        default: false
+        type: boolean
   push:
     tags:
       - '*'
@@ -10,6 +21,7 @@ permissions:
 
 jobs:
   release:
+    if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -59,18 +71,47 @@ jobs:
             --generate-notes
 
   deploy-wordpress-org:
-    if: ${{ vars.WORDPRESS_ORG_ENABLED == 'true' }}
+    if: ${{ always() && vars.WORDPRESS_ORG_ENABLED == 'true' && (needs.release.result == 'success' || github.event_name == 'workflow_dispatch') }}
     needs: release
     runs-on: ubuntu-latest
+    concurrency:
+      group: wordpress-org-georg-kloster-slavonic-translator
+      cancel-in-progress: false
+    env:
+      VERSION: ${{ github.event_name == 'workflow_dispatch' && inputs.version || github.ref_name }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && format('refs/tags/{0}', inputs.version) || github.ref }}
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          coverage: none
+
+      - name: Verify release before SVN publication
+        run: |
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          version="$(sed -n 's/^ \* Version: \(.*\)$/\1/p' georg-kloster-slavonic-translator.php)"
+          stable="$(sed -n 's/^Stable tag: \(.*\)$/\1/p' readme.txt)"
+          test "$VERSION" = "$version"
+          test "$VERSION" = "$stable"
+          find . -name '*.php' -not -path './.git/*' -print0 | xargs -0 -n1 php -l
+          node --check assets/wp-cu-translator.js
+          node scripts/build-translations.mjs
+          node tests/translations.mjs
+          node tests/frontend.mjs
+          git diff --exit-code -- languages
 
       - name: Use WordPress.org language packs
         run: printf '\nlanguages/*.po\nlanguages/*.mo\n' >> .distignore
 
       - name: Deploy to WordPress.org
         uses: 10up/action-wordpress-plugin-deploy@stable
+        with:
+          dry-run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
         env:
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}

@@ -55,7 +55,11 @@ WordPress-плагин для перевода русского и немецк�
 3. собирает архивы `georg-kloster-slavonic-translator-<версия>.zip` и `georg-kloster-slavonic-translator.zip`;
 4. собирает отдельный ZIP для WordPress.org без PO/MO и создаёт GitHub Release с тремя файлами.
 
-Публикация в WordPress.org отключена, пока переменная репозитория `WORDPRESS_ORG_ENABLED` не получит значение `true` и не будут настроены секреты `SVN_USERNAME` и `SVN_PASSWORD`.
+После одобрения каталога публикация выполняется GitHub Actions. Используются уже настроенные repository secrets `SVN_USERNAME` и `SVN_PASSWORD` (SVN-пароль из WordPress.org Account & Security), а repository variable `WORDPRESS_ORG_ENABLED=true` включает job. Значения секретов не хранятся в Git.
+
+Для первой публикации существующего выпуска откройте **Actions → Build and release WordPress plugin → Run workflow**, выберите `main`, укажите `version=1.0.7`. `dry_run=true` готовит SVN-изменения без commit; `false` публикует их. Workflow берёт код из существующего тега, проверяет version/stable tag, PHP/JS, каталоги и frontend regression и отправляет пакет без PO/MO в SVN trunk и tags/1.0.7.
+
+Новые теги запускают GitHub Release и затем SVN job автоматически, если release job прошёл. Публикации выполняются последовательно, без отмены уже начатого SVN commit. Новая версия должна иметь новый тег; существующие Git/SVN-теги не переписываются.
 
 ## Проверка по замечаниям WordPress.org — 7 октября 2026
 
