@@ -7,6 +7,13 @@ const interfaceSource = originals(`${directory}/interface-source.pot`);
 const readmeSource = originals(`${directory}/readme-source.pot`);
 assert.equal(interfaceSource.length, 93);
 assert.equal(readmeSource.length, 66);
+const readme = readFileSync('readme.txt', 'utf8');
+const changelog = readme.split(/^== Changelog ==\r?$/m)[1]?.split(/^== [^=]+ ==\r?$/m)[0];
+assert.ok(changelog, 'Missing changelog in readme.txt');
+for (const [, entry] of changelog.matchAll(/^\* (.+)\r?$/gm)) {
+  const original = entry.trim().replace(/`([^`]+)`/g, '<code>$1</code>');
+  assert.ok(readmeSource.includes(original), `Changelog entry missing from translation source: ${original}`);
+}
 const unchangedMetadata = new Set(['Vladimir Atapin', 'https://atapin.de/', 'https://kalender.georg-kloster.ru/calendar-api']);
 const markers = (text, regex) => (text.match(regex) || []).sort();
 const validate = (source, translation) => {

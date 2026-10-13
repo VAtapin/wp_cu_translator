@@ -47,6 +47,7 @@ jobs:
           node --check scripts/build-translations.mjs
           node scripts/build-translations.mjs
           node tests/translations.mjs
+          node tests/wordpress-org-translations.mjs
           node tests/frontend.mjs
           node tests/dictionary-frontend.mjs
           git diff --exit-code -- languages
@@ -105,6 +106,7 @@ jobs:
           node --check assets/dictionary.js
           node scripts/build-translations.mjs
           node tests/translations.mjs
+          node tests/wordpress-org-translations.mjs
           node tests/frontend.mjs
           node tests/dictionary-frontend.mjs
           git diff --exit-code -- languages
