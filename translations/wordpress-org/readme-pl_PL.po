@@ -157,3 +157,21 @@ msgstr "Pakiet katalogowy korzysta z pakietów językowych WordPress.org; wszyst
 
 msgid "Prefix the JavaScript configuration object consistently in PHP and JavaScript."
 msgstr "Obiekt konfiguracji JavaScript ma spójny prefiks w PHP i JavaScript."
+
+msgid "Public translation form with source-language and Church Slavonic orthography options."
+msgstr "Publiczny formularz tłumaczenia z wyborem języka źródłowego i opcjami pisowni cerkiewnosłowiańskiej."
+
+msgid "A real biblical translation with recognized reference, copy controls and font download."
+msgstr "Rzeczywiste tłumaczenie biblijne z rozpoznanym odwołaniem, kopiowaniem i pobieraniem czcionki."
+
+msgid "WordPress settings with the free public service and optional configuration."
+msgstr "Ustawienia WordPress z bezpłatną usługą publiczną i opcjonalną konfiguracją."
+
+msgid "Ready-to-copy shortcode examples in the WordPress administration area."
+msgstr "Gotowe do skopiowania przykłady krótkich kodów w panelu administracyjnym WordPress."
+
+msgid "Russian interface with localized labels and the external-processing notice."
+msgstr "Rosyjski interfejs z przetłumaczonymi etykietami i informacją o przetwarzaniu przez usługę zewnętrzną."
+
+msgid "Ensure translation requests work when block themes render the shortcode before the normal asset-registration hook."
+msgstr "Zapewniono działanie zapytań o tłumaczenie, gdy motywy blokowe renderują krótki kod przed standardowym mechanizmem rejestracji zasobów."

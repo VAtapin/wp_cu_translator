@@ -105,7 +105,7 @@ foreach ($entries as $entry) {
 }
 
 $metadata = get_plugin_data($pluginFile, false, true);
-if ($metadata['Version'] !== '1.0.7' || WP_CU_TRANSLATOR_VERSION !== '1.0.7') {
+if ($metadata['Version'] !== '1.0.8' || WP_CU_TRANSLATOR_VERSION !== '1.0.8') {
     throw new RuntimeException('Release version does not match.');
 }
 if (($metadata['PluginURI'] ?? '') !== 'https://kalender.georg-kloster.ru/calendar-api') {
@@ -118,7 +118,9 @@ if (($metadata['Description'] ?? '') !== $expected[$locale]['description']) {
     throw new RuntimeException('Translated plugin description does not match for '.$locale);
 }
 
-wp_cu_translator_register_assets();
+// Reproduce block-theme rendering before the normal enqueue hook.
+wp_deregister_script('wp-cu-translator');
+wp_deregister_style('wp-cu-translator');
 $html = do_shortcode('[wp_cu_translator]');
 if (! str_contains($html, $expected[$locale]['title'])) {
     throw new RuntimeException('Translated shortcode title does not match for '.$locale);

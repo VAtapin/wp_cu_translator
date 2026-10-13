@@ -50,5 +50,11 @@
   "Zachowano rosyjskie i niemieckie tłumaczenia oraz dodano kompletne ukraińskie i polskie tłumaczenia.",
   "Użyto angielskich tekstów źródłowych, w tym wbudowanych przykładów shortcode’ów.",
   "Pakiet katalogowy korzysta z pakietów językowych WordPress.org; wszystkie cztery dołączone tłumaczenia zachowano do bezpośredniej instalacji.",
-  "Obiekt konfiguracji JavaScript ma spójny prefiks w PHP i JavaScript."
+  "Obiekt konfiguracji JavaScript ma spójny prefiks w PHP i JavaScript.",
+  "Publiczny formularz tłumaczenia z wyborem języka źródłowego i opcjami pisowni cerkiewnosłowiańskiej.",
+  "Rzeczywiste tłumaczenie biblijne z rozpoznanym odwołaniem, kopiowaniem i pobieraniem czcionki.",
+  "Ustawienia WordPress z bezpłatną usługą publiczną i opcjonalną konfiguracją.",
+  "Gotowe do skopiowania przykłady krótkich kodów w panelu administracyjnym WordPress.",
+  "Rosyjski interfejs z przetłumaczonymi etykietami i informacją o przetwarzaniu przez usługę zewnętrzną.",
+  "Zapewniono działanie zapytań o tłumaczenie, gdy motywy blokowe renderują krótki kod przed standardowym mechanizmem rejestracji zasobów."
 ]

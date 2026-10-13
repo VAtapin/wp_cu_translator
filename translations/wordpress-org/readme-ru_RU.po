@@ -157,3 +157,21 @@ msgstr "Каталоговый пакет использует языковые 
 
 msgid "Prefix the JavaScript configuration object consistently in PHP and JavaScript."
 msgstr "Объект конфигурации JavaScript имеет согласованный префикс в PHP и JavaScript."
+
+msgid "Public translation form with source-language and Church Slavonic orthography options."
+msgstr "Публичная форма перевода с выбором исходного языка и параметров церковнославянского написания."
+
+msgid "A real biblical translation with recognized reference, copy controls and font download."
+msgstr "Настоящий библейский перевод с распознанной ссылкой, копированием и загрузкой шрифта."
+
+msgid "WordPress settings with the free public service and optional configuration."
+msgstr "Настройки WordPress с бесплатным публичным сервисом и дополнительными параметрами."
+
+msgid "Ready-to-copy shortcode examples in the WordPress administration area."
+msgstr "Готовые для копирования примеры шорткодов в административной части WordPress."
+
+msgid "Russian interface with localized labels and the external-processing notice."
+msgstr "Русский интерфейс с переведёнными подписями и уведомлением о внешней обработке."
+
+msgid "Ensure translation requests work when block themes render the shortcode before the normal asset-registration hook."
+msgstr "Обеспечена работа запросов перевода, когда блочные темы выводят шорткод до стандартного обработчика регистрации ресурсов."

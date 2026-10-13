@@ -7,6 +7,8 @@ node_modules
 scripts
 tests
 translations
+.wordpress-org
+design
 test
 tmp
 .idea

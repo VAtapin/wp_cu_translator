@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.8
+
+- Register shortcode assets before localization so block themes can render the form before the normal enqueue hook.
+- Add five genuine WordPress screenshots and captions for the plugin directory.
+
 ## 1.0.7
 
 - Prefix the localized JavaScript object as georsltr_config and test frontend translation requests using that object.

@@ -1,0 +1,30 @@
+name: Update WordPress.org screenshots and readme
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  update:
+    if: ${{ vars.WORDPRESS_ORG_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    concurrency:
+      group: wordpress-org-georg-kloster-slavonic-translator
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate screenshot inventory
+        run: |
+          for number in 1 2 3 4 5; do
+            test -s ".wordpress-org/screenshot-$number.jpg"
+            grep -q "^$number\. " readme.txt
+          done
+      - name: Publish directory materials
+        uses: 10up/action-wordpress-plugin-asset-update@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: georg-kloster-slavonic-translator
+          IGNORE_OTHER_FILES: true

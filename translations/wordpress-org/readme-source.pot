@@ -242,3 +242,20 @@ msgstr ""
 #, gp-priority: low
 msgid "Prefix the JavaScript configuration object consistently in PHP and JavaScript."
 msgstr ""
+msgid "Public translation form with source-language and Church Slavonic orthography options."
+msgstr ""
+
+msgid "A real biblical translation with recognized reference, copy controls and font download."
+msgstr ""
+
+msgid "WordPress settings with the free public service and optional configuration."
+msgstr ""
+
+msgid "Ready-to-copy shortcode examples in the WordPress administration area."
+msgstr ""
+
+msgid "Russian interface with localized labels and the external-processing notice."
+msgstr ""
+
+msgid "Ensure translation requests work when block themes render the shortcode before the normal asset-registration hook."
+msgstr ""
