@@ -12,6 +12,17 @@ const generated = spawnSync(process.execPath, ['scripts/build-translations.mjs']
 assert.equal(generated.status, 0, generated.stderr);
 assert.deepEqual(catalogs(), before, 'Committed translation catalogs must be reproducible.');
 
+// The German default locale uses informal address; plugin names stay unchanged.
+const german = readFileSync('languages/georg-kloster-slavonic-translator-de_DE.po', 'utf8');
+const germanStrings = new Map([...german.matchAll(/^msgid (".+")\r?\nmsgstr (".+")/gm)].map(match => [JSON.parse(match[1]), JSON.parse(match[2])]));
+assert.equal(germanStrings.get('Georg-Kloster Slavonic Translator'), 'Georg-Kloster Slavonic Translator');
+for (const translation of germanStrings.values()) {
+  assert.doesNotMatch(translation, /\b(?:Sie|Ihr|Ihre|Ihren|Ihrem|Ihres)\b/, 'de_DE must use informal address.');
+}
+for (const translation of JSON.parse(readFileSync('translations/wordpress-org/readme-de_DE.json', 'utf8')).filter(Boolean)) {
+  assert.doesNotMatch(translation, /\b(?:Sie|Ihr|Ihre|Ihren|Ihrem|Ihres)\b/, 'German readme must use informal address.');
+}
+
 for (const [name, modifiedSource, modifiedGenerator, error] of [
   ['source-language', source.replace('Church Slavonic translation', 'Перевод'), generator, 'Plugin source must use English'],
   ['placeholder', source, generator.replace('Не удалось подключиться: %s', 'Не удалось подключиться: %d'), 'mismatched placeholders'],

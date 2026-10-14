@@ -3,10 +3,10 @@ msgid ""
 msgstr "Project-Id-Version: WordPress.org readme\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-10-11 00:00+0000\nPO-Revision-Date: 2026-10-11 00:00+0000\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Domain: georg-kloster-slavonic-translator\n"
 
 msgid "Translate text into Church Slavonic and search its dictionary through Bible Desktop."
-msgstr "Übersetzt Texte ins Kirchenslawische und durchsucht das Wörterbuch über Bible Desktop."
+msgstr "Übersetzt Texte in das Kirchenslawische und durchsucht das Wörterbuch über Bible Desktop."
 
 msgid "Georg-Kloster Slavonic Translator"
-msgstr "Georg-Kloster — Kirchenslawischer Übersetzer"
+msgstr "Georg-Kloster Slavonic Translator"
 
 msgid "Use <strong>Copy with formatting</strong> and install Monomakh Unicode from the link below the result. If Word does not select it automatically, select the pasted text and assign Monomakh Unicode manually."
 msgstr "Verwende <strong>Mit Formatierung kopieren</strong> und installiere Monomakh Unicode über den Link unter dem Ergebnis. Falls Word die Schriftart nicht automatisch auswählt, markiere den eingefügten Text und weise Monomakh Unicode manuell zu."
@@ -183,10 +183,10 @@ msgid "Dictionary"
 msgstr "Wörterbuch"
 
 msgid "The Dictionary tab searches the complete Church Slavonic dictionary supplied by Bible Desktop from Azbyka. Search by original or civil spelling, by Russian meaning, or by alphabet chapter. Definitions remain in Russian. Meaning matches are dictionary references, not automatic sentence translations. Original spelling and source links are retained; morphology and audio are not generated."
-msgstr "Der Tab „Wörterbuch“ durchsucht das vollständige kirchenslawische Wörterbuch, das Bible Desktop aus Azbyka bereitstellt. Suchen Sie nach Original- oder Zivilschreibung, russischer Bedeutung oder Alphabetkapitel. Definitionen bleiben auf Russisch. Bedeutungstreffer sind Wörterbuchhinweise und keine automatische Satzübersetzung. Originalschreibung und Quellenlinks bleiben erhalten; Morphologie und Audio werden nicht erzeugt."
+msgstr "Der Tab „Wörterbuch“ durchsucht das vollständige kirchenslawische Wörterbuch, das Bible Desktop aus Azbyka bereitstellt. Suche nach Original- oder Zivilschreibung, russischer Bedeutung oder Alphabetkapitel. Definitionen bleiben auf Russisch. Bedeutungstreffer sind Wörterbuchhinweise und keine automatische Satzübersetzung. Originalschreibung und Quellenlinks bleiben erhalten; Morphologie und Audio werden nicht erzeugt."
 
 msgid "Use <code>[wp_cu_dictionary]</code> for the standalone dictionary, <code>[wp_cu_translator]</code> for both tools, or <code>[wp_cu_translator dictionary=\"no\"]</code> for translation only. Custom title attributes are supported."
-msgstr "Verwenden Sie <code>[wp_cu_dictionary]</code> für das eigenständige Wörterbuch, <code>[wp_cu_translator]</code> für beide Werkzeuge oder <code>[wp_cu_translator dictionary=\"no\"]</code> nur für die Übersetzung. Eigene Überschriften über das Attribut title werden unterstützt."
+msgstr "Verwende <code>[wp_cu_dictionary]</code> für das eigenständige Wörterbuch, <code>[wp_cu_translator]</code> für beide Werkzeuge oder <code>[wp_cu_translator dictionary=\"no\"]</code> nur für die Übersetzung. Eigene Überschriften über das Attribut title werden unterstützt."
 
 msgid "Dictionary searches and article requests are sent by WordPress to the configured Bible Desktop service only after user interaction: <code>/api/dictionaries/AZBYKA_CU_FULL/search</code>, <code>/api/dictionaries/AZBYKA_CU_FULL/alphabet</code> and <code>/api/dictionaries/AZBYKA_CU_FULL/entries/{key}</code>. They transmit the search, mode, chapter or article key and the existing plugin client and installation headers; an optional configured API key also stays server-side. Successful responses may be cached by WordPress for five minutes. The dictionary does not call OpenAI. Source: https://azbyka.ru/otechnik/Spravochniki/polnyj-pravoslavnyj-tserkovnoslavjanskij-slovar/ . Clicking a source link opens Azbyka directly."
 msgstr "Wörterbuch- und Artikelanfragen sendet WordPress erst nach einer Benutzeraktion an den konfigurierten Bible-Desktop-Dienst: <code>/api/dictionaries/AZBYKA_CU_FULL/search</code>, <code>/api/dictionaries/AZBYKA_CU_FULL/alphabet</code> und <code>/api/dictionaries/AZBYKA_CU_FULL/entries/{key}</code>. Übertragen werden Suchanfrage, Modus, Kapitel oder Artikelschlüssel sowie die bestehenden Client- und Installationsheader des Plugins; ein optional konfigurierter API-Schlüssel bleibt ebenfalls serverseitig. Erfolgreiche Antworten kann WordPress fünf Minuten zwischenspeichern. Das Wörterbuch ruft OpenAI nicht auf. Quelle: https://azbyka.ru/otechnik/Spravochniki/polnyj-pravoslavnyj-tserkovnoslavjanskij-slovar/ . Ein Klick auf einen Quellenlink öffnet Azbyka direkt."

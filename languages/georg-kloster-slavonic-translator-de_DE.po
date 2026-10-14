@@ -2,7 +2,7 @@ msgid ""
 msgstr "Project-Id-Version: Georg-Kloster Slavonic Translator 1.1.0\nReport-Msgid-Bugs-To: https://github.com/VAtapin/wp_cu_translator/issues\nPOT-Creation-Date: 2026-10-11 00:00+0000\nPO-Revision-Date: 2026-10-11 00:00+0000\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Domain: georg-kloster-slavonic-translator\n"
 
 msgid "Your text is sent to the configured Bible Desktop service and may be processed by OpenAI."
-msgstr "Ihr Text wird an den konfigurierten Bible-Desktop-Dienst gesendet und kann von OpenAI verarbeitet werden."
+msgstr "Dein Text wird an den konfigurierten Bible-Desktop-Dienst gesendet und kann von OpenAI verarbeitet werden."
 
 msgid "Terms of Service"
 msgstr "Nutzungsbedingungen"
@@ -11,7 +11,7 @@ msgid "Privacy Policy"
 msgstr "Datenschutzerklärung"
 
 msgid "Georg-Kloster Slavonic Translator"
-msgstr "Georg-Kloster — Kirchenslawischer Übersetzer"
+msgstr "Georg-Kloster Slavonic Translator"
 
 msgid "Settings"
 msgstr "Einstellungen"
@@ -20,7 +20,7 @@ msgid "Shortcodes"
 msgstr "Shortcodes"
 
 msgid "Add one of these shortcodes in the Shortcode block or HTML block of the WordPress editor."
-msgstr "Fügen Sie einen dieser Shortcodes in den Shortcode-Block oder HTML-Block des WordPress-Editors ein."
+msgstr "Füge einen dieser Shortcodes in den Shortcode-Block oder HTML-Block des WordPress-Editors ein."
 
 msgid "Shortcode"
 msgstr "Shortcode"
@@ -32,16 +32,16 @@ msgid "Shows the standard Church Slavonic translation form with the default titl
 msgstr "Zeigt das Standardformular des kirchenslawischen Übersetzers mit der Standardüberschrift."
 
 msgid "Shows the same form with a custom heading. Replace the text inside title with your own heading."
-msgstr "Zeigt dasselbe Formular mit einer eigenen Überschrift. Ersetzen Sie den Text in title durch Ihre Überschrift."
+msgstr "Zeigt dasselbe Formular mit einer eigenen Überschrift. Ersetze den Text in title durch deine Überschrift."
 
 msgid "Translate text into Church Slavonic and search its dictionary through Bible Desktop."
-msgstr "Übersetzt Texte ins Kirchenslawische und durchsucht das Wörterbuch über Bible Desktop."
+msgstr "Übersetzt Texte in das Kirchenslawische und durchsucht das Wörterbuch über Bible Desktop."
 
 msgid "Enter a valid Bible Desktop HTTPS URL."
-msgstr "Geben Sie eine gültige HTTPS-Adresse von Bible Desktop ein."
+msgstr "Gib eine gültige HTTPS-Adresse von Bible Desktop ein."
 
 msgid "Add the form with [wp_cu_translator]. The free tier works without a key; an optional key enables higher limits and always stays on the WordPress server."
-msgstr "Fügen Sie das Formular mit [wp_cu_translator] hinzu. Der kostenlose Tarif funktioniert ohne Schlüssel; ein optionaler Schlüssel ermöglicht höhere Limits und bleibt immer auf dem WordPress-Server."
+msgstr "Füge das Formular mit [wp_cu_translator] hinzu. Der kostenlose Tarif funktioniert ohne Schlüssel; ein optionaler Schlüssel ermöglicht höhere Limits und bleibt immer auf dem WordPress-Server."
 
 msgid "Bible Desktop URL"
 msgstr "Bible-Desktop-Adresse"
@@ -50,13 +50,13 @@ msgid "Example:"
 msgstr "Beispiel:"
 
 msgid "Bible Desktop API key"
-msgstr "Bible Desktop API-Schlüssel"
+msgstr "API-Schlüssel von Bible Desktop"
 
 msgid "The key is saved. Leave the field empty to keep it."
-msgstr "Der Schlüssel ist gespeichert. Lassen Sie das Feld leer, um ihn beizubehalten."
+msgstr "Der Schlüssel ist gespeichert. Lass das Feld leer, um ihn beizubehalten."
 
 msgid "Optional. Without a key, the plugin uses the free public tier. Add a key for higher limits."
-msgstr "Optional. Ohne Schlüssel verwendet das Plugin den kostenlosen öffentlichen Tarif. Fügen Sie für höhere Limits einen Schlüssel hinzu."
+msgstr "Optional. Ohne Schlüssel verwendet das Plugin den kostenlosen öffentlichen Tarif. Füge für höhere Limits einen Schlüssel hinzu."
 
 msgid "Delete the saved key"
 msgstr "Gespeicherten Schlüssel löschen"
@@ -80,7 +80,7 @@ msgid "Insufficient permissions."
 msgstr "Unzureichende Berechtigungen."
 
 msgid "Connection established. The Bible Desktop API is available."
-msgstr "Verbindung hergestellt. Die Bible Desktop API ist verfügbar."
+msgstr "Verbindung hergestellt. Die API von Bible Desktop ist verfügbar."
 
 msgid "Could not connect: %s"
 msgstr "Verbindung fehlgeschlagen: %s"
@@ -95,7 +95,7 @@ msgid "Recognized as %s"
 msgstr "Erkannt als %s"
 
 msgid "Ready — the result was loaded from cache."
-msgstr "Fertig — das Ergebnis wurde aus dem Cache geladen."
+msgstr "Fertig – das Ergebnis wurde aus dem Cache geladen."
 
 msgid "Ready."
 msgstr "Fertig."
@@ -107,13 +107,13 @@ msgid "Could not copy"
 msgstr "Kopieren fehlgeschlagen"
 
 msgid "Plain text copied"
-msgstr "Nur-Text wurde kopiert"
+msgstr "Unformatierter Text kopiert"
 
 msgid "Text to translate"
 msgstr "Zu übersetzender Text"
 
 msgid "Enter Russian or German text"
-msgstr "Geben Sie russischen oder deutschen Text ein"
+msgstr "Gib russischen oder deutschen Text ein"
 
 msgid "Source language"
 msgstr "Ausgangssprache"
@@ -155,10 +155,10 @@ msgid "Download font"
 msgstr "Schriftart herunterladen"
 
 msgid "After downloading, open MonomakhUnicode.ttf and click Install. If Word does not select it automatically, select the pasted text and assign Monomakh Unicode manually."
-msgstr "Öffnen Sie nach dem Herunterladen MonomakhUnicode.ttf und klicken Sie auf „Installieren“. Falls Word die Schriftart nicht automatisch auswählt, markieren Sie den eingefügten Text und weisen Sie Monomakh Unicode manuell zu."
+msgstr "Öffne nach dem Herunterladen MonomakhUnicode.ttf und klicke auf „Installieren“. Falls Word die Schriftart nicht automatisch auswählt, markiere den eingefügten Text und weise Monomakh Unicode manuell zu."
 
 msgid "Enter text to translate."
-msgstr "Geben Sie einen Text zum Übersetzen ein."
+msgstr "Gib einen Text zum Übersetzen ein."
 
 msgid "The selected source language is not supported."
 msgstr "Die ausgewählte Ausgangssprache wird nicht unterstützt."
@@ -170,19 +170,19 @@ msgid "Could not connect to Bible Desktop."
 msgstr "Die Verbindung zu Bible Desktop konnte nicht hergestellt werden."
 
 msgid "The Bible Desktop API key is invalid."
-msgstr "Der Bible Desktop API-Schlüssel ist ungültig."
+msgstr "Der API-Schlüssel von Bible Desktop ist ungültig."
 
 msgid "Check the entered text and translation settings."
-msgstr "Prüfen Sie den eingegebenen Text und die Übersetzungseinstellungen."
+msgstr "Prüfe den eingegebenen Text und die Übersetzungseinstellungen."
 
 msgid "The translation request limit has been reached. Please try again later."
-msgstr "Das Limit für Übersetzungsanfragen wurde erreicht. Bitte versuchen Sie es später erneut."
+msgstr "Das Limit für Übersetzungsanfragen wurde erreicht. Bitte versuche es später erneut."
 
 msgid "The higher translation limit has been reached. Please try again later."
-msgstr "Das erhöhte Übersetzungslimit wurde erreicht. Versuchen Sie es später erneut."
+msgstr "Das erhöhte Übersetzungslimit wurde erreicht. Versuche es später erneut."
 
 msgid "The free daily limit has been reached. Add an API key for higher limits or try again after the reset."
-msgstr "Das kostenlose Tageslimit wurde erreicht. Fügen Sie für höhere Limits einen API-Schlüssel hinzu oder versuchen Sie es nach dem Zurücksetzen erneut."
+msgstr "Das kostenlose Tageslimit wurde erreicht. Füge für höhere Limits einen API-Schlüssel hinzu oder versuche es nach dem Zurücksetzen erneut."
 
 msgid "The translation service is temporarily unavailable."
 msgstr "Der Übersetzungsdienst ist vorübergehend nicht verfügbar."
@@ -209,7 +209,7 @@ msgid "Use in translator"
 msgstr "Im Übersetzer verwenden"
 
 msgid "Select a word in the translation first."
-msgstr "Wählen Sie zuerst ein Wort in der Übersetzung aus."
+msgstr "Wähle zuerst ein Wort in der Übersetzung aus."
 
 msgid "Look up selected word"
 msgstr "Ausgewähltes Wort nachschlagen"
@@ -230,7 +230,7 @@ msgid "Word or Russian meaning"
 msgstr "Wort oder russische Bedeutung"
 
 msgid "Search in"
-msgstr "Suchen nach"
+msgstr "Suchen in"
 
 msgid "Church Slavonic word"
 msgstr "Kirchenslawisches Wort"
@@ -245,7 +245,7 @@ msgid "All letters"
 msgstr "Alle Buchstaben"
 
 msgid "Search with or without accents. Definitions are in Russian; a meaning match is not a sentence translation."
-msgstr "Suchen Sie mit oder ohne Akzente. Definitionen sind auf Russisch; ein Bedeutungstreffer ist keine Satzübersetzung."
+msgstr "Suche mit oder ohne Akzente. Definitionen sind auf Russisch; ein Bedeutungstreffer ist keine Satzübersetzung."
 
 msgid "Search"
 msgstr "Suchen"
@@ -257,10 +257,10 @@ msgid "Load more"
 msgstr "Mehr laden"
 
 msgid "Check the dictionary search parameters."
-msgstr "Prüfen Sie die Wörterbuch-Suchparameter."
+msgstr "Prüfe die Wörterbuch-Suchparameter."
 
 msgid "Too many dictionary requests. Please try again later."
-msgstr "Zu viele Wörterbuchanfragen. Versuchen Sie es später erneut."
+msgstr "Zu viele Wörterbuchanfragen. Versuche es später erneut."
 
 msgid "Shows only the translation form, without the dictionary tab."
 msgstr "Zeigt nur das Übersetzungsformular ohne Wörterbuch-Tab."
